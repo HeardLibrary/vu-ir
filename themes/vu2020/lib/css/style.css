@@ -57,6 +57,7 @@ select.multiple {
     background-color: black;
     color: white;
     min-width: 950px;
+    height: auto;
 }
 
 #ds-header-logo-link {
@@ -66,13 +67,13 @@ select.multiple {
 
 #ds-header-logo {
     float:left;
-    width: 48px;
-    height: 50px;
+    width: 648px;
+    height: 95px;
     margin-top: 10px;
-    background: url('../../images/dspace-logo-only.png');
+    background: url('../../images/logo-vandy-discoverarchive-height60.jpg');
     background-repeat: no-repeat;
     background-color: transparent;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 #ds-header-logo-text {
@@ -82,6 +83,8 @@ select.multiple {
     font-weight: normal;
     vertical-align: middle;
     float: left;
+    display: none;
+
 }
 
 #ds-user-box {
@@ -216,7 +219,7 @@ select.multiple {
 
 #ds-options-wrapper {
     float: left;
-    width: 249px;
+    width: 1249px;
     padding-top:10px;
 }
 
