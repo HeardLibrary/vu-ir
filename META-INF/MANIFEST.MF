@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Implementation-Title: DSpace XML-UI (Manakin) :: Local Customizations
 Implementation-Version: 6.3
 Archiver-Version: Plexus Archiver
-Built-By: root
+Built-By: dspace
 Specification-Vendor: DuraSpace
 Specification-Title: DSpace XML-UI (Manakin) :: Local Customizations
 Implementation-Vendor-Id: org.dspace.modules

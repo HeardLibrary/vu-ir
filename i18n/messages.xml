@@ -24,10 +24,10 @@
 		-->
 
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">Institutional Repository Home</message>
+	<message key="xmlui.general.dspace_home">DSpace Home</message>
 	<message key="xmlui.general.search">Search</message>
 	<message key="xmlui.general.go">Go</message>
-	<message key="xmlui.general.go_home">Go to Vanderbilt University Institutional Repository home</message>
+	<message key="xmlui.general.go_home">Go to DSpace home</message>
 	<message key="xmlui.general.save">Save</message>
 	<message key="xmlui.general.cancel">Cancel</message>
 	<message key="xmlui.general.return">Return</message>
@@ -41,7 +41,7 @@
         <!-- Keys which are used by exception2dri.xsl on error pages -->
         <message key="xmlui.error.contact_msg">Please contact the site administrator if you wish to report this error. If possible, please  provide details about what you were doing at the time this error occurred.</message>
         <message key="xmlui.error.contact">Contact site administrator</message>
-        <message key="xmlui.error.show_stack">Show underlying error stack</message> 
+        <message key="xmlui.error.show_stack">Show underlying error stack</message>
 
 	<!--
 		Page not found keys
@@ -65,7 +65,7 @@
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
 	-->
-	<message key="xmlui.feed.general_description">The Vanderbilt University Institutional Repository system captures, stores, indexes, preserves, and distributes digital research material.</message>
+	<message key="xmlui.feed.general_description">The DSpace digital repository system captures, stores, indexes, preserves, and distributes digital research material.</message>
     <message key="xmlui.feed.header">RSS Feeds</message>
 	<message key="xmlui.feed.logo_title">The Channel Image</message>
 	<message key="xmlui.feed.untitled">Untitled</message>
@@ -78,55 +78,30 @@
 
 
 	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-		             ArtifactBrowser Aspect
-
-		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-
-
-
-
-
-
-
-	<!-- org.dspace.app.xmlui.artifactbrowser.AbstractSearch.java -->
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_community">Search Results for Community: {0}</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_collection">Search Results for Collection: {0}</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.head1_none">Search Results</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.result_query">Your query "{0}" produced {1} result(s).</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.head2">Communities or Collections matching your query</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.head3">Items matching your query</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">Search produced no results.</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">All of VUIR</message>
-
-   <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.title">title</message>
-   <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dateissued">issue date</message>
-   <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dateaccessioned">submit date</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.relevance">relevance</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by">Sort items by</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.order">in order</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.order.asc">ascending</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.order.desc">descending</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.rpp">Results/page</message>
+		          ArtifactBrowser Aspect
+        NOTE: As of DSpace 6.0, the ArtifactBrowser Aspect was removed (in favor
+        of the ViewArtifacts, BrowseArtifacts and SearchArtifacts aspects). 
+        However, many of its classes and corresponding i18n keys still exist as 
+        they are used by other aspects.
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.AbstractSearch has been removed. -->
+        <!-- The following keys are still in use by Discovery's AbstractSearch -->
+        <message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">Search produced no results.</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">All of DSpace</message>
 
     <!-- org.dspace.app.xmlui.artifactbrowser.AdvancedSearch.java -->
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.title">Advanced Search</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.trail">Advanced Search</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.head">Advanced Search</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_scope">Search scope</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_scope_help">Limit your search to a community or collection.</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.conjunction">Conjunction</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_type">Search type</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.search_for">Search for</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Author</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_title">Title</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Subject</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">Abstract</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_series">Series</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_sponsor">Sponsor</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">Identifier</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Language (ISO)</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Keyword</message>
+    <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.AdvancedSearch has been removed. -->
+    <!-- The following "type_*" i18n keys will be left as is as they're referenced by the Discovery's SidebarFacetsTransformer
+         but in future, they should be refactored to a more relevant key prefix -->
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">Author</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_title">Title</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">Subject</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">Abstract</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_series">Series</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_sponsor">Sponsor</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">Identifier</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Language (ISO)</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Keyword</message>
 
    <!--  some common other possibilities for Advanced Search Fields -->
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Contributor</message>
@@ -139,10 +114,6 @@
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
 
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_ANY">Full Text</message>
-   <message key="xmlui.ArtifactBrowser.AdvancedSearch.and">AND</message>
-   <message key="xmlui.ArtifactBrowser.AdvancedSearch.or">OR</message>
-   <message key="xmlui.ArtifactBrowser.AdvancedSearch.not">NOT</message>
-
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.ConfigureableBrowse.java -->
 	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.general.starts_with">Or enter first few letters:</message>
@@ -208,7 +179,7 @@
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CollectionViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.search_scope">Search Scope</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">All of VUIR</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">All of DSpace</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Search within this collection:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Titles</message>
@@ -220,12 +191,12 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityBrowser.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.title">Community List</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.trail">Community List</message>
-	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Communities in VUIR</message>
+	<message key="xmlui.ArtifactBrowser.CommunityBrowser.head">Communities in DSpace</message>
 	<message key="xmlui.ArtifactBrowser.CommunityBrowser.select">Select a community to browse its collections.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.search_scope">Search Scope</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">All of VUIR</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">All of DSpace</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Search within this community and its collections:</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Browse by</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Titles</message>
@@ -250,7 +221,7 @@
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.title">Give feedback</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.trail">Give feedback</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.head">Give feedback</message>
-	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Thanks for sharing your feedback about Vanderbilt University Institional Repository system. Your comments are appreciated!</message>
+	<message key="xmlui.ArtifactBrowser.FeedbackForm.para1">Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email">Your Email</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.email_help">This address will be used to follow up on your feedback.</message>
 	<message key="xmlui.ArtifactBrowser.FeedbackForm.comments">Comments</message>
@@ -271,8 +242,11 @@
         <message key="xmlui.ArtifactBrowser.ItemViewer.withdrawn">This item has been withdrawn and is no longer available.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
+        <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.Navigation has been removed. -->
+        <!-- The following i18n keys will be left as is as they're referenced by the Discovery's Navigation
+         but in future, they should be refactored to a more relevant key prefix -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Browse</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of VUIR</message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">All of DSpace</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Communities &amp; Collections</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Titles</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Authors</message>
@@ -283,6 +257,9 @@
 	<message key="xmlui.ArtifactBrowser.Navigation.head_this_community">This Community</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.SimpleSearch.java -->
+        <!-- Note: As of DSpace 6.0, org.dspace.app.xmlui.aspect.artifactbrowser.SimpleSearch has been removed. -->
+        <!-- The following i18n keys will be left as is as they're referenced by the Discovery's SimpleSearch
+         but in future, they should be refactored to a more relevant key prefix -->
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.title">Search</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.trail">Search</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.head">Search</message>
@@ -458,7 +435,7 @@
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
 	<message key="xmlui.EPerson.CannotRegister.title">Registration unavailable</message>
 	<message key="xmlui.EPerson.CannotRegister.head">Registration unavailable</message>
-	<message key="xmlui.EPerson.CannotRegister.para1">The configuration of this Institional Repository does not allow registration in this context. Please contact the <a href="../contact">site administrator</a> with questions or comments.</message>
+	<message key="xmlui.EPerson.CannotRegister.para1">The configuration of this DSpace repository does not allow registration in this context. Please contact the <a href="../contact">site administrator</a> with questions or comments.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Update Profile</message>
@@ -518,20 +495,20 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Sign in</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">Sign in to Vanderbilt Univeristy Institional Repository</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">Sign in to DSpace</message>
 	<message key="xmlui.EPerson.PasswordLogin.email_address">E-Mail Address</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">The email address and/or password supplied were not valid.</message>
 	<message key="xmlui.EPerson.PasswordLogin.password">Password</message>
 	<message key="xmlui.EPerson.PasswordLogin.forgot_link"> Forgot your password?</message>
 	<message key="xmlui.EPerson.PasswordLogin.submit">Sign in</message>
 	<message key="xmlui.EPerson.PasswordLogin.head2">Register new user</message>
-	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates, and submit new items to Vanderbilt University Institutional Repository.</message>
+	<message key="xmlui.EPerson.PasswordLogin.para1">Register an account to subscribe to collections for email updates, and submit new items to DSpace.</message>
 	<message key="xmlui.EPerson.PasswordLogin.register_link">Click here to register.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Sign in</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Sign in</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">Sign in to Institutional Repository</message>
+	<message key="xmlui.EPerson.LDAPLogin.head1">Sign in to DSpace</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">User Name</message>
 	<message key="xmlui.EPerson.LDAPLogin.error_bad_login">The user name and/or password supplied were not valid.</message>
 	<message key="xmlui.EPerson.LDAPLogin.password">Password</message>
@@ -570,7 +547,7 @@
 	<!-- org.dspace.app.xmlui.eperson.RegistrationFinished.java -->
 	<message key="xmlui.EPerson.RegistrationFinished.title">Registration finished</message>
 	<message key="xmlui.EPerson.RegistrationFinished.head">Registration Finished</message>
-	<message key="xmlui.EPerson.RegistrationFinished.para1">You're now registered to use the Vanderbilt Univerisity Institutional Repository system.  You can subscribe to collections to receive email updates about new items.</message>
+	<message key="xmlui.EPerson.RegistrationFinished.para1">You're now registered to use the DSpace system.  You can subscribe to collections to receive email updates about new items.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.ResetPassword.java -->
 	<message key="xmlui.EPerson.ResetPassword.title">Reset password</message>
@@ -586,7 +563,7 @@
 	<!-- org.dspace.app.xmlui.eperson.StartForgotPassword.java -->
 	<message key="xmlui.EPerson.StartForgotPassword.title">Forgot Password</message>
 	<message key="xmlui.EPerson.StartForgotPassword.head">Forgot Password</message>
-	<message key="xmlui.EPerson.StartForgotPassword.para1">Enter the email address you provided when you registered with Vanderbilt University Institutional Repository. An email will be sent to that address with further instructions.</message>
+	<message key="xmlui.EPerson.StartForgotPassword.para1">Enter the email address you provided when you registered with DSpace. An email will be sent to that address with further instructions.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address">Email Address</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address_help">Enter the same address used when registering.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.error_not_found">Email address not found.</message>
@@ -599,7 +576,7 @@
 	<message key="xmlui.EPerson.StartRegistration.reset_password_for">Reset password for</message>
 	<message key="xmlui.EPerson.StartRegistration.submit_reset">Reset password</message>
 	<message key="xmlui.EPerson.StartRegistration.head2">New user registration</message>
-	<message key="xmlui.EPerson.StartRegistration.para2">Register an account to subscribe to collections for email updates, and submit new items to Vanderbilt University Institutional Repository.</message>
+	<message key="xmlui.EPerson.StartRegistration.para2">Register an account to subscribe to collections for email updates, and submit new items to DSpace.</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address">Email Address</message>
 	<message key="xmlui.EPerson.StartRegistration.email_address_help">This address will be verified and used as your login name.</message>
 	<message key="xmlui.EPerson.StartRegistration.error_bad_email">Unable to send email to this address.</message>
@@ -707,7 +684,7 @@
 	<message key="xmlui.Submission.Submissions.status_unknown">Unknown state</message>
         <!-- Same transformer, completed submissions section -->
         <message key="xmlui.Submission.Submissions.completed.head">Archived Submissions</message>
-        <message key="xmlui.Submission.Submissions.completed.info">These are your completed submissions which have been accepted into Vanderbilt University Institutional Repository.</message>
+        <message key="xmlui.Submission.Submissions.completed.info">These are your completed submissions which have been accepted into DSpace.</message>
         <message key="xmlui.Submission.Submissions.completed.column1">Date accepted</message>
         <message key="xmlui.Submission.Submissions.completed.column2">Title</message>
         <message key="xmlui.Submission.Submissions.completed.column3">Collection</message>
@@ -808,7 +785,8 @@
     <message key="xmlui.Submission.submit.AccessStep.column4">End Date</message>
     <message key="xmlui.Submission.submit.AccessStep.table_edit_button">Edit</message>
     <message key="xmlui.Submission.submit.AccessStep.table_delete_button">Remove</message>
-    <message key="xmlui.administrative.authorization.AccessStep.label_date_help">The first day from which access is allowed. Accepted format: yyyy, yyyy-mm, yyyy-mm-dd</message>
+	<message key="xmlui.administrative.authorization.AccessStep.label_date_help">The first day from which access is allowed. Accepted format: yyyy, yyyy-mm, yyyy-mm-dd</message>
+    <message key="xmlui.administrative.authorization.AccessStep.label_date_displayonly_help">The first day from which access is allowed. <b>This date cannot be modified on this form.</b> To set an embargo date for a bitstream, go to the <i>Item Status</i> tab, click <i>Authorizations...</i>, create or edit the bitstream's <i>READ</i> policy, and set the <i>Start Date</i> as desired.</message>
     <message key="xmlui.Submission.submit.AccessStep.review_policy_line">Name: {0}; action: {1}, group: {2}, start date: {3}, end date: {4}</message>
     <message key="xmlui.Submission.submit.AccessStep.review_public_item">The item will be searchable</message>
     <message key="xmlui.Submission.submit.AccessStep.review_private_item">The item will not be searchable</message>
@@ -923,7 +901,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
 	<message key="xmlui.Submission.submit.LicenseStep.head">Distribution License</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>There is one last step:</strong> In order for Vanderbilt University Institutional Repository to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>There is one last step:</strong> In order for DSpace to reproduce, translate and distribute your submission worldwide, you must agree to the following terms.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info2">Grant the standard distribution license by selecting 'I Grant the License'; and then click 'Complete Submission'.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">If you have questions regarding this license please contact the system administrators.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Distribution license</message>
@@ -1021,9 +999,10 @@
 	<message key="xmlui.administrative.Navigation.context_create_subcommunity">Create Sub-community</message>
 	<message key="xmlui.administrative.Navigation.context_create_community">Create Community</message>
 	<message key="xmlui.administrative.Navigation.context_export_item">Export Item</message>
-        <message key="xmlui.administrative.Navigation.context_export_collection">Export Collection</message>
-        <message key="xmlui.administrative.Navigation.context_export_community">Export Community</message>
-        <message key="xmlui.administrative.Navigation.context_export_metadata">Export Metadata</message>
+    <message key="xmlui.administrative.Navigation.context_export_collection">Export Collection</message>
+    <message key="xmlui.administrative.Navigation.context_export_community">Export Community</message>
+    <message key="xmlui.administrative.Navigation.context_export_metadata">Export Metadata</message>
+    <message key="xmlui.administrative.Navigation.context_search_export_metadata">Export Search Metadata</message>
 
 	<!-- Site administrator options -->
 	<message key="xmlui.administrative.Navigation.administrative_head">Administrative</message>
@@ -1041,8 +1020,8 @@
     <message key="xmlui.administrative.Navigation.administrative_control_panel">Control Panel</message>
     <message key="xmlui.administrative.Navigation.statistics">Statistics</message>
     <message key="xmlui.administrative.Navigation.administrative_batch_import">Batch Import (ZIP)</message>
-        <message key="xmlui.administrative.Navigation.administrative_import_metadata">Import Metadata</message>
-        <message key="xmlui.administrative.Navigation.administrative_curation">Curation Tasks</message>
+    <message key="xmlui.administrative.Navigation.administrative_import_metadata">Import Metadata</message>
+    <message key="xmlui.administrative.Navigation.administrative_curation">Curation Tasks</message>
 
     <!-- my account items -->
 	<message key="xmlui.administrative.Navigation.account_export">My Exports</message>
@@ -1314,7 +1293,7 @@
 	<!-- org.dspace.app.xmlui.administrative.registries.MetadatRegistryMain.java -->
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.title">Metadata Registry</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.head1">Metadata registry</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas.  However, Vanderbilt University Institutional Repository requires the qualified Dublin Core schema. You may extend the Dublin Core schema with additional fields or add new schemas to the registry.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">The metadata registry maintains a list of all metadata fields available in the repository. These fields may be divided amongst multiple schemas.  However, DSpace requires the qualified Dublin Core schema. You may extend the Dublin Core schema with additional fields or add new schemas to the registry.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column2">ID</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column3">Namespace</message>
@@ -1833,7 +1812,7 @@
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Harvesting</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.options_harvest">Content Source</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.label_source">Content source</message>
-	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">This is a standard Vanderbilt University Institutional Repository collection</message>
+	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">This is a standard DSpace collection</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_harvested">This collection harvests its content from an external source</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.submit_save">Save</message>
 
@@ -1877,6 +1856,7 @@
 	<message key="xmlui.administrative.ControlPanel.option_harvest">Harvesting</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_scheduler_head">Harvest Scheduler Controls</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_status">Status</message>
+	<message key="xmlui.administrative.ControlPanel.harvest_status_refresh">(refresh)</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_actions">Actions</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_submit_start">Start Harvester</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_submit_reset">Reset Harvest Status</message>
@@ -1966,7 +1946,7 @@
 	<message key="xmlui.administrative.ControlPanel.trail">Control panel</message>
 	<message key="xmlui.administrative.ControlPanel.head">Control Panel</message>
 	<message key="xmlui.administrative.ControlPanel.option_java">Java Information</message>
-	<message key="xmlui.administrative.ControlPanel.option_dspace">Institutional Repository Configuration</message>
+	<message key="xmlui.administrative.ControlPanel.option_dspace">DSpace Configuration</message>
 	<message key="xmlui.administrative.ControlPanel.option_alerts">System-wide Alerts</message>
 	<message key="xmlui.administrative.ControlPanel.hours">{0} h</message>
 	<message key="xmlui.administrative.ControlPanel.minutes">{0} m</message>
@@ -1991,11 +1971,11 @@
         <message key="xmlui.administrative.ControlPanel.cocoon_cache_clear">(Clear Cache Immediately)</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_persistent_cache_size">Persistent Cache Size ({0})</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_transient_cache_size">Transient Cache Size ({0})</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_head">Institutional Repository Settings</message>
-        <message key="xmlui.administrative.ControlPanel.dspace_version">Institutional Repository Version</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_dir">Institutional Repository Installation Directory</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_url">Institional Repository Base URL</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_hostname">Institutional Repository Host Name</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_head">DSpace Settings</message>
+        <message key="xmlui.administrative.ControlPanel.dspace_version">DSpace Version</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_dir">DSpace Installation Directory</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_url">DSpace Base URL</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DSpace Host Name</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_name">Name of the Site</message>
 	<message key="xmlui.administrative.ControlPanel.db_name">Database Name</message>
 	<message key="xmlui.administrative.ControlPanel.db_url">Database URL</message>
@@ -2037,8 +2017,20 @@
 	<message key="xmlui.administrative.ControlPanel.activity_sort_Agent">User-Agent</message>
 	<message key="xmlui.administrative.ControlPanel.activity_anonymous">Anonymous {0}</message>
 	<message key="xmlui.administrative.ControlPanel.activity_none">No page views have been recorded.</message>
+	<message key="xmlui.administrative.ControlPanel.detail">Detail</message>
+	<message key="xmlui.administrative.ControlPanel.show_hide">show/hide</message>
+	<message key="xmlui.administrative.ControlPanel.host">Host: {0}</message>
+	<message key="xmlui.administrative.ControlPanel.puser">Principal user: {0}</message>
+	<message key="xmlui.administrative.ControlPanel.headers">Headers: {0}</message>
+	<message key="xmlui.administrative.ControlPanel.cookies">Cookies: {0}</message>
 
 	<message key="xmlui.administrative.ControlPanel.select_panel">Use the tabs above to select the information to display</message>
+
+	<message key="xmlui.administrative.ControlPanel.tabs.Java Information">Java Information</message>
+	<message key="xmlui.administrative.ControlPanel.tabs.Configuration">Configuration</message>
+	<message key="xmlui.administrative.ControlPanel.tabs.SystemWide Alerts">SystemWide Alerts</message>
+	<message key="xmlui.administrative.ControlPanel.tabs.Harvesting">Harvesting</message>
+	<message key="xmlui.administrative.ControlPanel.tabs.Current Activity">Current Activity</message>
 
 	<!-- org.dspace.app.xmlui.administrative.SystemwideAlerts -->
 	<message key="xmlui.administrative.SystemwideAlerts.countdown"><strong>In {0} minutes</strong>: </message>
@@ -2055,7 +2047,7 @@
         <!-- System-wide Curation Tasks form (org.dspace.app.xmlui.aspect.administrative.CurateForm) -->
         <message key="xmlui.administrative.CurateForm.title">System Curation Tasks</message>
         <message key="xmlui.administrative.CurateForm.trail">Curation Tasks</message>
-        <message key="xmlui.administrative.CurateForm.object_label_name">Handle of Institutional Repository Object</message>
+        <message key="xmlui.administrative.CurateForm.object_label_name">Handle of DSpace Object</message>
         <message key="xmlui.administrative.CurateForm.object_hint">Hint: Enter [your-handle-prefix]/0 to run a task across entire site (not all tasks may support this capability)</message>
         <message key="xmlui.administrative.CurateForm.task_label_name">Task</message>
     <!-- Used by Curate<DSO>Form classes also -->
@@ -2165,7 +2157,7 @@
 			<span id="ds-footer-logo">&#160;</span>
 		</a>
 		<p>
-			This website is using Manakin, a new front end for Institutional Repository created by Texas A&amp;M University
+			This website is using Manakin, a new front end for DSpace created by Texas A&amp;M University
 			Libraries. The interface can be extensively modified through Manakin Aspects and XSL based Themes.
 			For more information visit
 			<a href="http://di.tamu.edu">http://di.tamu.edu</a> and
@@ -2175,14 +2167,13 @@
 	<message key="xmlui.dri2xhtml.structural.contact-link">Contact Us</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Send Feedback</message>
 
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">Institutional Repository</message>
+	<message key="xmlui.dri2xhtml.structural.head-subtitle">DSpace Repository</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profile: </message>
 	<message key="xmlui.dri2xhtml.structural.logout">Logout</message>
 	<message key="xmlui.dri2xhtml.structural.login">Login</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Search Institutional Repository
-</message>
+	<message key="xmlui.dri2xhtml.structural.search">Search DSpace</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Advanced Search</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-community">This Community</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-collection">This Collection</message>
@@ -2202,7 +2193,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.no-title">Untitled</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.no-author">Unknown author</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.non-conformant">
-		This is not an Institutional Repository object conformant to the METS 1.0 profile and as such cannot be
+		This is not a DSpace object conformant to the METS 1.0 profile and as such cannot be
         rendered effectively. You can override either the template that handles the general
         case in dri2xhtml to perform the needed function, or create your template to match
         whatever profile you use.
@@ -2214,11 +2205,9 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-abstract">Abstract</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-uri">URI</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Published</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-date">Date</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-publisher">Publisher</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-subject">Subject</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-persistent">Persistent Link</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-ssrn">SSRN Link</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-head">Files in this item</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-file">Files</message>
@@ -2228,7 +2217,6 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-view">View</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-description">Description</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-files-viewOpen">View/<wbr/>Open</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-files-access-rights">Read access available for</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.item-no-files">There are no files associated with this item.</message>
 
 	<message key="xmlui.dri2xhtml.METS-1.0.size-bytes">bytes</message>
@@ -2256,8 +2244,8 @@
 	<!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
 		DS-METS-1.0-QDC.xsl -->
 	<message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
-	Qualified Dublin Core (QDC) is not applicable to Institutional Repository communities and collections at
-		this time. When using QDC, you should use the QDC crosswalk for Institutional Repository items and either
+		Qualified Dublin Core (QDC) is not applicable to DSpace communities and collections at
+		this time. When using QDC, you should use the QDC crosswalk for DSpace items and either
 		DIM or MODS for processing of communities and collections.
 	</message>
 
@@ -2369,7 +2357,7 @@
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">Institutional Repository Value Lookup</message>
+  <message key="xmlui.ChoiceLookupTransformer.title">DSpace Value Lookup</message>
   <message key="xmlui.ChoiceLookupTransformer.accept">Accept</message>
   <message key="xmlui.ChoiceLookupTransformer.add">Add</message>
   <message key="xmlui.ChoiceLookupTransformer.cancel">Cancel</message>
@@ -2393,7 +2381,7 @@
   <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Local value "@1@" (not in Naming Authority)</message>
 
   <!-- mobile theme -->
-  <message key="xmlui.mobile.home_mobile">Institutional Repository Mobile</message>
+  <message key="xmlui.mobile.home_mobile">DSpace Mobile</message>
   <message key="xmlui.mobile.search_all">Search ALL</message>
   <message key="xmlui.mobile.browse_all">Browse ALL by</message>
   <message key="xmlui.mobile.browse_date">Date</message>
@@ -2475,6 +2463,7 @@
     <message key="xmlui.aspect.sherpa.submission.blue">blue</message>
     <message key="xmlui.aspect.sherpa.submission.white">white</message>
     <message key="xmlui.aspect.sherpa.submission.yellow">yellow</message>
+    <message key="xmlui.aspect.sherpa.submission.gray">gray</message>
     <!-- End Versioning -->
 
 
@@ -2494,15 +2483,25 @@
     <message key="xmlui.mirage2.forms.nonCompositeFieldSet.add">Add</message>
     <message key="xmlui.mirage2.forms.nonCompositeFieldSet.remove">Remove</message>
 
-    <message key="xmlui.mirage2.page-structure.aboutThisRepository">About Institutional Repository</message>
+    <message key="xmlui.mirage2.page-structure.aboutThisRepository">About This Repository</message>
     <message key="xmlui.mirage2.page-structure.toggleNavigation">Toggle navigation</message>
 
-    <message key="xmlui.mirage2.page-structure.heroUnit.title">About Institutional Repository</message>
-    <message key="xmlui.mirage2.page-structure.heroUnit.content">To fklsgjfljg add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.title">About This Repository</message>
+    <message key="xmlui.mirage2.page-structure.heroUnit.content">To add your own content to this page, edit webapps/xmlui/themes/Mirage2/lib/xsl/core/page-structure.xsl and add your own content to the title, trail, and body. If you wish to add additional pages, you will need to create an additional xsl:when block and match the request-uri to whatever page you are adding. Currently, static pages created through altering XSL are only available under the URI prefix of page/.</message>
 
     <message key="xmlui.mirage2.navigation.rss.feed">feed</message>
 
     <message key="xmlui.mirage2.choice-authority-control.loading">Loading...</message>
 
     <message key="xmlui.mirage2.item-list.thumbnail">Thumbnail</message>
+
+
+    <!-- org.dspace.app.xmlui.Submission.submit.StartSubmissionLookupStep -->
+    <message key="xmlui.Submission.submit.StartSubmissionLookupStep.submit_lookup">Search</message>
+    <message key="xmlui.Submission.submit.StartSubmissionLookupStep.title">Publication Search</message>
+    <message key="xmlui.Submission.submit.StartSubmissionLookupStep.lookup_help">Fill in a publication ID, DOI, Title or Author and then press "Search".  A list of all matching publications will be shown to you to select in order to proceed with the submission process.</message>
+    <message key="xmlui.Submission.submit.StartSubmissionLookupStep.submit_publication_item">Imported publication Record</message>
+    <message key="xmlui.Submission.submit.progressbar.lookup">Lookup</message>
+
+
 </catalogue>
