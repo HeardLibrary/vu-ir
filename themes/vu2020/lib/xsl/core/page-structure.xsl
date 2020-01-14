@@ -741,7 +741,7 @@
                     <a href="//www.library.vanderbilt.edu">Jean and Alexander Heard Libraries</a> · 419 21st Avenue South · Nashville, TN 37203 · <a href="//www.library.vanderbilt.edu/about/contact.php">Phone</a>
                     <img src="//www.library.vanderbilt.edu/images/USA_Federal_depository_library_logo.svg.png" title="Vanderbilt is a US Federal Depository Library" alt="Vanderbilt is a US Federal Depository Library" class="depository-logo" />
                 </p>         
-                <p><small><span><a id="de" href="//a.cms.omniupdate.com/10?skin=vanderbilt&amp;account=Library&amp;site=library2018&amp;action=de&amp;path=/technology/index.pcf">©</a></span> Vanderbilt University · All rights reserved. <a href="//web.vanderbilt.edu/">Site Development: Digital Strategy and Development (Division of Communications)</a>
+                <p><small>© Vanderbilt University · All rights reserved. <a href="//web.vanderbilt.edu/">Site Development: Digital Strategy and Development (Division of Communications)</a>
                 <br/>Vanderbilt University is committed to principles of equal opportunity and affirmative action. <a class="credits__link" href="//www.vanderbilt.edu/accessibility/">Accessibility information</a>. <br/>Vanderbilt®, Vanderbilt University®, V Oak Leaf Design®, Star V Design® and Anchor Down® are trademarks of The Vanderbilt University</small>
                 </p>
             </div>
