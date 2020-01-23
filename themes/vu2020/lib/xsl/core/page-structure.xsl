@@ -183,7 +183,7 @@
             <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
             <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
             <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
-            <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />  
             <!-- local styles --> 
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='stylesheet']">
                 <link rel="stylesheet" type="text/css">
@@ -342,7 +342,7 @@
 
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
         placeholders for header images -->
-    <xsl:template name="buildHeader">
+    <xsl:template name="buildHeader_old">
         <div id="ds-header-wrapper">
             <div id="ds-header" class="clearfix">
                 <a id="ds-header-logo-link">
@@ -356,23 +356,9 @@
                        <i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
                     </span>
                 </a>
-                <h1 class="pagetitle visuallyhidden">
+                <div id="ds-user-box">
                     <xsl:choose>
-                        <!-- protection against an empty page title -->
-                        <xsl:when test="not(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'])">
-                            <xsl:text> </xsl:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:copy-of
-                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']/node()"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-
-                </h1>
-
-                <xsl:choose>
-                    <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
-                        <div id="ds-user-box">
+                        <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
                             <p>
                                 <a>
                                     <xsl:attribute name="href">
@@ -395,10 +381,8 @@
                                     <i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
                                 </a>
                             </p>
-                        </div>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <div id="ds-user-box">
+                        </xsl:when>
+                        <xsl:otherwise>
                             <p>
                                 <a>
                                     <xsl:attribute name="href">
@@ -408,15 +392,78 @@
                                     <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
                                 </a>
                             </p>
-                        </div>
-                    </xsl:otherwise>
-                </xsl:choose>
-                
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </div>
+
                 <xsl:call-template name="languageSelection" />
                 
             </div>
         </div>
     </xsl:template>
+
+    <xsl:template name="buildHeader">
+    <!-- vu2020 header --> 
+        <div id="ds-header-wrapper">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/themes/vu2020/images/logo-vandy-discoverarchive-height60.jpg" alt="VUIR Logo" /></a> 
+                        <!-- <a id="ds-header-logo-link">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                                <xsl:text>/</xsl:text>
+                            </xsl:attribute>
+                        <span id="ds-header-logo">&#160;</span>
+                        <span id="ds-header-logo-text"><i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text></span>
+                        </a>  --> 
+
+                    </div> 
+                    <div id="navbar3" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/page/about">About</a></li>
+                            <li>  <!-- log in --> 
+                                <xsl:choose>
+                                    <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
+                                        <a>
+                                            <xsl:attribute name="href">
+                                            <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/                                      dri:metadata[@element='identifier' and @qualifier='url']"/>
+                                            </xsl:attribute>
+                                            <i18n:text>xmlui.dri2xhtml.structural.profile</i18n:text>
+                                            <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/                                   dri:metadata[@element='identifier' and @qualifier='firstName']"/>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/                                            dri:metadata[@element='identifier' and @qualifier='lastName']"/>
+                                        </a>
+                                        <xsl:text> | </xsl:text>
+                                        <a>
+                                            <xsl:attribute name="href">
+                                            <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/                                        dri:metadata[@element='identifier' and @qualifier='logoutURL']"/>
+                                            </xsl:attribute>
+                                            <i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
+                                        </a>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <a>
+                                            <xsl:attribute name="href">
+                                            <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/                                       dri:metadata[@element='identifier' and @qualifier='loginURL']"/>
+                                            </xsl:attribute>
+                                            <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
+                                        </a>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </li>
+                        </ul>
+                    </div>
+                </div>   <!--/.container-fluid -->
+            </nav>
+        </div>
+    </xsl:template>    
 
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
         placeholders for header images -->
@@ -774,14 +821,20 @@
             <!-- Check for the custom pages -->
             <xsl:choose>
                 <xsl:when test="starts-with($request-uri, 'page/about')">
-                    <div>
+        <!--             <div>
                         <h1>About This Repository</h1>
                         <p>To add your own content to this page, edit webapps/xmlui/themes/Mirage/lib/xsl/core/page-structure.xsl and
                             add your own content to the title, trail, and body. If you wish to add additional pages, you
                             will need to create an additional xsl:when block and match the request-uri to whatever page
                             you are adding. Currently, static pages created through altering XSL are only available
                             under the URI prefix of page/.</p>
+                    </div> -->
+                    This is the new about page 
+                    <div class="hero-unit">
+                        <h1><i18n:text>xmlui.vu2020.page-structure.heroUnit.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.vu2020.page-structure.heroUnit.content</i18n:text></p>
                     </div>
+
                 </xsl:when>
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>

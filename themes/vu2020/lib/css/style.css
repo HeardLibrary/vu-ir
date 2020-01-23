@@ -105,6 +105,32 @@ select.multiple {
     color: white;
 }
 
+
+/** Header Styles **/
+
+#ds-header-wrapper .navbar-brand {
+  padding: 0px;
+}
+
+#ds-header-wrapper .navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+#ds-header-wrapper .navbar-brand {
+  height: 80px;
+}
+
+#ds-header-wrapper .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#ds-header-wrapper .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+
 #ds-trail-wrapper {
     background-color: #e7b850;
     margin: 0;
