@@ -428,7 +428,7 @@
                     <div id="navbar3" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="/page/about">About</a></li>
-                            <li>  <!-- log in --> 
+                            <li>  <!-- log in or log out --> 
                                 <xsl:choose>
                                     <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
                                         <a>
@@ -821,20 +821,8 @@
             <!-- Check for the custom pages -->
             <xsl:choose>
                 <xsl:when test="starts-with($request-uri, 'page/about')">
-        <!--             <div>
-                        <h1>About This Repository</h1>
-                        <p>To add your own content to this page, edit webapps/xmlui/themes/Mirage/lib/xsl/core/page-structure.xsl and
-                            add your own content to the title, trail, and body. If you wish to add additional pages, you
-                            will need to create an additional xsl:when block and match the request-uri to whatever page
-                            you are adding. Currently, static pages created through altering XSL are only available
-                            under the URI prefix of page/.</p>
-                    </div> -->
-                    This is the new about page 
-                    <div class="hero-unit">
-                        <h1><i18n:text>xmlui.vu2020.page-structure.heroUnit.title</i18n:text></h1>
-                        <p><i18n:text>xmlui.vu2020.page-structure.heroUnit.content</i18n:text></p>
-                    </div>
-
+                <!-- adding about contents --> 
+                  <xsl:call-template name="page_about"  />  
                 </xsl:when>
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
@@ -844,7 +832,6 @@
 
         </div>
     </xsl:template>
-
 
     <!-- Currently the dri:meta element is not parsed directly. Instead, parts of it are referenced from inside
         other elements (like reference). The blank template below ends the execution of the meta branch -->
@@ -1043,5 +1030,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+
+
 
 </xsl:stylesheet>
