@@ -176,14 +176,15 @@
                 </link>
             </xsl:for-each>
 
-            <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/>
+            <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/>  
 
             <!-- styles for the nivo slider to be used in homepage-->
-            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/nivo-default/default.css')}" />
-            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/nivo-slider.css')}" />
+            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/nivo-default/default.css')}" /> 
+            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/nivo-slider.css')}" />  
+                
 
             <!-- customized styles for categories page -->
-            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/categories.css')}" />
+            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/categories.css')}" />   
 
 
             <!-- Add syndication feeds -->

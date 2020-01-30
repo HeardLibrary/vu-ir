@@ -178,12 +178,14 @@
 
             <!-- Add stylesheets -->
             
-            <!-- VU general Styles -->
+            <!-- reference to VU general Styles -->
             <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,700" />
             <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
             <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
             <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
             <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />  
+
+
             <!-- local styles --> 
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='stylesheet']">
                 <link rel="stylesheet" type="text/css">
@@ -296,6 +298,11 @@
                         <xsl:when test="starts-with($request-uri, 'page/about')">
                                 <xsl:text>About This Repository</xsl:text>
                         </xsl:when>
+
+                        <xsl:when test="starts-with($request-uri, 'page/categories')">
+                                <xsl:text>Categories...</xsl:text>
+                        </xsl:when>
+
                         <xsl:when test="not($page_title)">
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                         </xsl:when>
@@ -824,6 +831,10 @@
                 <!-- adding about contents --> 
                   <xsl:call-template name="page_about"  />  
                 </xsl:when>
+                <xsl:when test="starts-with($request-uri, 'page/categories')">
+                <!-- adding about contents --> 
+                  <xsl:call-template name="page_categories"  />  
+                </xsl:when>
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
                     <xsl:apply-templates />
@@ -862,14 +873,19 @@
         </xsl:variable>
 
         <!-- adding bootstrap javascript -->
-        <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            <xsl:attribute name="src">
+                <xsl:text>//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js</xsl:text>
+            </xsl:attribute>&#160;
+        </script>        
 
         <script type="text/javascript">
             <xsl:text disable-output-escaping="yes">!window.jQuery &amp;&amp; document.write('&lt;script type="text/javascript" src="</xsl:text><xsl:value-of
                 select="$localJQuerySrc"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;\/script&gt;')</xsl:text>
         </script>
 
-        <script type="text/javascript"><xsl:text>
+        <script type="text/javascript">
+            <xsl:text>
                          if(typeof window.publication === 'undefined'){
                             window.publication={};
                           };
@@ -877,7 +893,11 @@
             <xsl:text>window.publication.themePath= '</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>';</xsl:text>
         </script>
         <script>
-            <xsl:text>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='</xsl:text><xsl:value-of select="$context-path"/><xsl:text>';window.DSpace.theme_path='</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>/';</xsl:text>
+            <xsl:text>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='</xsl:text>
+            <xsl:value-of select="$context-path"/>
+            <xsl:text>';window.DSpace.theme_path='</xsl:text>
+            <xsl:value-of select="$theme-path"/>
+            <xsl:text>/';</xsl:text>
         </script>
 
 
@@ -952,6 +972,18 @@
             runAfterJSImports.execute();
         </script>
 
+        <!-- Add Nivo Slider jquery --> 
+        <script type="text/javascript"            >
+            <xsl:attribute name="src">
+                <xsl:text>/themes/vu2020/lib/js/jquery.nivo.slider.js</xsl:text>
+            </xsl:attribute>&#160;
+        </script>   
+        <script type="text/javascript">
+            <xsl:attribute name="src">
+                <xsl:text>/themes/vu2020/lib/js/nivo-start.js</xsl:text>
+            </xsl:attribute>&#160;
+        </script>  
+
         <xsl:call-template name="addJavascript-google-analytics" />
 
         <!-- Add a contextpath to a JS variable -->
@@ -964,7 +996,7 @@
         </script>
 
     </xsl:template>
-    
+
     <xsl:template name="addJavascript-google-analytics">
         <!-- Add a google analytics script if the key is present -->
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
