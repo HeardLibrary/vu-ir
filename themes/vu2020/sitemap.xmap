@@ -80,6 +80,7 @@
                 <map:parameter name="stylesheet.screen#6" value="lib/css/authority-control.css"/>
                 <map:parameter name="stylesheet.screen#7" value="lib/css/nivo_slider_default_theme.css"/>
                 <map:parameter name="stylesheet.screen#8" value="lib/css/nivo_slider.css"/> 
+                <map:parameter name="stylesheet.screen#9" value="lib/css/categories.css"/> 
             </map:transform>
             <map:transform type="IncludePageMeta">
                 <map:parameter name="stylesheet.handheld" value="lib/css/handheld.css"/>
