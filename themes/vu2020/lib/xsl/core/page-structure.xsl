@@ -300,7 +300,7 @@
                         </xsl:when>
 
                         <xsl:when test="starts-with($request-uri, 'page/categories')">
-                                <xsl:text>Categories...</xsl:text>
+                                <xsl:text>Communities and Collections</xsl:text>
                         </xsl:when>
 
                         <xsl:when test="not($page_title)">
@@ -479,7 +479,18 @@
             <ul id="ds-trail">
                 <xsl:choose>
                     <xsl:when test="starts-with($request-uri, 'page/about')">
-                         <xsl:text>About This Repository</xsl:text>
+                        <li class="ds-trail-link first-link ">
+                            <a href="/">Institutional Repository Home</a>
+                        </li>
+                        <li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://di.tamu.edu/DRI/1.0/" class="ds-trail-arrow">→</li>
+                        <li><xsl:text>About This Repository</xsl:text></li>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/categories')">
+                        <li class="ds-trail-link first-link ">
+                            <a href="/">Institutional Repository Home</a>
+                        </li>
+                        <li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://di.tamu.edu/DRI/1.0/" class="ds-trail-arrow">→</li>
+                        <li><xsl:text>Communities &amp; Collections</xsl:text></li>
                     </xsl:when>
                     <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) = 0">
                         <li class="ds-trail-link first-link">-</li>

@@ -85,8 +85,8 @@
     <xsl:template name="sign-in-text" match="dri:div[@id='aspect.eperson.LDAPLogin.div.login']/dri:head">
         <h1>Sign In to Vanderbilt University Institutional Repository</h1>
         <br/>
-        <p>Please use your VUNetID and ePassword to sign in to DiscoverArchive.</p>
-        <p>If you previously used a different ID and password to access DiscoverArchive, you will need to reauthenticate yourself with your VUNetID. Please <a href="mailto:discoverarchive@library.vanderbilt.edu">contact us</a> if you have questions or experience connectivity problems.</p>
+        <p>Please use your VUNetID and ePassword to sign in to Vanderbilt University Institutional Repository.</p>
+        <p>If you previously used a different ID and password to access Vanderbilt University Institutional Repository, you will need to reauthenticate yourself with your VUNetID. Please <a href="mailto:vuir@list.vanderbilt.edu">contact us</a> if you have questions or experience connectivity problems.</p>
         <hr/>
         <h1>Authenticate with your VUNetID</h1>
         <xsl:apply-templates select="dri:list"/>
