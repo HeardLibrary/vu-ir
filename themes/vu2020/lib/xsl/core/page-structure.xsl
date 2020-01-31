@@ -480,16 +480,18 @@
                 <xsl:choose>
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                         <li class="ds-trail-link first-link ">
+                            <span class="glyphicon glyphicon-home">&#160;</span>
                             <a href="/">Institutional Repository Home</a>
                         </li>
-                        <li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://di.tamu.edu/DRI/1.0/" class="ds-trail-arrow">→</li>
+                        <li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://di.tamu.edu/DRI/1.0/" class="ds-trail-arrow"> &gt;</li>
                         <li><xsl:text>About This Repository</xsl:text></li>
                     </xsl:when>
                     <xsl:when test="starts-with($request-uri, 'page/categories')">
                         <li class="ds-trail-link first-link ">
+                            <span class="glyphicon glyphicon-home">&#160;</span>
                             <a href="/">Institutional Repository Home</a>
                         </li>
-                        <li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://di.tamu.edu/DRI/1.0/" class="ds-trail-arrow">→</li>
+                        <li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://di.tamu.edu/DRI/1.0/" class="ds-trail-arrow"> &gt; </li>
                         <li><xsl:text>Communities &amp; Collections</xsl:text></li>
                     </xsl:when>
                     <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) = 0">
@@ -507,7 +509,7 @@
         <!--put an arrow between the parts of the trail-->
         <xsl:if test="position()>1">
             <li class="ds-trail-arrow">
-                <xsl:text>&#8594;</xsl:text>
+                <xsl:text> &gt;</xsl:text>
             </li>
         </xsl:if>
         <li>
@@ -523,6 +525,10 @@
             <!-- Determine whether we are dealing with a link or plain text trail link -->
             <xsl:choose>
                 <xsl:when test="./@target">
+                    <!-- add home button for the first link --> 
+                    <xsl:if test= "position()=1" >
+                        <span class="glyphicon glyphicon-home" aria-hidden="true">&#160;</span>
+                    </xsl:if>  
                     <a>
                         <xsl:attribute name="href">
                             <xsl:value-of select="./@target"/>
@@ -531,6 +537,7 @@
                     </a>
                 </xsl:when>
                 <xsl:otherwise>
+                     <span class="glyphicon glyphicon-home" aria-hidden="true">&#160;</span>
                     <xsl:apply-templates />
                 </xsl:otherwise>
             </xsl:choose>
