@@ -57,19 +57,22 @@
         <xsl:variable name="emphasis" select="confman:getProperty('xmlui.theme.mirage.item-list.emphasis')"/>
         <xsl:choose>
             <xsl:when test="'file' = $emphasis">
-
-
                 <div class="item-wrapper clearfix">
-                    <xsl:apply-templates select="./mets:fileSec" mode="artifact-preview"><xsl:with-param name="href" select="$href"/></xsl:apply-templates>
-                    <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
-                                         mode="itemSummaryList-DIM-file"><xsl:with-param name="href" select="$href"/></xsl:apply-templates>
+                    <xsl:apply-templates select="./mets:fileSec" mode="artifact-preview">                  
+                        <xsl:with-param name="href" select="$href"/>
+                    </xsl:apply-templates>
+                    <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim" mode="itemSummaryList-DIM-file">
+                        <xsl:with-param name="href" select="$href"/>
+                    </xsl:apply-templates>
                 </div>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
-                                     mode="itemSummaryList-DIM-metadata"><xsl:with-param name="href" select="$href"/></xsl:apply-templates>
-            </xsl:otherwise>
-        </xsl:choose>
+                                     mode="itemSummaryList-DIM-metadata">
+                    <xsl:with-param name="href" select="$href"/>
+                </xsl:apply-templates>
+            </xsl:otherwise>  
+        </xsl:choose> 
     </xsl:template>
 
     <!--handles the rendering of a single item in a list in file mode-->
@@ -243,12 +246,23 @@
 
     <xsl:template match="mets:fileSec" mode="artifact-preview">
         <xsl:param name="href"/>
-        <div class="thumbnail-wrapper" style="width: {$thumbnail.maxwidth}px;">
+
+        <div class="thumbnail-wrapper" style="width: {$thumbnail.maxwidth}px;"> 
             <div class="artifact-preview">
                 <a class="image-link" href="{$href}">
+
+                    <!-- display proper icon base on MIMETYPE and DC:type -->
+                    <!--<img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" style="height: {$thumbnail.maxheight}px;"/>   -->
+
+                    <xsl:call-template name="displayItemIcon" >
+                        <xsl:with-param name="thumbnail_node" select="mets:fileGrp[@USE='THUMBNAIL']" />
+                        <xsl:with-param name="mimetype" select="mets:fileGrp[@USE='THUMBNAIL']/mets:file[1]/@MIMETYPE" /> 
+                        <xsl:with-param name="dctype" select="../mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim/dim:field[@element = 'format']" />
+                    </xsl:call-template>      
+
                     <xsl:choose>
-                        <xsl:when test="mets:fileGrp[@USE='THUMBNAIL']">
-                            <!-- Checking if Thumbnail is restricted and if so, show a restricted image --> 
+                        <xsl:when test="mets:fileGrp[@USE='THUMBNAIL']"> 
+                            <!-- Checking if Thumbnail is restricted and if so, show a restricted image  -->
                             <xsl:variable name="src">
                               <xsl:value-of select="mets:fileGrp[@USE='THUMBNAIL']/mets:file/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
                             </xsl:variable>
@@ -275,13 +289,132 @@
                             </xsl:choose>
                         </xsl:when>
                         <xsl:otherwise>
-                            <img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" style="height: {$thumbnail.maxheight}px;"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
+                            <img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" style="height: {$thumbnail.maxheight}px;"/>  
+                    </xsl:otherwise>
+                    </xsl:choose> 
                 </a>
             </div>
-        </div>
-    </xsl:template>
+        </div>  
+    </xsl:template> 
 
+    <!-- display proper icon for item base on MIMETYPE and DC:type -->
+    <xsl:template name="displayItemIcon" >
+
+        <xsl:param name="thumbnail_node" />
+        <xsl:param name="mimetype" />
+        <xsl:param name="dctype" />
+
+        <xsl:variable name="knowntypes" 
+            select="'pdf msword vnd.ms-powerpoint image audio video' " />
+        
+           
+        <!--    MIMETYPE: <xsl:value-of select="$mimetype" />
+            DCTYPE: <xsl:value-of select="$dctype" /> 
+            THUMBNAIL: <xsl:value-of select="thumbnail_node" />  --> 
+             
+
+        <xsl:choose>
+            <!-- When image Thumbnail is available -->     
+            <!-- <xsl:when test="mets:fileGrp[@USE='THUMBNAIL']"> --> 
+            <xsl:when test="$thumbnail_node != '' "> 
+                <img class="img-responsive" alt="xmlui.mirage2.item-list.thumbnail" i18n:attr="alt">
+                    <xsl:attribute name="src">
+                        <!-- <xsl:value-of <select="mets:fileGrp[@USE='THUMBNAIL']/mets:file/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/> -->
+                        <xsl:value-of
+                                select="$thumbnail_node/mets:file/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/> 
+                    </xsl:attribute>
+                </img>
+            </xsl:when> 
+
+            <!-- When MIMETYPE is known, display icon based on MIMETYPE --> 
+            <xsl:when test="($mimetype != '') and ( contains($knowntypes, substring-after($mimetype,'/')) or contains($knowntypes, substring-before($mimetype, '/')) )" >
+                <xsl:call-template name="displayKnownItemtypeIcon">
+                    <xsl:with-param name="icontype" select="$mimetype" />
+                </xsl:call-template>
+            </xsl:when>
+
+            <!-- Display icon based on DC:type --> 
+            <xsl:when test="($dctype != '') and (contains($knowntypes, substring-before($dctype,'/')) or contains($knowntypes,substring-after($dctype, '/')) ) " >
+                <xsl:call-template name="displayKnownItemtypeIcon">
+                    <xsl:with-param name="icontype" select="$dctype" />
+                </xsl:call-template>
+            </xsl:when>
+
+            <!-- display generic item icon --> 
+            <xsl:otherwise>
+                <xsl:call-template name="displayGenericIcon" />
+            </xsl:otherwise>           
+        </xsl:choose>
+    </xsl:template>        
+
+
+    <!-- display item icon based on input value -->
+    <xsl:template name="displayKnownItemtypeIcon" >
+        <xsl:param name="icontype" />
+        <xsl:param name="currentfilesec" />
+
+        <xsl:choose>
+            <!-- PDF Mime Types -->      
+            <xsl:when test="$icontype ='application/pdf'">
+                <xsl:call-template name="displayPDFIcon" />
+            </xsl:when>
+
+            <!-- Microsoft Word Mime Types -->
+            <xsl:when test="$icontype ='application/msword'">
+                <xsl:call-template name="displayWordIcon" />     
+            </xsl:when>
+            
+            <!-- Microsoft Powerpoint Mime Types -->
+            <xsl:when test="$icontype ='application/vnd.ms-powerpoint'">
+                <xsl:call-template name="displayPPTIcon" />     
+            </xsl:when>
+
+            <!-- Image Mime Types -->
+            <!-- 'image/jpeg', $mimetype ='image/tiff' or $mimetype='image/png', 'application/postscript'  -->
+            <xsl:when test="contains($icontype, 'image') or $icontype ='application/postscript' " >
+                <xsl:call-template name="displayImageIcon" >
+                    <xsl:with-param name="context" select="$currentfilesec" />    
+                </xsl:call-template>     
+            </xsl:when>
+
+            <!-- Audio Mime Types -->
+            <!-- <xsl:when test="$mimetype= 'audio/x-mpeg' or $mimetype= 'audio/acc, aacp' or $mimetype ='audio/x-wav' or $mimetype='audio/x-aiff, aacp' or $mimetype='audio/x-aiff' or $mimetype='audio/x-wma, aacp' or $mimetype='audio/x-wma' "> -->
+            <xsl:when test="contains($icontype, 'audio')">
+                <xsl:call-template name="displayAudioIcon" />     
+            </xsl:when>
+                
+            <!-- Video Mime Types -->
+            <xsl:when test="contains($icontype, 'video')">
+                    <xsl:call-template name="displayVideoIcon" />     
+            </xsl:when>
+        </xsl:choose>    
+    </xsl:template>   
+
+    <xsl:template name="displayPDFIcon">
+        <img alt="Icon" src="{concat($theme-path,'/images/pdf.png')}" style="height:{$thumbnail.maxheight}px;"/>
+    </xsl:template>    
+    <xsl:template name="displayWordIcon">
+        <img alt="Icon" src="{concat($theme-path,'/images/DOCX.png')}" style="height:{$thumbnail.maxheight}px;"/>
+    </xsl:template>   
+    <xsl:template name="displayPPTIcon">
+        <img alt="Icon" src="{concat($theme-path,'/images/PowerPoint.png')}" style="height:{$thumbnail.maxheight}px;"/> 
+    </xsl:template>    
+    <xsl:template name="displayAudioIcon">
+        <img alt="Icon" src="{concat($theme-path,'/images/audio-basic.png')}"  style="height:{$thumbnail.maxheight}px;"/> 
+    </xsl:template> 
+    <xsl:template name="displayVideoIcon">
+        <img alt="Icon" src="{concat($theme-path,'/images/video.png')}"  style="height:{$thumbnail.maxheight}px;"/> 
+    </xsl:template> 
+    <xsl:template name="displayGenericIcon">
+        <xsl:attribute name="data-src">
+        <xsl:text>holder.js/100%x</xsl:text>
+        <xsl:value-of select="$thumbnail.maxheight"/>
+        <xsl:text>/text:No Thumbnail</xsl:text>
+        </xsl:attribute> 
+        <img alt="Icon" src="{concat($theme-path,'/images/document_generic.png')}" style="height:{$thumbnail.maxheight}px;"/>
+    </xsl:template>                
+    <xsl:template name="displayImageIcon" match="mets.file">
+        <img alt="Icon" src="{concat($theme-path,'/images/jpg.png')}"  style="height:{$thumbnail.maxheight}px;"/> 
+    </xsl:template>  
 
 </xsl:stylesheet>
