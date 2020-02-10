@@ -80,7 +80,8 @@
                             <xsl:apply-templates select="dri:body/*"/>
                         </xsl:when>
                         <xsl:otherwise>
-                        <div id="page-wrap"> <!-- for sticky footer --> 
+                        <!-- <div id="page-wrap"> -->  <!-- for sticky footer --> 
+                        <div> 
                             <xsl:call-template name="buildHeader"/>
                             <xsl:call-template name="buildTrail"/>
                             <!--javascript-disabled warning, will be invisible if javascript is enabled-->
@@ -163,7 +164,13 @@
 
             <!-- Add stylesheets -->
 
-            <!--TODO figure out a way to include these in the concat & minify-->
+            <!-- reference to VU general Styles -->
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,700" />
+            <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
+            <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
+            <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />  
+
+            <!-- Add local styles from themes folder -->
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='stylesheet']">
                 <link rel="stylesheet" type="text/css">
                     <xsl:attribute name="media">
@@ -175,17 +182,6 @@
                     </xsl:attribute>
                 </link>
             </xsl:for-each>
-
-            <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/>  
-
-            <!-- styles for the nivo slider to be used in homepage-->
-            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/nivo-default/default.css')}" /> 
-            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/nivo-slider.css')}" />  
-                
-
-            <!-- customized styles for categories page -->
-            <link type="text/css" rel="stylesheet" href="{concat($theme-path, 'styles/categories.css')}" />   
-
 
             <!-- Add syndication feeds -->
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
@@ -417,24 +413,7 @@
                             <li><a href="/page/about"><span class="hidden-xs">About</span></a></li>
                             <xsl:choose>
                                 <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
-                            <!--         <li class="dropdown">
-                                    
-                                        <a id="user-dropdown-toggle" href="#" role="button" class="dropdown-toggle"
-                                           data-toggle="dropdown">
-                                            <span class="hidden-xs">
-                                                <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='firstName']"/>
-                                                <xsl:text> </xsl:text>
-                                                <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='lastName']"/>
-                                                &#160;
-                                                <b class="caret"/>
-                                            </span>
-                                        </a> -->
-                                       <!--  <ul class="dropdown-menu pull-right" role="menu"
-                                            aria-labelledby="user-dropdown-toggle" data-no-collapse="true"> 
-                                        <ul> -->
-                                    
+                              
                                             <li>
                                                 <a href="{/dri:document/dri:meta/dri:userMeta/
                             dri:metadata[@element='identifier' and @qualifier='url']}">
@@ -452,10 +431,10 @@
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <li>
-                                        <!-- hardcode in login url -->   
-                                        <!-- <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}"> -->
-                                            <a href="login">  
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/                                     dri:metadata[@element='identifier' and @qualifier='loginURL']"/>
+                                            </xsl:attribute> 
                                             <span class="hidden-xs">
                                                 <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
                                             </span>
@@ -650,35 +629,35 @@
         <xsl:variable name="ccLogo">
              <xsl:choose>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by/')">
+                                           '//creativecommons.org/licenses/by/')">
                        <xsl:value-of select="'cc-by.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-sa/')">
+                                           '//creativecommons.org/licenses/by-sa/')">
                        <xsl:value-of select="'cc-by-sa.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nd/')">
+                                           '//creativecommons.org/licenses/by-nd/')">
                        <xsl:value-of select="'cc-by-nd.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc/')">
+                                           '//creativecommons.org/licenses/by-nc/')">
                        <xsl:value-of select="'cc-by-nc.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc-sa/')">
+                                           '//creativecommons.org/licenses/by-nc-sa/')">
                        <xsl:value-of select="'cc-by-nc-sa.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc-nd/')">
+                                           '//creativecommons.org/licenses/by-nc-nd/')">
                        <xsl:value-of select="'cc-by-nc-nd.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/publicdomain/zero/')">
+                                           '//creativecommons.org/publicdomain/zero/')">
                        <xsl:value-of select="'cc-zero.png'" />
                   </xsl:when>
                   <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/publicdomain/mark/')">
+                                           '//creativecommons.org/publicdomain/mark/')">
                        <xsl:value-of select="'cc-mark.png'" />
                   </xsl:when>
                   <xsl:otherwise>
@@ -697,7 +676,7 @@
     </xsl:template>
 
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
-    <xsl:template name="buildFooter">
+    <xsl:template name="buildFooter-deliv">
         <footer id="footer-primary">
             <div class="wrap">
                 <div class="footer-top">
@@ -707,16 +686,16 @@
                         <div class="callout-block">
 	                       <div class="callout-title">Support the Jean and Alexander Heard Library</div>
                                <p>Gifts to the  Library support the learning and research needs of the entire Vanderbilt community.</p>
-		                  <a href="http://library.vanderbilt.edu/giving/" class="btn-more">Learn More</a>
+		                  <a href="//library.vanderbilt.edu/giving/" class="btn-more">Learn More</a>
                         </div> <!-- /callout-block -->
                     </div> <!-- /footer-callout -->
 
                     <nav id="nav-footer-social">
                         <span class="nav-title">Follow Us</span>
                         <ul>
-                            <li class="twitter"><a href="https://twitter.com/VandyLibraries">Twitter</a></li>
-                            <li class="facebook"><a href="http://www.facebook.com/vulibrary">Facebook</a></li>
-                            <li class="rss"><a href="http://newsonline.library.vanderbilt.edu/?feed=rss2">RSS</a></li>
+                            <li class="twitter"><a href="//twitter.com/VandyLibraries">Twitter</a></li>
+                            <li class="facebook"><a href="//www.facebook.com/vulibrary">Facebook</a></li>
+                            <li class="rss"><a href="//newsonline.library.vanderbilt.edu/?feed=rss2">RSS</a></li>
                         </ul>
                     </nav>
                 </div> <!-- /footer-top -->
@@ -731,27 +710,146 @@
 
                     <ul id="nav-footer-tools">
                         <li class="hours">
-                          <a href="http://www.library.vanderbilt.edu/hours.php">Hours</a>
+                          <a href="//www.library.vanderbilt.edu/hours.php">Hours</a>
                         </li>
                         <li class="about">
-                		    <a href="http://www.library.vanderbilt.edu/about/index.php">About</a>
+                		    <a href="//www.library.vanderbilt.edu/about/index.php">About</a>
                         </li>
                         <li class="employment">
-                		  <a href="http://www.library.vanderbilt.edu/about/employment.php">Employment</a>
+                		  <a href="//www.library.vanderbilt.edu/about/employment.php">Employment</a>
                         </li>
                         <li class="staff">
-                            <a href="http://www.library.vanderbilt.edu/staff.php">Staff</a>
+                            <a href="//www.library.vanderbilt.edu/staff.php">Staff</a>
                         </li>
                         <li class="contact">
-                		  <a href="http://www.library.vanderbilt.edu/about/contact.php">Contact</a>
+                		  <a href="//www.library.vanderbilt.edu/about/contact.php">Contact</a>
                         </li>
                     </ul>
                 </div>  <!-- /footer-botoom --> 
            
             </div><!-- /wrap  --> 
         </footer>
-        <script type="text/javascript" src="http://www.library.vanderbilt.edu/assets/js/validate.js"></script>
+        <script type="text/javascript" src="//www.library.vanderbilt.edu/assets/js/validate.js"></script>
     </xsl:template>
+
+
+    <!-- customized VU footer -->
+    <xsl:template name="buildFooter">
+
+    <footer id="vu-footer" class="vu-footer fresh">
+       <footer id="vu-social" class="vu-social">
+            <div class="container">
+                <div class="row">
+                  <section class="vu-footer__social text-center center-block">
+                    <h4 class="vu-footer__title"><a href="//social.vanderbilt.edu">Connect with Vanderbilt Libraries</a></h4>
+                    <ul class="social-icons h2">
+                      <li class="facebook">
+                        <a href="//www.facebook.com/vandylibraries" target="_blank" rel="noopener">
+                            <xsl:text  disable-output-escaping="yes">&lt;i title="follow us on facebook" class="fab fa-facebook-f fa-fw" &gt;&lt;/i&gt;</xsl:text>
+                        </a>    
+                      </li>
+                      <li class="twitter">
+                        <a href="//twitter.com/vandylibraries" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="follow us on twitter" class="fab fa-twitter fa-fw" &gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="instagram">
+                        <a href="//www.instagram.com/vandylibraries/" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="follow us on instagram" class="fab fa-instagram fa-fw" &gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="youtube">
+                        <a href="//www.youtube.com/playlist?list=PLB1EPeYUwa4n_I0CyMrQidztwO-SdENRm" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="watch our youtube videos" class="fab fa-youtube fa-fw"&gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="flickr">
+                        <a href="//www.flickr.com/photos/vulibrary/" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="view our photo album" class="fab fa-flickr fa-fw"&gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="rss">
+                        <a href="//newsonline.library.vanderbilt.edu/?feed=rss2" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="subscribe to our news rss feed" class="fas fa-rss fa-fw"&gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="linkedin">
+                        <a href="//www.linkedin.com/company/jean-and-alexander-heard-libraries" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="follow us on linkedin" class="fab fa-linkedin-in fa-fw"&gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li> 
+                    </ul>
+                  </section>
+                </div>
+            </div>
+        </footer> 
+        <div class="container">
+          <div class="row">
+            <section class="vu-footer__yourvu col-sm-3 clearfix">
+              <h4 class="vu-footer__title">Your Vanderbilt</h4>
+              <ul>
+                <li><a href="//www.vanderbilt.edu/alumni/">Alumni</a></li>
+                <li><a href="//www.vanderbilt.edu/student/">Current Students</a></li>
+                <li><a href="//www.vanderbilt.edu/faculty-staff/">Faculty &amp; Staff</a></li>
+                <li><a href="//www.vanderbilt.edu/isss/">International Students</a></li>
+                <li><a href="//news.vanderbilt.edu/for-media/">Media</a></li>
+                <li><a href="//www.vanderbilt.edu/families/">Parents &amp; Family</a></li>
+                <li><a href="//www.vanderbilt.edu/prospective/">Prospective Students</a></li>
+                <li><a href="//www.vanderbilt.edu/academics/research/">Researchers</a></li>
+                <li><a href="//www.vucommodores.com">Sports Fans</a></li>
+                <li><a href="//www.vanderbilt.edu/community/">Visitors &amp; Neighbors</a></li>
+              </ul>
+            </section>
+            <section class="vu-footer__map col-sm-6 clearfix">
+              <div class="embed-responsive embed-responsive-16by9">
+                <h4 class="vu-footer__title">Support the Jean and Alexander Heard Libraries</h4>
+                <div class="row">
+                  <div class="col-xs-3 col-sm-4 col-lg-3">
+                    <a href="//webapp.mis.vanderbilt.edu/olga/pub/landing?appealCode=Q13A8" class="give-now">
+                        <img src="//www.library.vanderbilt.edu/images/giveNow-ccc.png" alt="Support the Library...Give Now" title="Support the Library...Give Now" />
+                    </a> 
+                  </div>
+                  <p class="col-xs-12 col-sm-8 col-lg-9">Gifts to the Libraries support the learning and research needs of the entire Vanderbilt community. <a href="//www.library.vanderbilt.edu/giving/">Learn more about giving to the Libraries.</a>
+                  </p>
+                </div>
+                <div class="friend">
+                  <a href="//www.library.vanderbilt.edu/friends/" class="btn btn-primary">
+                    <xsl:text disable-output-escaping="yes">Become a Friend of the Libraries &lt;i class="fas fa-arrow-alt-circle-right"&gt; &lt;/i&gt; </xsl:text>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section class="vu-footer__popular col-sm-3 clearfix">
+              <h4 class="vu-footer__title">Quick Links</h4>
+              <ul>
+                <li><a href="//www.library.vanderbilt.edu/hours.php">Hours</a></li>
+                <li><a href="//www.library.vanderbilt.edu/about">About</a></li>
+                <li><a href="//www.library.vanderbilt.edu/about/employment.php">Employment</a></li>
+                <li><a href="//www.library.vanderbilt.edu/staff">Staff Directory</a></li>
+                <li><a href="//www.library.vanderbilt.edu/about/accessibility.php">Accessibility Services</a></li>
+                <li><a href="//www.library.vanderbilt.edu/about/contact.php">Contact</a></li>
+                <li><a href="//www.vanderbilt.edu">Vanderbilt Home</a></li>
+                <li><a href="//www.library.vanderbilt.edu/privacypolicy.php">Privacy Policy</a></li>
+                <!--<li><a href="#">Site Index</a></li>-->
+              </ul>
+            </section>
+          </div>
+        </div>
+    </footer>
+    <footer class="credits">
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <p id="library-address">
+                    <a href="//www.library.vanderbilt.edu">Jean and Alexander Heard Libraries</a> · 419 21st Avenue South · Nashville, TN 37203 · <a href="//www.library.vanderbilt.edu/about/contact.php">Phone</a>
+                    <img src="//www.library.vanderbilt.edu/images/USA_Federal_depository_library_logo.svg.png" title="Vanderbilt is a US Federal Depository Library" alt="Vanderbilt is a US Federal Depository Library" class="depository-logo" />
+                </p>         
+                <p><small>© Vanderbilt University · All rights reserved. <a href="//web.vanderbilt.edu/">Site Development: Digital Strategy and Development (Division of Communications)</a>
+                <br/>Vanderbilt University is committed to principles of equal opportunity and affirmative action. <a class="credits__link" href="//www.vanderbilt.edu/accessibility/">Accessibility information</a>. <br/>Vanderbilt®, Vanderbilt University®, V Oak Leaf Design®, Star V Design® and Anchor Down® are trademarks of The Vanderbilt University</small>
+                </p>
+            </div>
+        </div>
+    </footer>
+</xsl:template> 
 
 
     <!--
@@ -868,7 +966,7 @@
 
         <!-- adds support for slider on front page. Should be localized to front page --> 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"> </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"> </script>
         
         <script src="/xmlui/themes/VU2/scripts/nivo.js" type="text/javascript">&#160;</script>
         <script src="/xmlui/themes/VU2/scripts/nivo-start.js" type="text/javascript">&#160;</script>

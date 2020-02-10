@@ -86,6 +86,21 @@
                 <map:parameter name="theme.path" value="{global:theme-path}/"/>
                 <map:parameter name="theme.name" value="{global:theme-name}/"/>
             </map:transform>
+            
+            <!-- This adds all Stylesheets (CSS) and Javascript (js) into the DRI XML, 
+                 so that they are accessible to the XSLTs -->
+            <!-- 3 different IncludePageMeta transformers to ensure that the
+                 stylesheets end up in the correct order-->
+            <map:transform type="IncludePageMeta">
+                <map:parameter name="stylesheet.screen#1" value="styles/main.css"/>
+                <map:parameter name="stylesheet.screen#2" value="styles/nivo-default/default.css"/>
+                <map:parameter name="stylesheet.screen#3" value="styles/nivo-slider.css"/> 
+                <map:parameter name="stylesheet.screen#4" value="styles/categories.css"/> 
+            </map:transform>
+
+            <map:transform type="IncludePageMeta">
+                <map:parameter name="javascript" value="lib/js/jquery-ui-1.8.15.custom.min.js"/>
+            </map:transform>    
 
             <!-- Debugging output (this is only called when ?XML is passed on querystring) -->
             <!-- It allows developers to view the final DRI XML, in order to build/debug theme XSLTs -->

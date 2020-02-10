@@ -20,10 +20,9 @@
 	
 	<xsl:template name="page_about"	>
 		<div>
-			<h1>About DiscoverArchive</h1>
+			<h1>About the Vanderbilt University Institutional Repository</h1>
 
-			<p>DiscoverArchive is a digital repository providing open access to scholarly research at Vanderbilt University. Faculty, students and staff at Vanderbilt may contribute materials. This service, provided by the library, supports the university in the preservation and dissemination of research.</p>
-			<h2>Services</h2>
+			<p>The University Institutional Repository (VUIR) is a digital repository providing open access to scholarly research at Vanderbilt University. Faculty, students and staff at Vanderbilt may contribute materials. This service, provided by the library, supports the university in the preservation and dissemination of research.bi</p>
 
 			<p>Services provided by library specialists:</p>
 

@@ -41,12 +41,16 @@ html, body {height: 100%;}
 
 /*** header ***/
 header{
-    background: #505050 url("../../images/bg-header.jpg") repeat-x scroll 0 0;
+    /* background: #505050 url("../images/bg-header.jpg") repeat-x scroll 0 0;  */
     border-top: 2px solid $gold; 
-    color: white;   
+    color: white;  
+    .navbar-default {background-color: #000;}
 }
 
-.navbar-brand {height: auto; }
+.navbar-brand {
+    height: auto;
+    > img {max-width: 100%;} 
+}
 
 @media screen and (max-width: 768px) {
     .nav >li >a {padding: 0; }
@@ -74,7 +78,11 @@ header{
 #ds-body {padding-right: 20px; }     
 #ds-options {padding: 20px 14px 0; }
 
-.breadcrumb > li + li:before{ content: " > "; }
+
+.breadcrumb {
+    border-bottom: 0px;
+    > li + li:before{ content: " > "; }
+}
 
 .list-group-item-heading { font-weight: bold; }
 

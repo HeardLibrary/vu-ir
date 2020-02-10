@@ -51,7 +51,6 @@
 
     <!-- add static pages --> 
     <xsl:import href="about.xsl" />
-    <!-- <xsl:import href="404.xsl" /> -->
     <xsl:import href="categories.xsl" />
     
     <xsl:output indent="yes"/>
@@ -66,9 +65,9 @@
     <!-- Adds a slider to the front page -->
     <xsl:template name="add_frontpage_slider" match="dri:div[@id='file.news.div.news']">
         <!-- Adds custom language to the font page. Does the news feed need to be changed elsewhere? -->
-        <h1>Welcome to DiscoverArchive!</h1>
+        <h1>Welcome to the Vanderbilt University Institutional Repository!</h1>
         <br/>
-        <p>DiscoverArchive, Vanderbilt University's digital repository, provides open access to faculty scholarly work, preserves historically significant digital materials, and supports the university in scholarly communications and the dissemination of knowledge. Faculty, researchers, staff and students are invited to contribute digital materials to ensure long term preservation and access. <a href="/page/about">Learn more....</a></p>
+        <p>The Vanderbilt University Institutional Repository (VUIR) provides open access to faculty scholarly work, preserves historically significant digital materials, and supports the university in scholarly communications and the dissemination of knowledge. Faculty, researchers, staff and students are invited to contribute digital materials to ensure long term preservation and access. <a href="/page/about">Learn more....</a></p>
         
         <div class="slider-wrapper">
             <div id="slider" class="nivoSlider theme-default">
@@ -94,10 +93,10 @@
 
     <!-- Adds explanatory text to login page -->
     <xsl:template name="sign-in-text" match="dri:div[@id='aspect.eperson.LDAPLogin.div.login']/dri:head">
-        <h1>Sign In to DiscoverArchive</h1>
+        <h1>Sign In to Vanderbilt University Institutional Repository</h1>
         <br/>
-        <p>Please use your VUNetID and ePassword to sign in to DiscoverArchive.</p>
-        <p>If you previously used a different ID and password to access DiscoverArchive, you will need to reauthenticate yourself with your VUNetID. Please <a href="mailto:discoverarchive@library.vanderbilt.edu">contact us</a> if you have questions or experience connectivity problems.</p>
+        <p>Please use your VUNetID and ePassword to sign in to Vanderbilt University Institutional Repository.</p>
+        <p>If you previously used a different ID and password to access DiscoverArchive, you will need to reauthenticate yourself with your VUNetID. Please <a href="mailto:vuir@list.vanderbilt.edu">contact us</a> if you have questions or experience connectivity problems.</p>
         <hr/>
         <h1>Authenticate with your VUNetID</h1>
         <xsl:apply-templates select="dri:list"/>
