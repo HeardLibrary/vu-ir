@@ -44,7 +44,6 @@
     <xsl:template name="itemSummaryList-DIM">
         <xsl:variable name="itemWithdrawn" select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim/@withdrawn" />
     
-       
         <xsl:variable name="href">
             <xsl:choose>
                 <xsl:when test="$itemWithdrawn">
@@ -56,9 +55,10 @@
             </xsl:choose>
         </xsl:variable>
 
-        <xsl:variable name="emphasis" select="confman:getProperty('xmlui.theme.mirage.item-list.emphasis')"/>
+       <!-- no such value, bypass it ... --> 
+       <!--  <xsl:variable name="emphasis" select="confman:getProperty('xmlui.theme.mirage.item-list.emphasis')"/>
         <xsl:choose>
-            <xsl:when test="'file' = $emphasis">
+            <xsl:when test="'file' = $emphasis">  --> 
 
 
                 <div class="item-wrapper row">
@@ -76,12 +76,12 @@
                     </div>
 
                 </div>
-            </xsl:when>
+           <!-- </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
                                      mode="itemSummaryList-DIM-metadata"><xsl:with-param name="href" select="$href"/></xsl:apply-templates>
             </xsl:otherwise>
-        </xsl:choose>
+        </xsl:choose> --> 
     </xsl:template>
 
     <!--handles the rendering of a single item in a list in file mode-->

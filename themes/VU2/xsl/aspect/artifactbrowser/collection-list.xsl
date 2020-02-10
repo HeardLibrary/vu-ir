@@ -107,11 +107,12 @@
     <!-- A collection rendered in the detailList pattern. Encountered on the item view page as
         the "this item is part of these collections" list -->
     <xsl:template name="collectionItemPageSummaryList-DIM">
+        testing 
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
         <a href="{@OBJID}">
             <xsl:choose>
 	            <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
-	                <xsl:value-of select="$data/dim:field[@element='title'][1]"/>
+                    <xsl:value-of select="$data/dim:field[@element='title'][1]"/>
 	            </xsl:when>
 	            <xsl:otherwise>
 	                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
