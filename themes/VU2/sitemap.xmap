@@ -99,7 +99,9 @@
             </map:transform>
 
             <map:transform type="IncludePageMeta">
-                <map:parameter name="javascript" value="lib/js/jquery-ui-1.8.15.custom.min.js"/>
+               <!-- <map:parameter name="javascript.#1" value="lib/js/jquery-ui-1.8.15.custom.min.js"/> -->
+                <map:parameter name="javascript.#1" value="scripts/nivo.js"/>
+                <map:parameter name="javascript.#2" value="scripts/nivo-start.js"/>
             </map:transform>    
 
             <!-- Debugging output (this is only called when ?XML is passed on querystring) -->

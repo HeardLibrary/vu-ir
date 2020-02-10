@@ -904,8 +904,6 @@
 
     <xsl:template name="addJavascript">
 
-        <!--TODO concat & minify!-->
-
         <script>
            <xsl:text>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='</xsl:text><xsl:value-of select="$context-path"/><xsl:text>';window.DSpace.theme_path='</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>';</xsl:text>  
         </script>
@@ -923,6 +921,9 @@
         <xsl:for-each select="document($scriptURL)/scripts/script">
             <script src="{$theme-path}{@src}">&#160;</script>
         </xsl:for-each>   
+
+        <!-- add bootstrap javascript -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"> </script>
 
         <!-- Add javascipt specified in DRI -->
         <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][not(@qualifier)]">
@@ -964,14 +965,7 @@
             <xsl:call-template name="choiceLookupPopUpSetup"/>
         </xsl:if>
 
-        <!-- adds support for slider on front page. Should be localized to front page --> 
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"> </script>
-        
-        <script src="/xmlui/themes/VU2/scripts/nivo.js" type="text/javascript">&#160;</script>
-        <script src="/xmlui/themes/VU2/scripts/nivo-start.js" type="text/javascript">&#160;</script>
-
-
+ 
         <!-- Add a google analytics script if the key is present -->
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
             <script><xsl:text>

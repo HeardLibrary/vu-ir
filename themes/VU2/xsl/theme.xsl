@@ -40,8 +40,8 @@
     <xsl:import href="aspect/general/vocabulary-support.xsl"/>
     <!--<xsl:import href="xsl/aspect/administrative/administrative.xsl"/>-->
     <xsl:import href="aspect/artifactbrowser/common.xsl"/>
-    <xsl:import href="aspect/artifactbrowser/item-list.xsl"/>
-    <xsl:import href="aspect/artifactbrowser/item-view.xsl"/>
+    <xsl:import href="aspect/artifactbrowser/item-list.vu2.xsl"/>
+    <xsl:import href="aspect/artifactbrowser/item-view.vu2.xsl"/>
     <xsl:import href="aspect/artifactbrowser/community-list.xsl"/>
     <xsl:import href="aspect/artifactbrowser/collection-list.xsl"/>
     <xsl:import href="aspect/artifactbrowser/browse.xsl"/>
@@ -64,21 +64,26 @@
     
     <!-- Adds a slider to the front page -->
     <xsl:template name="add_frontpage_slider" match="dri:div[@id='file.news.div.news']">
-        <!-- Adds custom language to the font page. Does the news feed need to be changed elsewhere? -->
+        <!-- Adds custom language to the font page. -->
         <h1>Welcome to the Vanderbilt University Institutional Repository!</h1>
         <br/>
         <p>The Vanderbilt University Institutional Repository (VUIR) provides open access to faculty scholarly work, preserves historically significant digital materials, and supports the university in scholarly communications and the dissemination of knowledge. Faculty, researchers, staff and students are invited to contribute digital materials to ensure long term preservation and access. <a href="/page/about">Learn more....</a></p>
         
+        <!-- To Do: generating theme path dynamically 
+          <xsl:value-of select="$pagemeta/dri:metadata[@element='theme'][@qualifier='path']"/>
+        -->        
         <div class="slider-wrapper">
             <div id="slider" class="nivoSlider theme-default">
-                <a href="/community-list"><img src="/themes/VU2/images/vanderbilt.jpg" alt=""  title="A community of scholars..." /></a>
-                <a href="/handle/1803/3706"><img src="/themes/VU2/images/artssciences.jpg" alt=""  title="Open Access at the College of Arts &amp; Sciences" /></a>
-                <a href="/handle/1803/5546"><img src="/themes/VU2/images/law.jpg" alt=""  title="Open Access at Vanderbilt Law School" /></a>
-                <a href="/handle/1803/244"><img src="/themes/VU2/images/blair.jpg" alt=""  title="Open Access at the Blair School of Music" /></a>
-                <a href="/handle/1803/5548"><img src="/themes/VU2/images/peabody.jpg" alt=""  title="Open Access at the Peabody College of Education and Human Development" /></a>
+
+                <a href="/community-list">
+                    <img src="/themes/VU2/images/vanderbilt.jpg" alt=""  title="A community of scholars..." /></a>
+                <a href="/handle/1803/3706"><img src="themes/VU2/images/artssciences.jpg" alt="College of Arts &amp; Sciences"  title="Open Access at the College of Arts &amp; Sciences" /></a>
+                <a href="/handle/1803/5546"><img src="/themes/VU2/images/law.jpg" alt="Vanderbilt Law School"  title="Open Access at Vanderbilt Law School" /></a>
+                <a href="/handle/1803/244"><img src="/themes/VU2/images/blair.jpg" alt="Blair School of Music"  title="Open Access at the Blair School of Music" /></a>
+                <a href="/handle/1803/5548"><img src="/themes/VU2/images/peabody.jpg" alt="Peabody College of Education"  title="Open Access at the Peabody College of Education and Human Development" /></a>
                 <a href="/handle/1803/1269"><img src="/themes/VU2/images/divinity.jpg" alt=""  title="Open Access at Vanderbilt Divinity School" /></a>
-                <a href="/handle/1803/5547"><img src="/themes/VU2/images/owen.jpg" alt=""  title="Open Access at the Owen Graduate School of Management" /></a>
-                <a href="/handle/1803/610"><img src="/themes/VU2/images/library-rotation.jpg" alt="" title="...served by a community of librarians"/></a>
+                <a href="/handle/1803/5547"><img src="/themes/VU2/images/owen.jpg" alt="Owen Graduate School of Management"  title="Open Access at the Owen Graduate School of Management" /></a>
+                <a href="/handle/1803/610"><img src="/themes/VU2/images/library-rotation.jpg" alt="Community of Librarians" title="...served by a community of librarians"/></a>
             </div>
         </div>
         <div>
