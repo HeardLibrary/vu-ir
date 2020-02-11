@@ -42,9 +42,9 @@
     can be configured with the property 'xmlui.theme.mirage.item-list.emphasis' in dspace.cfg-->
 
     <xsl:template name="itemSummaryList-DIM">
+        <xsl:text> Called here.. </xsl:text>
         <xsl:variable name="itemWithdrawn" select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim/@withdrawn" />
-    
-       
+
         <xsl:variable name="href">
             <xsl:choose>
                 <xsl:when test="$itemWithdrawn">
@@ -56,7 +56,8 @@
             </xsl:choose>
         </xsl:variable>
 
-        <xsl:variable name="emphasis" select="confman:getProperty('xmlui.theme.mirage.item-list.emphasis')"/>
+        <xsl:variable name="emphasis" select="confman:getProperty('xmlui.theme.VU2.item-list.emphasis')"/>
+        emphasis = <xsl:value-of select='$emphasis'/>
         <xsl:choose>
             <xsl:when test="'file' = $emphasis">
 
@@ -78,6 +79,7 @@
                 </div>
             </xsl:when>
             <xsl:otherwise>
+                <xsl:text>Otherwise</xsl:text>
                 <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
                                      mode="itemSummaryList-DIM-metadata"><xsl:with-param name="href" select="$href"/></xsl:apply-templates>
             </xsl:otherwise>
@@ -345,7 +347,7 @@
 
         <!-- Generate the info about the item from the metadata section -->
         <xsl:template match="dim:dim" mode="itemSummaryList-DIM">
-            <xsl:variable name="itemWithdrawn" select="@withdrawn" />
+             <xsl:variable name="itemWithdrawn" select="@withdrawn" />
             <div class="artifact-description">
                 <div class="artifact-title">
                     <xsl:element name="a">

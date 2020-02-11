@@ -801,14 +801,14 @@
               </ul>
             </section>
             <section class="vu-footer__map col-sm-6 clearfix">
-              <div class="embed-responsive embed-responsive-16by9">
+              <div class="embed-responsive embed-responsive-16by9">  
                 <h4 class="vu-footer__title">Support the Jean and Alexander Heard Libraries</h4>
                 <div class="row">
                   <div class="col-xs-3 col-sm-4 col-lg-3">
                     <a href="//webapp.mis.vanderbilt.edu/olga/pub/landing?appealCode=Q13A8" class="give-now">
                         <img src="//www.library.vanderbilt.edu/images/giveNow-ccc.png" alt="Support the Library...Give Now" title="Support the Library...Give Now" />
                     </a> 
-                  </div>
+                </div> 
                   <p class="col-xs-12 col-sm-8 col-lg-9">Gifts to the Libraries support the learning and research needs of the entire Vanderbilt community. <a href="//www.library.vanderbilt.edu/giving/">Learn more about giving to the Libraries.</a>
                   </p>
                 </div>

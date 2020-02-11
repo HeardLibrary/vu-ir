@@ -66,7 +66,29 @@ header{
 }    
 
 
-/*** footer: see _footer.scss ***/
+/*** footer, override out-of-box styels  ***/
+footer {
+    &> .container {
+        padding: 0;
+        border: none; 
+    }
+
+    .row >div {padding-top: 0; border: none;}
+
+    .btn-primary {
+        background-color:#d8ab4c;
+        border: #d8ab4c;
+        color: #000;
+        &:hover {
+          background-color: #c6942b;
+          color: #000; }
+    }
+
+   .embed-responsive.embed-responsive-16by9 {
+    padding-bottom: 0;
+    }
+} 
+
 
 /***** DSpace element customization   ***/
 

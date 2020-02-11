@@ -8,8 +8,8 @@
 
 @import "compass";
 /* variables    */
-/* @import "classic_mirage_color_scheme/bootstrap_variables";   */
-@import "_variables"; 
+@import "classic_mirage_color_scheme/bootstrap_variables";   
+@import "variables"; 
 
 /******* Bootstrap    *******/
 @function twbs-font-path($font-name) {
