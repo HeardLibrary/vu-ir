@@ -107,7 +107,6 @@
     <!-- A collection rendered in the detailList pattern. Encountered on the item view page as
         the "this item is part of these collections" list -->
     <xsl:template name="collectionItemPageSummaryList-DIM">
-        testing 
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
         <a href="{@OBJID}">
             <xsl:choose>
