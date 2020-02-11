@@ -9945,131 +9945,136 @@ header .navbar-default {
 }
 
 /*** footer, override out-of-box styels  ***/
-/* line 71, _style.scss */
+/* line 70, _style.scss */
 footer > .container {
   padding: 0;
   border: none;
 }
-/* line 76, _style.scss */
+/* line 75, _style.scss */
 footer .row > div {
   padding-top: 0;
   border: none;
 }
-/* line 78, _style.scss */
+/* line 77, _style.scss */
 footer .btn-primary {
   background-color: #d8ab4c;
   border: #d8ab4c;
   color: #000;
 }
-/* line 82, _style.scss */
+/* line 81, _style.scss */
 footer .btn-primary:hover {
   background-color: #c6942b;
   color: #000;
 }
-/* line 87, _style.scss */
+/* line 86, _style.scss */
 footer .embed-responsive.embed-responsive-16by9 {
   padding-bottom: 0;
 }
 
 /***** DSpace element customization   ***/
-/* line 96, _style.scss */
+/* line 95, _style.scss */
 #main-container .row-offcanvas {
   background-color: #fff;
 }
-/* line 97, _style.scss */
+/* line 96, _style.scss */
 #main-container #sidebar {
   z-index: 1000;
 }
 
-/* line 100, _style.scss */
+/* line 99, _style.scss */
 #ds-body {
   padding-right: 20px;
 }
+/* line 102, _style.scss */
+#ds-body .collection {
+  /* override vu-main style */
+  width: 100%;
+}
 
-/* line 101, _style.scss */
+/* line 107, _style.scss */
 #ds-options {
   padding: 20px 14px 0;
 }
 
-/* line 104, _style.scss */
+/* line 110, _style.scss */
 .breadcrumb {
   border-bottom: 0px;
 }
-/* line 106, _style.scss */
+/* line 112, _style.scss */
 .breadcrumb > li + li:before {
   content: " > ";
 }
 
-/* line 109, _style.scss */
+/* line 115, _style.scss */
 .list-group-item-heading {
   font-weight: bold;
 }
 
-/* line 111, _style.scss */
+/* line 117, _style.scss */
 .page-header {
   border-bottom: none;
 }
 
-/* line 112, _style.scss */
+/* line 118, _style.scss */
 .author-entry {
   display: inline;
 }
 
-/* line 113, _style.scss */
+/* line 119, _style.scss */
 .author-entry + .author-entry:before {
   content: ";";
 }
 
-/* line 115, _style.scss */
+/* line 121, _style.scss */
 .item-page-field-wrapper h4 {
   border-bottom: 1px solid #d8e8ed;
 }
 
-/* line 117, _style.scss */
+/* line 123, _style.scss */
 .simple-item-view-collections ul.ds-referenceSet-list {
   list-style: disc outside none;
 }
 
-/* line 119, _style.scss */
+/* line 125, _style.scss */
 .item-summary-view-metadata {
   padding: 0 30px;
   margin-top: 10px;
   margin-bottom: 30px;
 }
-/* line 123, _style.scss */
+/* line 129, _style.scss */
 .item-summary-view-metadata h2 {
   color: #d8ab4c;
   text-align: justify;
   font-size: 140%;
   font-weight: bold;
 }
-/* line 125, _style.scss */
+/* line 131, _style.scss */
 .item-summary-view-metadata .simple-item-view-show-full {
   padding: 20px 0;
 }
-/* line 126, _style.scss */
+/* line 132, _style.scss */
 .item-summary-view-metadata .item-page-field-wrapper {
   margin-bottom: 0;
 }
-/* line 127, _style.scss */
+/* line 133, _style.scss */
 .item-summary-view-metadata .underline-border {
   border-bottom: 1px solid #d8e8ed;
   margin-bottom: 20px;
   padding-bottom: 2px;
 }
-/* line 128, _style.scss */
+/* line 134, _style.scss */
 .item-summary-view-metadata .author-entry {
   text-align: justify;
   font-weight: bold;
   font-size: 120%;
 }
 
-/* line 132, _style.scss */
+/* line 138, _style.scss */
 .dl-horizontal dd {
   width: auto;
 }
 
-/* line 133, _style.scss */
+/* line 139, _style.scss */
 .dl-horizontal dt {
   margin-left: 5px;
 }

@@ -65,7 +65,6 @@ header{
     padding: 0;
 }    
 
-
 /*** footer, override out-of-box styels  ***/
 footer {
     &> .container {
@@ -97,7 +96,14 @@ footer {
     #sidebar {z-index: 1000; }
 }
 
-#ds-body {padding-right: 20px; }     
+#ds-body {
+    padding-right: 20px; 
+   
+   .collection { /* override vu-main style */ 
+    width: 100%; 
+    }  
+}
+     
 #ds-options {padding: 20px 14px 0; }
 
 
@@ -131,4 +137,5 @@ footer {
 
 .dl-horizontal dd {width: auto; }
 .dl-horizontal dt {margin-left: 5px;}
+
 

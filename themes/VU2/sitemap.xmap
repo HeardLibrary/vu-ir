@@ -93,14 +93,14 @@
                  stylesheets end up in the correct order-->
             <map:transform type="IncludePageMeta">
                 <map:parameter name="stylesheet.screen#1" value="styles/main.css"/>
-                <map:parameter name="stylesheet.screen#2" value="styles/nivo-default/default.css"/>
+                <map:parameter name="stylesheet.screen#2" value="styles/nivo_default/default.css"/>
                 <map:parameter name="stylesheet.screen#3" value="styles/nivo-slider.css"/> 
                 <map:parameter name="stylesheet.screen#4" value="styles/categories.css"/> 
             </map:transform>
 
             <map:transform type="IncludePageMeta">
                <!-- <map:parameter name="javascript.#1" value="lib/js/jquery-ui-1.8.15.custom.min.js"/> -->
-                <map:parameter name="javascript.#1" value="scripts/nivo.js"/>
+                <map:parameter name="javascript.#1" value="scripts/jquery.nivo.slider.js"/>
                 <map:parameter name="javascript.#2" value="scripts/nivo-start.js"/>
             </map:transform>    
 

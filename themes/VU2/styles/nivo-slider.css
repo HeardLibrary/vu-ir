@@ -1,5 +1,5 @@
 /*
- * jQuery Nivo Slider v3.1
+ * jQuery Nivo Slider v3.2
  * http://nivo.dev7studios.com
  *
  * Copyright 2012, Dev7studios
@@ -7,7 +7,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
  
-/* The Nivo Slider is used in home page, styles included in the head section */
+/* The Nivo Slider styles */
 .nivoSlider {
 	position:relative;
 	width:100%;
@@ -19,7 +19,6 @@
 	top:0px;
 	left:0px;
 	max-width: none;
-	border-radius: 10px 10px 0 0;
 }
 .nivo-main-image {
 	display: block !important;
@@ -39,6 +38,9 @@
 	margin:0;
 	z-index:6;
 	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
 }
 /* The slices and boxes in the Slider */
 .nivo-slice {

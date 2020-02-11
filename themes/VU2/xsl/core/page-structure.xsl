@@ -911,16 +911,14 @@
         <!--inject scripts.html containing all the theme specific javascript references
         that can be minified and concatinated in to a single file or separate and untouched
         depending on whether or not the developer maven profile was active-->
-        <xsl:variable name="scriptURL">
+        <!-- <xsl:variable name="scriptURL">
             <xsl:text>cocoon://themes/</xsl:text> 
-            <!--we can't use $theme-path, because that contains the context path,
-            and cocoon:// urls don't need the context path-->
             <xsl:value-of select="$pagemeta/dri:metadata[@element='theme'][@qualifier='path']"/>
             <xsl:text>scripts-dist.xml</xsl:text>
         </xsl:variable>
         <xsl:for-each select="document($scriptURL)/scripts/script">
             <script src="{$theme-path}{@src}">&#160;</script>
-        </xsl:for-each>   
+        </xsl:for-each>   --> 
 
         <!-- add bootstrap javascript -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"> </script>
