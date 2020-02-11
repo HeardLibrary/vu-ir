@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    About: This is the "About" page for DSpace
-    Author: Clifford Anderson 
+    About: This is the "About" page for VUIR
+    Created by: Clifford Anderson 
 
 -->
 
@@ -36,19 +36,19 @@
 				<li>Research copyright and seek permissions</li>
 			</ul>
 
-			<p>Contact the coordinator: <a href="mailto:discoverarchive@library.vanderbilt.edu">discoverarchive@library.vanderbilt.edu</a></p>
+			<p>Contact the coordinator: <a href="mailto:vuir@list.vanderbilt.edu">vuir@list.vanderbilt.edu</a></p>
 
 			<h2>Registration</h2>
 
-			<p>Users can search, browse, and access items in DiscoverArchive without logging in. However to access items restricted to the Vanderbilt community and to submit items to the repository, users must register. Click on &quot;Register&quot; to register your VUNET ID with the institutional repository.</p>
+			<p>Users can search, browse, and access items in Vanderbilt University Institutional Repository without logging in. However to access items restricted to the Vanderbilt community and to submit items to the repository, users must register. Click on &quot;Register&quot; to register your VUNET ID with the institutional repository.</p>
 
 			<h2>Procedure for submitting</h2>
 
-			<p>Permission must be obtained to submit material to a collection. Contact the <a href="mailto:discoverarchive@library.vanderbilt.edu">repository coordinator</a> to request permissions to submit items to the repository. The coordinator will reply to you to approve your request, provide permission to submit to relevant collections, and supply any needed submission instructions.</p>
+			<p>Permission must be obtained to submit material to a collection. Contact the <a href="mailto:vuir@list.vanderbilt.edu">repository coordinator</a> to request permissions to submit items to the repository. The coordinator will reply to you to approve your request, provide permission to submit to relevant collections, and supply any needed submission instructions.</p>
 
 			<h2>Copyright</h2>
 
-			<p>If you retain copyright to your work you can deposit it in DiscoverArchive. By depositing your work in DiscoverArchive you will significantly increase access while ensuring its preservation.</p>
+			<p>If you retain copyright to your work you can deposit it in Vanderbilt University Institutional Repository. By depositing your work in Vanderbilt University Institutional Repository you will significantly increase access while ensuring its preservation.</p>
 
 			<ul>
 				<li><p>SPARC Addendum: Retain copyright to your research by using the SPARC (Scholarly Publishing &amp; Academic Resources Coalition) <a href="http://www.arl.org/sparc/author/addendum.shtml">Author Addendum</a> to standard publishing agreements.</p></li>
@@ -56,19 +56,19 @@
 				<li><p>Self-Archiving: If you do not retain copyright or are unsure if copyright has, over time, reverted back to you, please contact the publisher. Many publishers post policies online concerning what is allowed to be published in digital repositories. This can be referred to as &quot;self-archiving&quot; policies. <a href="http://www.sherpa.ac.uk/">SHERPA</a> is a useful resource to check publisher policies and includes databases of publisher copyright and archiving policies (<a href="http://www.sherpa.ac.uk/romeo/">RoMEO</a>) and research funders archiving mandates and guidelines (<a href="http://www.sherpa.ac.uk/juliet/index.php">JULIET</a>).</p></li>
 			</ul>
 
-			<p>If you would like to publish in DiscoverArchive and need help determining copyright please contact the institutional repository coordinator for assistance.</p>
+			<p>If you would like to publish in Vanderbilt University Institutional Repository and need help determining copyright please contact the institutional repository coordinator for assistance.</p>
 
 			<h2>License</h2>
 
-			<p>When depositing in DiscoverArchive you will be prompted to agree to a <a href="/handle/1803/2820">non-exclusive distribution license</a> granting Vanderbilt University the right to reproduce, convert and/or distribute submissions.</p>
+			<p>When depositing in Vanderbilt University Institutional Repository you will be prompted to agree to a <a href="/handle/1803/2820">non-exclusive distribution license</a> granting Vanderbilt University the right to reproduce, convert and/or distribute submissions.</p>
 
 			<blockquote>
 				<p>Note to those who want to contribute papers or digital content on behalf of others:
-To contribute, or publish, digital content on behalf of another author, please obtain an agreement to the non-exclusive distribution license before submitting to DiscoverArchive. This can be done by printing out the license for the author(s) to sign. An alternative is to email the wording of the license to the author and receive back an acknowledgement of agreement. In either case the agreement must be retained on file, in either digital or paper format, in the center or department.</p>
+To contribute, or publish, digital content on behalf of another author, please obtain an agreement to the non-exclusive distribution license before submitting to Vanderbilt University Institutional Repository. This can be done by printing out the license for the author(s) to sign. An alternative is to email the wording of the license to the author and receive back an acknowledgement of agreement. In either case the agreement must be retained on file, in either digital or paper format, in the center or department.</p>
 			</blockquote>
 			<h2>Formats and Preservation</h2>
 
-			<p>All digital formats are accepted in DiscoverArchive. While DiscoverArchive accepts all formats, there are three levels of preservation. </p>
+			<p>All digital formats are accepted in Vanderbilt University Institutional Repository. While Vanderbilt University Institutional Repository accepts all formats, there are three levels of preservation. </p>
 
 			<ul>
 				<li><p>&quot;Supported formats&quot; will be functionally preserved using either format migration or emulation techniques. Examples include Microsoft Word DOC and DOCX, HTML, Adobe PDF, JPEG, TIFF, RTX/RTF(rich text), SGML, XML, and AIFF.</p></li>
@@ -78,11 +78,11 @@ To contribute, or publish, digital content on behalf of another author, please o
 			
 			<h2>Removing or Updating Materials</h2>
 
-			<p>DiscoverArchive is a permanent location for digital materials and each item is assigned a permanent URI. The author and copyright holder of digital content deposited in DiscoverArchive can request that repository managers remove an item completely or replace it with an updated version. It is also possible to add the updated version along with the original item to serve as a record of research.</p>
+			<p>Vanderbilt University Institutional Repository is a permanent location for digital materials and each item is assigned a permanent URI. The author and copyright holder of digital content deposited in Vanderbilt University Institutional Repository can request that repository managers remove an item completely or replace it with an updated version. It is also possible to add the updated version along with the original item to serve as a record of research.</p>
 
 			<h2>Questions?</h2>
 
-			<p>Please contact the coordinator with any questions at <a href="mailto:discoverarchive@library.vanderbilt.edu">discoverarchive@library.vanderbilt.edu</a>. Thank you!</p>
+			<p>Please contact the coordinator with any questions at <a href="mailto:vuir@list.vanderbilt.edu">vuir@list.vanderbilt.edu</a>. Thank you!</p>
 		</div>
 	</xsl:template>
 
