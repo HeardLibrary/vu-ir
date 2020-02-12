@@ -10021,7 +10021,7 @@ footer .embed-responsive.embed-responsive-16by9 {
 }
 
 /* line 119, _style.scss */
-.author-entry + .author-entry:before {
+.author-entry:not(:last-child):after {
   content: ";";
 }
 

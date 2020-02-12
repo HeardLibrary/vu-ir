@@ -499,7 +499,7 @@
                                     <!-- hardcode the home link --> 
                                     <!-- <li>
                                         <i class="glyphicon glyphicon-home" aria-hidden="true">&#160;</i>
-                                        <a href="/">DiscoverArchive Home</a>
+                                        <a href="/">VUIR Home</a>
                                     </li> -->
                                 </ul>    
                             </xsl:otherwise>

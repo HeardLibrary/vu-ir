@@ -24,7 +24,7 @@
 					<br/>
 					<h5>We're sorry! We did not find the page that you requested.</h5>
 					<br/>
-					<p>Click <a href="/">here</a> to return to DiscoverArchive or <a href="http://www.library.vanderbilt.edu">here</a> to return to the University Library website.</p>
+					<p>Click <a href="/">here</a> to return to the Institutional Repository or <a href="http://www.library.vanderbilt.edu">here</a> to return to the University Library website.</p>
 				</div>
 			</div>
 		</div>

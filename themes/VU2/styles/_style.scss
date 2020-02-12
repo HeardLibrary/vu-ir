@@ -116,7 +116,7 @@ footer {
 
 .page-header{ border-bottom: none;  }  
 .author-entry{ display: inline; }
-.author-entry + .author-entry:before {content: ";"; }
+.author-entry:not(:last-child):after {content: ";"};
 
 .item-page-field-wrapper h4 {border-bottom: 1px solid #d8e8ed;  }
 
