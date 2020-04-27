@@ -54,11 +54,6 @@
             <transformer name="strip-namespaces" src="org.apache.cocoon.transformation.StripNameSpacesTransformer"/>
         </map:transformers>
 
-        <map:actions>
-            <map:action name="ContextAbortAction" src="org.dspace.app.xmlui.cocoon.ContextAbortAction" />
-        </map:actions>
-
-
         <map:serializers>
             <map:serializer name="html-no-doctype" logger="sitemap.serializer.xhtml"
                             src="org.apache.cocoon.serialization.HTMLSerializer"
@@ -90,8 +85,24 @@
             <map:transform type="IncludePageMeta">
                 <map:parameter name="theme.path" value="{global:theme-path}/"/>
                 <map:parameter name="theme.name" value="{global:theme-name}/"/>
-                <map:parameter name="curRequestURI" value="{1}"/>
             </map:transform>
+            
+            <!-- This adds all Stylesheets (CSS) and Javascript (js) into the DRI XML, 
+                 so that they are accessible to the XSLTs -->
+            <!-- 3 different IncludePageMeta transformers to ensure that the
+                 stylesheets end up in the correct order-->
+            <map:transform type="IncludePageMeta">
+                <map:parameter name="stylesheet.screen#1" value="styles/main.css"/>
+                <map:parameter name="stylesheet.screen#2" value="styles/nivo_default/default.css"/>
+                <map:parameter name="stylesheet.screen#3" value="styles/nivo-slider.css"/> 
+                <map:parameter name="stylesheet.screen#4" value="styles/categories.css"/> 
+            </map:transform>
+
+            <map:transform type="IncludePageMeta">
+               <!-- <map:parameter name="javascript.#1" value="lib/js/jquery-ui-1.8.15.custom.min.js"/> -->
+                <map:parameter name="javascript.#1" value="scripts/jquery.nivo.slider.js"/>
+                <map:parameter name="javascript.#2" value="scripts/nivo-start.js"/>
+            </map:transform>    
 
             <!-- Debugging output (this is only called when ?XML is passed on querystring) -->
             <!-- It allows developers to view the final DRI XML, in order to build/debug theme XSLTs -->
@@ -126,24 +137,10 @@
         -->
         <map:component-configurations>
             <global-variables>
-                <theme-path>vu2020R</theme-path>
-                <theme-name>vu2020R</theme-name>
+                <theme-path>VU2</theme-path>
+                <theme-name>VU2</theme-name>
             </global-variables>
         </map:component-configurations>
-
-        <map:pipeline internal-only="true">
-            <map:parameter name="expires" value="access plus 1 hours"/>
-
-            <!--
-                 Bypass the file extension check for the vu2020R theme's scripts-dist.xml file.
-                 That way, we don't have to whitelist all .xml files just to make JS loading work.
-            -->
-            <map:match pattern="themes/{global:theme-name}/scripts-dist.xml">
-                <map:read type="ThemeResourceReader" src="scripts-dist.xml">
-                    <map:parameter name="bypass-whitelist" value="true"/>
-                </map:read>
-            </map:match>
-        </map:pipeline>
 
         <!--
              Caching Pipeline: This caching pipeline handles access to static content (css, js, etc)
@@ -173,7 +170,7 @@
 
             <!-- Static content -->
             <map:match pattern="themes/*/**">
-                <map:read type="ThemeResourceReader" src="{2}"/>
+                <map:read src="{2}"/>
             </map:match>
         </map:pipeline>
 
@@ -212,19 +209,18 @@
         -->
         <map:handle-errors>
             <!-- Step 1: Tell Cocoon to generate an XML formatted exception message -->
-            <map:generate type="exception"/>
+            <map:generate type="exception" src="cocoon://DRI/exception" />
 
             <!-- Step 2: Transform that Cocoon XML exception into valid DRI (using exception2dri.xslt)-->
             <map:transform src="../../exception2dri.xslt">
-                <map:parameter name="contextPath" value="{request:contextPath}"/>
-            </map:transform>
+                <map:parameter name="contextPath" value="{request:contextPath}"/>   
+            </map:transform> 
 
             <!-- Step 3: Transform that DRI formatted exception into XHTML (using our Theme) -->
-            <map:call resource="transform-to-xhtml"/>
+            <map:call resource="transform-to-xhtml"/>   
 
-            <!-- Step 4: Serialize XHTML page to user's brower. Based on the type of error,
-                         provide a different HTTP response code. -->
-            <map:select type="exception">
+            <!-- Step 4: Serialize XHTML page to user's brower. Based on the type of error,provide a different HTTP response code. -->
+            <map:select type="exception"> 
                 <!-- HTTP 400 Bad Request -->
                 <map:when test="bad-request">
                     <map:serialize type="html-no-doctype" status-code="400"/>
@@ -235,9 +231,8 @@
                 </map:when>
                 <!-- All other errors (HTTP 500 Internal Server Error) -->
                 <map:otherwise>
-                    <map:act type="ContextAbortAction"/>
                     <map:serialize type="html-no-doctype" status-code="500"/>
-                </map:otherwise>
+                </map:otherwise> 
             </map:select>
         </map:handle-errors>
     </map:pipelines>

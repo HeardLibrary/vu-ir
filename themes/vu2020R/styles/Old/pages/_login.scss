@@ -1,0 +1,11 @@
+.login {
+  #user-login {
+    margin: 0 auto 2em;
+    max-width: 350px;
+    width: 80%;
+
+    #{$all-text-inputs} {
+      width: 100%;
+    }
+  }
+}
