@@ -109,9 +109,6 @@
                                         <div class="col-xs-12 col-sm-12 col-md-9 main-content">
                                             <xsl:apply-templates select="*[not(self::dri:options)]"/>
 
-                                            <div class="visible-xs visible-sm">
-                                                <xsl:call-template name="buildFooter"/>
-                                            </div>
                                         </div>
 
                                     </div>
@@ -120,10 +117,9 @@
                                 <!--
                             The footer div, dropping whatever extra information is needed on the page. It will
                             most likely be something similar in structure to the currently given example. -->
-                            <div class="hidden-xs hidden-sm">
+
+</div>
                             <xsl:call-template name="buildFooter"/>
-                             </div>
-                         </div>
 
 
                         </xsl:otherwise>
@@ -186,6 +182,7 @@
             <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
             <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
             <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />  
+	    <link rel="stylesheet" type="text/css" href="https://www.library.vanderbilt.edu/portable/v2/vul-bootstrap3.css" />
 
             <!-- Add local styles from themes folder -->
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='stylesheet']">
@@ -546,7 +543,7 @@
             <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
             <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
             <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />
-
+ <link rel="stylesheet" type="text/css" href="https://www.library.vanderbilt.edu/portable/v2/vul-bootstrap3.css" />
 
             <!-- Add syndication feeds -->
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
