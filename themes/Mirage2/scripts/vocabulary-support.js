@@ -8,7 +8,7 @@
 (function($) {
     $(document).ready(function(){
         //Find any controlled vocabulary urls this page might contain
-        var vocabularyUrls = $('a[href^="vocabulary:"]');
+        var vocabularyUrls = $('a[href^=""]');
         vocabularyUrls.click(function(index){
             var $link = $(this);
             var vocabularyJSONUrl = $link.attr('href').replace('vocabulary:', '');

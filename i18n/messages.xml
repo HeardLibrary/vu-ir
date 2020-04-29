@@ -335,7 +335,7 @@
 	<message key="xmlui.ArtifactBrowser.ItemRequestSent.title">Your request has been sent.</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestSent.trail">Your request has been sent.</message>
 	<message key="xmlui.ArtifactBrowser.ItemRequestSent.head">Your request has been sent.</message>
-	<message key="xmlui.ArtifactBrowser.ItemRequestSent.para1">Your request has been sent to the author or responsible person.</message>
+	<message key="xmlui.ArtifactBrowser.ItemRequestSent.para1">Your request has been sent to the repository managers.</message>
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.ItemRequestResponseDecisionForm.java -->
 	<message key="xmlui.ArtifactBrowser.ItemRequestResponseDecisionForm.title">Document copy request</message>

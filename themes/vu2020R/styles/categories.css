@@ -94,7 +94,7 @@ a.rollover_blair {
     height: 100px;
     text-decoration: none;
     text-indent: -99999px;
-    background: url('/xmlui/themes/VU2/images/bwblair.jpg');
+    background: url('/xmlui/themes/vu2020R/images/bwblair.jpg');
     }
 
 a.rollover_blair:hover {
@@ -108,7 +108,7 @@ a.rollover_artsscience {
     height: 100px;
     text-decoration: none;
     text-indent: -99999px;
-    background: url('/xmlui/themes/VU2/images/bwarts_science.jpg');
+    background: url('/xmlui/themes/vu2020R/images/bwarts_science.jpg');
     }
 
 a.rollover_artsscience:hover {
@@ -121,7 +121,7 @@ a.rollover_owen {
     height: 100px;
     text-decoration: none;
     text-indent: -99999px;
-    background: url('/xmlui/themes/VU2/images/bwowen.jpg');
+    background: url('/xmlui/themes/vu2020R/images/bwowen.jpg');
     }
 
 a.rollover_owen:hover {
@@ -134,7 +134,7 @@ a.rollover_peabody {
     height: 100px;
     text-decoration: none;
     text-indent: -99999px;
-    background: url('/xmlui/themes/VU2/images/bwpeabody.jpg');
+    background: url('/xmlui/themes/vu2020R/images/bwpeabody.jpg');
     }
 
 a.rollover_peabody:hover {
@@ -147,7 +147,7 @@ a.rollover_divinity{
     height: 100px;
     text-decoration: none;
     text-indent: -99999px;
-    background: url('/xmlui/themes/VU2/images/bwdivinity.jpg');
+    background: url('/xmlui/themes/vu2020R/images/bwdivinity.jpg');
     }
 
 a.rollover_divinity:hover {
@@ -161,7 +161,7 @@ a.rollover_law {
     height: 100px;
     text-decoration: none;
     text-indent: -99999px;
-    background: url('/xmlui/themes/VU2/images/bwlaw.jpg');
+    background: url('/xmlui/themes/vu2020R/images/bwlaw.jpg');
     }
 
 a.rollover_law:hover {
@@ -174,7 +174,7 @@ a.rollover_publications {
     height: 100px;
     text-decoration: none;
     text-indent: -99999px;
-    background: url('/xmlui/themes/VU2/images/bwpublications.jpg');
+    background: url('/xmlui/themes/vu2020R/images/bwpublications.jpg');
     }
 
 a.rollover_publications:hover {
@@ -187,7 +187,7 @@ a.rollover_vulibrary{
     height: 100px;
     text-decoration: none;
     text-indent: -99999px;
-    background: url('/xmlui/themes/VU2/images/bwvulibrary.jpg');
+    background: url('/xmlui/themes/vu2020R/images/bwvulibrary.jpg');
     }
 
 a.rollover_vulibrary:hover {

@@ -1,8 +1,8 @@
 # The FULL URL to the DSpace sitemaps
-# The http://dev-da.library.vanderbilt.edu:6060/xmlui will be auto-filled with the value in dspace.cfg
+# The http://ir.vanderbilt.edug will be auto-filled with the value in dspace.cfg
 # XML sitemap is listed first as it is preferred by most search engines
-Sitemap: http://dev-da.library.vanderbilt.edu:6060/xmlui/sitemap
-Sitemap: http://dev-da.library.vanderbilt.edu:6060/xmlui/htmlmap
+Sitemap: https://ir.vanderbilt.edu/sitemap
+Sitemap: https://ir.vanderbilt.edu/htmlmap
 
 ##########################
 # Default Access Group
@@ -29,7 +29,7 @@ Disallow: /search-filter
 # Disallow: /feedback
 # Disallow: /forgot
 # Disallow: /login
-# Disallow: /register
+ Disallow: /register
 
 
 ##############################

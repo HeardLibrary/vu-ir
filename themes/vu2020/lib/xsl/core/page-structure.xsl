@@ -549,7 +549,8 @@
         <xsl:variable name="externalMetadataURL">
             <xsl:text>cocoon:/</xsl:text>
             <xsl:value-of select="$metadataURL"/>
-            <xsl:text>?sections=dmdSec,fileSec&amp;fileGrpTypes=THUMBNAIL</xsl:text>
+            <!-- <xsl:text>?sections=dmdSec,fileSec&amp;fileGrpTypes=THUMBNAIL</xsl:text> -->
+            <xsl:text>?sections=dmdSec,fileSec</xsl:text> 
         </xsl:variable>
 
         <xsl:variable name="ccLicenseName"

@@ -137,8 +137,8 @@
         -->
         <map:component-configurations>
             <global-variables>
-                <theme-path>VU2</theme-path>
-                <theme-name>VU2</theme-name>
+                <theme-path>vu2020R</theme-path>
+                <theme-name>vu2020R</theme-name>
             </global-variables>
         </map:component-configurations>
 

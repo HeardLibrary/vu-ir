@@ -78,14 +78,14 @@
             <div id="slider" class="nivoSlider theme-default">
 
                 <a href="/community-list">
-                    <img src="/themes/VU2/images/vanderbilt.jpg" alt=""  title="A community of scholars..." /></a>
-                <a href="/handle/1803/3706"><img src="themes/VU2/images/artssciences.jpg" alt="College of Arts &amp; Sciences"  title="Open Access at the College of Arts &amp; Sciences" /></a>
-                <a href="/handle/1803/5546"><img src="/themes/VU2/images/law.jpg" alt="Vanderbilt Law School"  title="Open Access at Vanderbilt Law School" /></a>
-                <a href="/handle/1803/244"><img src="/themes/VU2/images/blair.jpg" alt="Blair School of Music"  title="Open Access at the Blair School of Music" /></a>
-                <a href="/handle/1803/5548"><img src="/themes/VU2/images/peabody.jpg" alt="Peabody College of Education"  title="Open Access at the Peabody College of Education and Human Development" /></a>
-                <a href="/handle/1803/1269"><img src="/themes/VU2/images/divinity.jpg" alt=""  title="Open Access at Vanderbilt Divinity School" /></a>
-                <a href="/handle/1803/5547"><img src="/themes/VU2/images/owen.jpg" alt="Owen Graduate School of Management"  title="Open Access at the Owen Graduate School of Management" /></a>
-                <a href="/handle/1803/610"><img src="/themes/VU2/images/library-rotation.jpg" alt="Community of Librarians" title="...served by a community of librarians"/></a>
+                    <img src="/themes/vu2020R/images/vanderbilt.jpg" alt=""  title="A community of scholars..." /></a>
+                <a href="/handle/1803/3706"><img src="themes/vu2020R/images/artssciences.jpg" alt="College of Arts &amp; Sciences"  title="Open Access at the College of Arts &amp; Sciences" /></a>
+                <a href="/handle/1803/5546"><img src="/themes/vu2020R/images/law.jpg" alt="Vanderbilt Law School"  title="Open Access at Vanderbilt Law School" /></a>
+                <a href="/handle/1803/244"><img src="/themes/vu2020R/images/blair.jpg" alt="Blair School of Music"  title="Open Access at the Blair School of Music" /></a>
+                <a href="/handle/1803/5548"><img src="/themes/vu2020R/images/peabody.jpg" alt="Peabody College of Education"  title="Open Access at the Peabody College of Education and Human Development" /></a>
+                <a href="/handle/1803/1269"><img src="/themes/vu2020R/images/divinity.jpg" alt=""  title="Open Access at Vanderbilt Divinity School" /></a>
+                <a href="/handle/1803/5547"><img src="/themes/vu2020R/images/owen.jpg" alt="Owen Graduate School of Management"  title="Open Access at the Owen Graduate School of Management" /></a>
+                <a href="/handle/1803/610"><img src="/themes/vu2020R/images/library-rotation.jpg" alt="Community of Librarians" title="...served by a community of librarians"/></a>
             </div>
         </div>
         <div>
