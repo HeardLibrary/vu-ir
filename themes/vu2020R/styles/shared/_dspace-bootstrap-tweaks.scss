@@ -10,7 +10,7 @@ ul.ds-simple-list.vocabulary ul {
 }
 
 header .navbar-brand img{
-    height: 22px;
+    // height: 22px;
 }
 
 @media (max-width: $screen-xs-max) {
@@ -139,9 +139,4 @@ span.bold {
 /* Preserve whitespace. Used to display error stack in a readable way. */
 p.pre {
     white-space:pre;
-}
-.break-all{
-  -ms-word-break:   break-all;
-  word-break:       break-all;
-  word-wrap:        break-word;
 }

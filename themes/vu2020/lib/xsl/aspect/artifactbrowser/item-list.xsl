@@ -252,11 +252,11 @@
                 <a class="image-link" href="{$href}">
 
                     <!-- display proper icon base on MIMETYPE and DC:type -->
-                    <!--<img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" style="height: {$thumbnail.maxheight}px;"/>   -->
+                   <!-- <img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" style="height: {$thumbnail.maxheight}px;"/>   -->
 
                     <xsl:call-template name="displayItemIcon" >
                         <xsl:with-param name="thumbnail_node" select="mets:fileGrp[@USE='THUMBNAIL']" />
-                        <xsl:with-param name="mimetype" select="mets:fileGrp[@USE='THUMBNAIL']/mets:file[1]/@MIMETYPE" /> 
+                        <xsl:with-param name="mimetype" select="./mets:fileGrp[@USE='CONTENT']/mets:file[1]/@MIMETYPE" /> 
                         <xsl:with-param name="dctype" select="../mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim/dim:field[@element = 'format']" />
                     </xsl:call-template>      
 
@@ -290,6 +290,7 @@
                         </xsl:when>
                         <xsl:otherwise>
                             <img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" style="height: {$thumbnail.maxheight}px;"/>  
+
                     </xsl:otherwise>
                     </xsl:choose> 
                 </a>
@@ -416,5 +417,6 @@
     <xsl:template name="displayImageIcon" match="mets.file">
         <img alt="Icon" src="{concat($theme-path,'/images/jpg.png')}"  style="height:{$thumbnail.maxheight}px;"/> 
     </xsl:template>  
+
 
 </xsl:stylesheet>

@@ -114,6 +114,11 @@
             </a>
         </p>
 
+<div class="collapse" id="{@value}">
+
+</div>
+
+
     </xsl:template>
 
 </xsl:stylesheet>

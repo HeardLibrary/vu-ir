@@ -92,7 +92,7 @@
 <!--                 <map:parameter name="javascript" qualifier="url" value="lib/js/jquery.nivo.slider.js"/>
                 <map:parameter name="javascript" qualifier="url" value="lib/js/nivo-start.js"/> -->
                 <map:parameter name="theme.path" value="{global:theme-path}"/>
-                <map:parameter name="theme.name" value="{global:theme-path}"/>
+                <map:parameter name="theme.name" value="{global:theme-name}"/>
                 <map:parameter name="curRequestURI" value="{1}"/>
             </map:transform>
 

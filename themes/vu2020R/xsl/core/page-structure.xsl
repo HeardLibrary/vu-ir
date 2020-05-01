@@ -100,16 +100,15 @@
                             <div id="main-container" class="container">
 
                                 <div class="row row-offcanvas row-offcanvas-right">
+
+                                        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                                            <xsl:apply-templates select="dri:options"/>
+                                        </div>
+
                                     <div class="horizontal-slider clearfix">
                                         <div class="col-xs-12 col-sm-12 col-md-9 main-content">
                                             <xsl:apply-templates select="*[not(self::dri:options)]"/>
 
-                                            <div class="visible-xs visible-sm">
-                                                <xsl:call-template name="buildFooter"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-                                            <xsl:apply-templates select="dri:options"/>
                                         </div>
 
                                     </div>
@@ -118,10 +117,9 @@
                                 <!--
                             The footer div, dropping whatever extra information is needed on the page. It will
                             most likely be something similar in structure to the currently given example. -->
-                            <div class="hidden-xs hidden-sm">
+
+</div>
                             <xsl:call-template name="buildFooter"/>
-                             </div>
-                         </div>
 
 
                         </xsl:otherwise>
@@ -143,6 +141,344 @@
     <!-- The HTML head element contains references to CSS as well as embedded JavaScript code. Most of this
     information is either user-provided bits of post-processing (as in the case of the JavaScript), or
     references to stylesheets pulled directly from the pageMeta element. -->
+
+    <xsl:template name="buildHead-vu">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+            <!-- Use the .htaccess and remove these lines to avoid edge case issues. More info: h5bp.com/i/378 -->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+            <!-- Mobile viewport optimized: h5bp.com/viewport -->
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+            <link rel="shortcut icon">
+                <xsl:attribute name="href">
+                    <xsl:value-of select="$theme-path"/>
+                    <xsl:text>images/favicon.ico</xsl:text>
+                </xsl:attribute>
+            </link>
+            <link rel="apple-touch-icon">
+                <xsl:attribute name="href">
+                    <xsl:value-of select="$theme-path"/>
+                    <xsl:text>images/apple-touch-icon.png</xsl:text>
+                </xsl:attribute>
+            </link>
+
+            <meta name="Generator">
+                <xsl:attribute name="content">
+                    <xsl:text>DSpace</xsl:text>
+                    <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']">
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']"/>
+                    </xsl:if>
+                </xsl:attribute>
+            </meta>
+
+            <!-- Add stylesheets -->
+
+            <!-- reference to VU general Styles -->
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,700" />
+            <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
+           <link rel="stylesheet" type="text/css" href="https://www.library.vanderbilt.edu/portable/v2/vul-bootstrap3.css" />
+            <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
+            <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />  
+            <link rel="stylesheet" href="{concat($theme-path, 'styles/vu-overrides.css')}"/>
+
+            <!-- Add local styles from themes folder -->
+            <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='stylesheet']">
+                <link rel="stylesheet" type="text/css">
+                    <xsl:attribute name="media">
+                        <xsl:value-of select="@qualifier"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="$theme-path"/>
+                        <xsl:value-of select="."/>
+                    </xsl:attribute>
+                </link>
+            </xsl:for-each>
+
+            <!-- Add syndication feeds -->
+            <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
+                <link rel="alternate" type="application">
+                    <xsl:attribute name="type">
+                        <xsl:text>application/</xsl:text>
+                        <xsl:value-of select="@qualifier"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="."/>
+                    </xsl:attribute>
+                </link>
+            </xsl:for-each>
+
+            <!--  Add OpenSearch auto-discovery link -->
+            <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='opensearch'][@qualifier='shortName']">
+                <link rel="search" type="application/opensearchdescription+xml">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='scheme']"/>
+                        <xsl:text>://</xsl:text>
+                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/>
+                        <xsl:text>:</xsl:text>
+                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverPort']"/>
+                        <xsl:value-of select="$context-path"/>
+                        <xsl:text>/</xsl:text>
+                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='opensearch'][@qualifier='context']"/>
+                        <xsl:text>description.xml</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="title" >
+                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='opensearch'][@qualifier='shortName']"/>
+                    </xsl:attribute>
+                </link>
+            </xsl:if>
+
+            <!-- The following javascript removes the default text of empty text areas when they are focused on or submitted -->
+            <!-- There is also javascript to disable submitting a form when the 'enter' key is pressed. -->
+            <script>
+                //Clear default text of emty text areas on focus
+                function tFocus(element)
+                {
+                if (element.value == '<i18n:text>xmlui.dri2xhtml.default.textarea.value</i18n:text>'){element.value='';}
+                }
+                //Clear default text of emty text areas on submit
+                function tSubmit(form)
+                {
+                var defaultedElements = document.getElementsByTagName("textarea");
+                for (var i=0; i != defaultedElements.length; i++){
+                if (defaultedElements[i].value == '<i18n:text>xmlui.dri2xhtml.default.textarea.value</i18n:text>'){
+                defaultedElements[i].value='';}}
+                }
+                //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+                function disableEnterKey(e)
+                {
+                var key;
+
+                if(window.event)
+                key = window.event.keyCode;     //Internet Explorer
+                else
+                key = e.which;     //Firefox and Netscape
+
+                if(key == 13)  //if "Enter" pressed, then disable!
+                return false;
+                else
+                return true;
+                }
+            </script>
+
+            <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 9]&gt;
+                &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/html5shiv/dist/html5shiv.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
+                &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/respond/respond.min.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
+                &lt;![endif]--&gt;</xsl:text>
+
+            <!-- Modernizr enables HTML5 elements & feature detects -->
+            <script src="{concat($theme-path, 'vendor/modernizr/modernizr.js')}">&#160;</script>
+
+            <!-- Add the title in -->
+            <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title'][last()]" />
+            <title>
+                <xsl:choose>
+                    <xsl:when test="starts-with($request-uri, 'page/about')">
+                        <!-- <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text> -->
+                        <xsl:text>About This Repository</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="not($page_title)">
+                        <xsl:text>  </xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:copy-of select="$page_title/node()" />
+                    </xsl:otherwise>
+                </xsl:choose>
+            </title>
+
+            <!-- Head metadata in item pages -->
+            <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='xhtml_head_item']">
+                <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='xhtml_head_item']"
+                              disable-output-escaping="yes"/>
+            </xsl:if>
+
+            <!-- Add all Google Scholar Metadata values -->
+            <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[substring(@element, 1, 9) = 'citation_']">
+                <meta name="{@element}" content="{.}"></meta>
+            </xsl:for-each>
+
+            <!-- Add MathJAX JS library to render scientific formulas-->
+            <xsl:if test="confman:getProperty('webui.browse.render-scientific-formulas') = 'true'">
+                <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({
+                      tex2jax: {
+                        inlineMath: [['$','$'], ['\\(','\\)']],
+                        ignoreClass: "detail-field-data|detailtable|exception"
+                      },
+                      TeX: {
+                        Macros: {
+                          AA: '{\\mathring A}'
+                        }
+                      }
+                    });
+                </script>
+                <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
+            </xsl:if>
+
+        </head>
+    </xsl:template>
+
+
+    <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various placeholders for header images -->
+    <xsl:template name="buildHeader">
+
+        <header>
+            <div class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+
+                        <a href="{$context-path}/" class="navbar-brand">
+                            <img src="{$theme-path}images/logo-vandy-discoverarchive-height60.jpg" class="img-responsive" />
+                        </a>
+                        <button type="button" class="navbar-toggle" data-toggle="offcanvas">
+                            <span class="sr-only">
+                                <i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text>
+                            </span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg" style="display:inline-block;">
+                        <ul class="nav nav-pills pull-left ">
+                             <li><a href="/page/about"><button class="navbar-toggle navbar-link"><b aria-hidden="true" class="visible-xs glyphicon glyphicon-info-sign"></b></button></a>
+                            </li>   
+
+                            <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
+                                <li id="ds-language-selection-xs" class="dropdown">
+                                    <xsl:variable name="active-locale" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='currentLocale']"/>
+                                    <button id="language-dropdown-toggle-xs" href="#" role="button" class="dropdown-toggle navbar-toggle navbar-link" data-toggle="dropdown">
+                                        <b class="visible-xs glyphicon glyphicon-globe" aria-hidden="true"/>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="language-dropdown-toggle-xs" data-no-collapse="true">
+                                        <xsl:for-each
+                                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
+                                            <xsl:variable name="locale" select="."/>
+                                            <li role="presentation">
+                                                <xsl:if test="$locale = $active-locale">
+                                                    <xsl:attribute name="class">
+                                                        <xsl:text>disabled</xsl:text>
+                                                    </xsl:attribute>
+                                                </xsl:if>
+                                                <a>
+                                                    <xsl:attribute name="href">
+                                                        <xsl:value-of select="$current-uri"/>
+                                                        <xsl:text>?locale-attribute=</xsl:text>
+                                                        <xsl:value-of select="$locale"/>
+                                                    </xsl:attribute>
+                                                    <xsl:value-of
+                                                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
+                                                </a>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </li>
+                            </xsl:if>
+
+
+                            <xsl:choose>
+
+                                <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
+                                    <li class="dropdown">
+                                        <button class="dropdown-toggle navbar-toggle navbar-link" id="user-dropdown-toggle-xs" href="#" role="button"  data-toggle="dropdown">
+                                            <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right" role="menu"
+                                            aria-labelledby="user-dropdown-toggle-xs" data-no-collapse="true">
+                                            <li>
+                                                <a href="{/dri:document/dri:meta/dri:userMeta/
+                            dri:metadata[@element='identifier' and @qualifier='url']}">
+                                                    <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{/dri:document/dri:meta/dri:userMeta/
+                            dri:metadata[@element='identifier' and @qualifier='logoutURL']}">
+                                                    <i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <li>
+                                        <form style="display: inline" action="{/dri:document/dri:meta/dri:userMeta/
+                            dri:metadata[@element='identifier' and @qualifier='loginURL']}" method="get">
+                                            <button class="navbar-toggle navbar-link">
+                                            <b class="visible-xs glyphicon glyphicon-user" aria-hidden="true"/>
+                                            </button>
+                                        </form>
+                                    </li>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </ul>
+                              </div>
+                    </div>
+
+
+                    <!-- display top navbar for larger screen --> 
+                    <div class="navbar-header pull-right hidden-xs">
+                        <ul class="nav navbar-nav pull-left">
+                              <xsl:call-template name="languageSelection"/>
+                        </ul>
+                        <ul class="nav navbar-nav pull-left">
+                            <li><a href="/page/about"><span class="hidden-xs">About</span></a></li>
+                            <xsl:choose>
+                                <xsl:when test="/dri:document/dri:meta/dri:userMeta/@authenticated = 'yes'">
+                              
+                                            <li>
+                                                <a href="{/dri:document/dri:meta/dri:userMeta/
+                            dri:metadata[@element='identifier' and @qualifier='url']}">
+                                                    <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{/dri:document/dri:meta/dri:userMeta/
+                            dri:metadata[@element='identifier' and @qualifier='logoutURL']}">
+                                                    <i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
+                                                </a>
+                                            </li>
+                                       <!--  </ul> -->
+                                  <!--   </li> -->
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <li>
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/                                     dri:metadata[@element='identifier' and @qualifier='loginURL']"/>
+                                            </xsl:attribute> 
+                                            <span class="hidden-xs">
+                                                <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </ul>
+
+                        <button data-toggle="offcanvas" class="navbar-toggle visible-sm" type="button">
+                            <span class="sr-only"><i18n:text>xmlui.mirage2.page-structure.toggleNavigation</i18n:text></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+    </xsl:template>
+
+
+
+
+
+
+
     <xsl:template name="buildHead">
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -201,6 +537,17 @@
             </xsl:for-each>
 
             <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/>
+
+
+            <!-- reference to VU general Styles -->
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,700" />
+            <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
+           <link rel="stylesheet" type="text/css" href="https://www.library.vanderbilt.edu/portable/v2/vul-bootstrap3.css" />
+            <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
+            <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />
+
+	    <link rel="stylesheet" type="text/css" href="{concat($theme-path, 'styles/vu-overrides.css')}"/>
+
 
             <!-- Add syndication feeds -->
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
@@ -325,13 +672,17 @@
 
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
         placeholders for header images -->
-    <xsl:template name="buildHeader">
+    <xsl:template name="buildHeader-deliv">
 
 
         <header>
             <div class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
+                        <a href="{$context-path}/" class="navbar-brand">
+                            <img src="{$theme-path}images/logo-vandy-discoverarchive-height60.jpg" class="img-responsive" />
+                        </a>
+
 
                         <button type="button" class="navbar-toggle" data-toggle="offcanvas">
                             <span class="sr-only">
@@ -696,7 +1047,7 @@
     </xsl:template>
 
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
-    <xsl:template name="buildFooter">
+    <xsl:template name="buildFooter-deliv">
         <footer>
                 <div class="row">
                     <hr/>
@@ -747,6 +1098,127 @@
             <p>&#160;</p>
         </footer>
     </xsl:template>
+
+ <!-- customized VU footer -->
+    <xsl:template name="buildFooter">
+
+    <footer id="vu-footer" class="vu-footer fresh">
+       <footer id="vu-social" class="vu-social">
+            <div class="container">
+                <div class="row">
+                  <section class="vu-footer__social text-center center-block">
+                    <h4 class="vu-footer__title"><a href="//social.vanderbilt.edu">Connect with Vanderbilt Libraries</a></h4>
+                    <ul class="social-icons h2">
+                      <li class="facebook">
+                        <a href="//www.facebook.com/vandylibraries" target="_blank" rel="noopener">
+                            <xsl:text  disable-output-escaping="yes">&lt;i title="follow us on facebook" class="fab fa-facebook-f fa-fw" &gt;&lt;/i&gt;</xsl:text>
+                        </a>    
+                      </li>
+                      <li class="twitter">
+                        <a href="//twitter.com/vandylibraries" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="follow us on twitter" class="fab fa-twitter fa-fw" &gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="instagram">
+                        <a href="//www.instagram.com/vandylibraries/" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="follow us on instagram" class="fab fa-instagram fa-fw" &gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="youtube">
+                        <a href="//www.youtube.com/playlist?list=PLB1EPeYUwa4n_I0CyMrQidztwO-SdENRm" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="watch our youtube videos" class="fab fa-youtube fa-fw"&gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="flickr">
+                        <a href="//www.flickr.com/photos/vulibrary/" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="view our photo album" class="fab fa-flickr fa-fw"&gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="rss">
+                        <a href="//newsonline.library.vanderbilt.edu/?feed=rss2" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="subscribe to our news rss feed" class="fas fa-rss fa-fw"&gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li>
+                      <li class="linkedin">
+                        <a href="//www.linkedin.com/company/jean-and-alexander-heard-libraries" target="_blank" rel="noopener">
+                          <xsl:text disable-output-escaping="yes">&lt;i title="follow us on linkedin" class="fab fa-linkedin-in fa-fw"&gt;&lt;/i&gt;</xsl:text>
+                        </a>
+                      </li> 
+                    </ul>
+                  </section>
+                </div>
+            </div>
+        </footer> 
+        <div class="container">
+          <div class="row">
+            <section class="vu-footer__yourvu col-sm-3 clearfix">
+              <h4 class="vu-footer__title">Your Vanderbilt</h4>
+              <ul>
+                <li><a href="//www.vanderbilt.edu/alumni/">Alumni</a></li>
+                <li><a href="//www.vanderbilt.edu/student/">Current Students</a></li>
+                <li><a href="//www.vanderbilt.edu/faculty-staff/">Faculty &amp; Staff</a></li>
+                <li><a href="//www.vanderbilt.edu/isss/">International Students</a></li>
+                <li><a href="//news.vanderbilt.edu/for-media/">Media</a></li>
+                <li><a href="//www.vanderbilt.edu/families/">Parents &amp; Family</a></li>
+                <li><a href="//www.vanderbilt.edu/prospective/">Prospective Students</a></li>
+                <li><a href="//www.vanderbilt.edu/academics/research/">Researchers</a></li>
+                <li><a href="//www.vucommodores.com">Sports Fans</a></li>
+                <li><a href="//www.vanderbilt.edu/community/">Visitors &amp; Neighbors</a></li>
+              </ul>
+            </section>
+            <section class="vu-footer__map col-sm-6 clearfix">
+              <div class="embed-responsive embed-responsive-16by9">  
+                <h4 class="vu-footer__title">Support the Jean and Alexander Heard Libraries</h4>
+                <div class="row">
+                  <div class="col-xs-3 col-sm-4 col-lg-3">
+                    <a href="//webapp.mis.vanderbilt.edu/olga/pub/landing?appealCode=Q13A8" class="give-now">
+                        <img src="//www.library.vanderbilt.edu/images/giveNow-ccc.png" alt="Support the Library...Give Now" title="Support the Library...Give Now" />
+                    </a> 
+                </div> 
+                  <p class="col-xs-12 col-sm-8 col-lg-9">Gifts to the Libraries support the learning and research needs of the entire Vanderbilt community. <a href="//www.library.vanderbilt.edu/giving/">Learn more about giving to the Libraries.</a>
+                  </p>
+                </div>
+                <div class="friend">
+                  <a href="//www.library.vanderbilt.edu/friends/" class="btn btn-primary">
+                    <xsl:text disable-output-escaping="yes">Become a Friend of the Libraries &lt;i class="fas fa-arrow-alt-circle-right"&gt; &lt;/i&gt; </xsl:text>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section class="vu-footer__popular col-sm-3 clearfix">
+              <h4 class="vu-footer__title">Quick Links</h4>
+              <ul>
+                <li><a href="//www.library.vanderbilt.edu/hours.php">Hours</a></li>
+                <li><a href="//www.library.vanderbilt.edu/about">About</a></li>
+                <li><a href="//www.library.vanderbilt.edu/about/employment.php">Employment</a></li>
+                <li><a href="//www.library.vanderbilt.edu/staff">Staff Directory</a></li>
+                <li><a href="//www.library.vanderbilt.edu/about/accessibility.php">Accessibility Services</a></li>
+                <li><a href="//www.library.vanderbilt.edu/about/contact.php">Contact</a></li>
+                <li><a href="//www.vanderbilt.edu">Vanderbilt Home</a></li>
+                <li><a href="//www.library.vanderbilt.edu/privacypolicy.php">Privacy Policy</a></li>
+                <!--<li><a href="#">Site Index</a></li>-->
+              </ul>
+            </section>
+          </div>
+        </div>
+    </footer>
+ <!--   <footer class="credits">
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <p id="library-address">
+                    <a href="//www.library.vanderbilt.edu">Jean and Alexander Heard Libraries</a> · 419 21st Avenue South · Nashville, TN 37203 · <a href="//www.library.vanderbilt.edu/about/contact.php">Phone</a>
+                    <img src="//www.library.vanderbilt.edu/images/USA_Federal_depository_library_logo.svg.png" title="Vanderbilt is a US Federal Depository Library" alt="Vanderbilt is a US Federal Depository Library" class="depository-logo" />
+                </p>         
+                <p><small>© Vanderbilt University · All rights reserved. <a href="//web.vanderbilt.edu/">Site Development: Digital Strategy and Development (Division of Communications)</a>
+                <br/>Vanderbilt University is committed to principles of equal opportunity and affirmative action. <a class="credits__link" href="//www.vanderbilt.edu/accessibility/">Accessibility information</a>. <br/>Vanderbilt®, Vanderbilt University®, V Oak Leaf Design®, Star V Design® and Anchor Down® are trademarks of The Vanderbilt University</small>
+                </p>
+            </div>
+        </div>
+    </footer>
+-->
+</xsl:template> 
+
+
 
 
     <!--

@@ -4,20 +4,24 @@
  * tree and available online at
  *
  * http://www.dspace.org/license/
- */
-@import "compass";
-// variables
-@import "classic_mirage_color_scheme/bootstrap_variables";
+**/
 
-// Bootstrap
+@import "compass";
+/* variables    */
+@import "classic_mirage_color_scheme/bootstrap_variables";   
+@import "variables"; 
+
+/******* Bootstrap    *******/
 @function twbs-font-path($font-name) {
     @return "../vendor/bootstrap-sass-official/assets/fonts/" + $font-name
 }
+
 @import "../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap";
+  
 
-@import "classic_mirage_color_scheme/dspace_variables";
-
-// DSpace theme
+/********* DSpace theme  *******/
+@import "classic_mirage_color_scheme/bootstrap_variables";
+@import "classic_mirage_color_scheme/dspace_variables";  
 @import "classic_mirage_color_scheme/utils";
 @import "classic_mirage_color_scheme/general";
 @import "classic_mirage_color_scheme/forms";
@@ -31,6 +35,15 @@
 
 @import "classic_mirage_color_scheme/jquery_ui";
 @import "classic_mirage_color_scheme/dataTables.bootstrap";
-@import "shared/dspace-bootstrap-tweaks";
-@import "../vendor/jquery-ui/themes/base/jquery-ui.css";
-@import "style";
+@import "shared/dspace-bootstrap-tweaks"; 
+@import "../vendor/jquery-ui/themes/base/jquery-ui.css";  
+
+ 
+/**** DiscoverArchive customizations  ****/
+/* @import "//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css";  */
+@import "style"; 
+
+
+
+
+

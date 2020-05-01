@@ -187,6 +187,9 @@
     <xsl:template name="displayWordIcon">
         <img alt="Icon" src="{concat($theme-path,'images/DOCX.png')}" style="height:{$thumbnail.maxheight}px;"/>
     </xsl:template>   
+    <xsl:template name="displayXLSXIcon">
+        <img alt="Icon" src="{concat($theme-path,'images/excel.png')}" style="height:{$thumbnail.maxheight}px;"/>
+    </xsl:template>
     <xsl:template name="displayPPTIcon">
         <img alt="Icon" src="{concat($theme-path,'images/PowerPoint.png')}" style="height:{$thumbnail.maxheight}px;"/> 
     </xsl:template>    
