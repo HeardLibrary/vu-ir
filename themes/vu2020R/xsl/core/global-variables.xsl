@@ -87,5 +87,10 @@
         </xsl:if>
     </xsl:variable>
 
+   <!-- item metadata reference -->
+    <xsl:variable name='identifier_doi'
+                  select='//dri:meta/dri:pageMeta/dri:metadata[@element="identifier" and @qualifier="doi"]'/>
+    <xsl:variable name='identifier_handle'
+                  select='//dri:meta/dri:pageMeta/dri:metadata[@element="identifier" and @qualifier="handle"]'/>
 
 </xsl:stylesheet>
