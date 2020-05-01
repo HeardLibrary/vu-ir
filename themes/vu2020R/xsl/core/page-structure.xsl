@@ -180,9 +180,15 @@
             <!-- reference to VU general Styles -->
             <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,700" />
             <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
+<<<<<<< HEAD
            <link rel="stylesheet" type="text/css" href="https://www.library.vanderbilt.edu/portable/v2/vul-bootstrap3.css" />
             <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
             <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />  
+=======
+            <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
+            <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />  
+	    <link rel="stylesheet" type="text/css" href="https://www.library.vanderbilt.edu/portable/v2/vul-bootstrap3.css" />
+>>>>>>> db8950bf769bd04bcf4160eb3dd53dc2f886c688
             <link rel="stylesheet" href="{concat($theme-path, 'styles/vu-overrides.css')}"/>
 
             <!-- Add local styles from themes folder -->
@@ -542,9 +548,15 @@
             <!-- reference to VU general Styles -->
             <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,700" />
             <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
+<<<<<<< HEAD
            <link rel="stylesheet" type="text/css" href="https://www.library.vanderbilt.edu/portable/v2/vul-bootstrap3.css" />
             <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
             <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />
+=======
+            <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
+            <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />
+	    <link rel="stylesheet" type="text/css" href="https://www.library.vanderbilt.edu/portable/v2/vul-bootstrap3.css" />
+>>>>>>> db8950bf769bd04bcf4160eb3dd53dc2f886c688
 
 	    <link rel="stylesheet" type="text/css" href="{concat($theme-path, 'styles/vu-overrides.css')}"/>
 

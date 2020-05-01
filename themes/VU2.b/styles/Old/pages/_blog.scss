@@ -1,0 +1,76 @@
+.vl-blog {
+  .post {
+    border-bottom: 1px solid $gray-lighter;
+    margin-bottom: 2em;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  .attachment-post-thumbnail {
+    border-radius: 3px;
+    margin-bottom: 1em;
+  }
+
+  .post-meta {
+    color: $gray;
+    font-size: 0.857em;
+    font-weight: 400;
+    margin-bottom: 1em;
+
+    a {
+      text-decoration: none;
+    }
+
+    .comments-link {
+      background: url('../images/icon-comment.png') no-repeat 0 1px;
+      padding-left: 1.5em;
+
+      @include hidpi(2) {
+        background-image: url('../images/icon-comment_2x.png');
+        background-position: 0 2px;
+        background-size: 13px 12px;
+      }
+    }
+  }
+
+  .entry-title a {
+    color: $red;
+    text-decoration: none;
+  }
+
+  .entry-summary,
+  .entry-content {
+    @extend .lead;
+
+    img {
+      border: 1px solid $gray-lighter;
+      border-radius: 3px;
+      padding: 0.4em;
+    }
+  }
+
+  .nav-below,
+  .nav-single {
+    border-top: 1px solid $gray-lighter;
+    padding-top: 1.5em;
+    @include clearfix;
+
+    .nav-prev,
+    .nav-next {
+      max-width: 45%;
+    }
+  }
+
+  #disqus_thread {
+    border-top: 1px solid $gray-lighter;
+    margin-top: 0.5em;
+    padding-top: 1.5em;
+  }
+}
