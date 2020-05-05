@@ -129,7 +129,7 @@
     </xsl:template>
 
     <!-- The HTML head element contains references to CSS as well as embedded JavaScript code. M/ost of this information is either user-provided bits of post-processing (as in the case of the JavaScript), or references to stylesheets pulled directly from the pageMeta element. -->
-    <xsl:template name="buildHead">
+    <xsl:template name="buildHead-dev">
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -490,7 +490,7 @@
 
 
 
-    <xsl:template name="buildHeader-deliv">
+    <xsl:template name="buildHeader">
 
         <header>
             <div class="navbar navbar-default navbar-static-top" role="navigation">
