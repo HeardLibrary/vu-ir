@@ -2,3 +2,9 @@
     max-width: 520px; 
     display: inline;
 }
+
+/* main.css | https://dev-ir.library.vanderbilt.edu/themes/vu2020R/styles/main.css */
+
+.ds-artifact-list .artifact-title {
+  margin-top: 15px;
+}

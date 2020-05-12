@@ -348,7 +348,6 @@
             <link rel="stylesheet"  type="text/css"  href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
             <link rel="stylesheet" type="text/css" href="//cdn.vanderbilt.edu/vu-www4/omni/css/vu-main.css" />
             <link rel="stylesheet" type="text/css" href="//www.library.vanderbilt.edu/_resources/overrides.css" media="screen" />
-            <link rel="stylesheet" type="text/css" href="{concat($theme-path, 'styles/vu-overrides.css')}"/>
 
 
             <!--TODO figure out a way to include these in the concat & minify-->
@@ -364,8 +363,8 @@
                 </link>
             </xsl:for-each>
 
-            <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/>
-
+           <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/> 
+          <link rel="stylesheet" href="{concat($theme-path, 'styles/vu-overrides.css')}"/>	
 
             <!-- Add syndication feeds -->
             <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']">
