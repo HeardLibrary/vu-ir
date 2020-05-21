@@ -289,7 +289,7 @@
                             </xsl:choose>
                         </xsl:when>
                         <xsl:otherwise>
-<!--                            <img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" style="height: {$thumbnail.maxheight}px;"/>  -->
+                            <img alt="Icon" src="{concat($theme-path, '/images/mime.png')}" style="height: {$thumbnail.maxheight}px;"/>  
 
                     </xsl:otherwise>
                     </xsl:choose> 
@@ -315,8 +315,17 @@
              
 
         <xsl:choose>
-            <!-- When image Thumbnail is available xx -->     
+            <!-- When image Thumbnail is available -->     
             <!-- <xsl:when test="mets:fileGrp[@USE='THUMBNAIL']"> --> 
+            <xsl:when test="$thumbnail_node != '' "> 
+                <img class="img-responsive" alt="xmlui.mirage2.item-list.thumbnail" i18n:attr="alt">
+                    <xsl:attribute name="src">
+                        <!-- <xsl:value-of <select="mets:fileGrp[@USE='THUMBNAIL']/mets:file/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/> -->
+                        <xsl:value-of
+                                select="$thumbnail_node/mets:file/mets:FLocat[@LOCTYPE='URL']/@xlink:href"/> 
+                    </xsl:attribute>
+                </img>
+            </xsl:when> 
 
             <!-- When MIMETYPE is known, display icon based on MIMETYPE --> 
             <xsl:when test="($mimetype != '') and ( contains($knowntypes, substring-after($mimetype,'/')) or contains($knowntypes, substring-before($mimetype, '/')) )" >
@@ -326,12 +335,12 @@
             </xsl:when>
 
             <!-- Display icon based on DC:type --> 
-  <!--          <xsl:when test="($dctype != '') and (contains($knowntypes, substring-before($dctype,'/')) or contains($knowntypes,substring-after($dctype, '/')) ) " >
+            <xsl:when test="($dctype != '') and (contains($knowntypes, substring-before($dctype,'/')) or contains($knowntypes,substring-after($dctype, '/')) ) " >
                 <xsl:call-template name="displayKnownItemtypeIcon">
                     <xsl:with-param name="icontype" select="$dctype" />
                 </xsl:call-template>
             </xsl:when>
--->
+
             <!-- display generic item icon --> 
             <xsl:otherwise>
                 <xsl:call-template name="displayGenericIcon" />
@@ -398,13 +407,13 @@
         <img alt="Icon" src="{concat($theme-path,'/images/video.png')}"  style="height:{$thumbnail.maxheight}px;"/> 
     </xsl:template> 
     <xsl:template name="displayGenericIcon">
-<!--        <xsl:attribute name="data-src">
+        <xsl:attribute name="data-src">
         <xsl:text>holder.js/100%x</xsl:text>
         <xsl:value-of select="$thumbnail.maxheight"/>
         <xsl:text>/text:No Thumbnail</xsl:text>
-        </xsl:attribute>  -->
-    </xsl:template>      
-          
+        </xsl:attribute> 
+        <img alt="Icon" src="{concat($theme-path,'/images/document_generic.png')}" style="height:{$thumbnail.maxheight}px;"/>
+    </xsl:template>                
     <xsl:template name="displayImageIcon" match="mets.file">
         <img alt="Icon" src="{concat($theme-path,'/images/jpg.png')}"  style="height:{$thumbnail.maxheight}px;"/> 
     </xsl:template>  
