@@ -42,12 +42,14 @@
     <xsl:template name="itemSummaryView-DIM">
 
         <!-- optional: Altmeric.com badge and PlumX widget -->
-     <!--       <xsl:call-template name='impact-altmetric'/>
+        <xsl:call-template name='impact-altmetric'/>
         <xsl:if test='confman:getProperty("altmetrics", "plumx.enabled") and $identifier_doi'> 
             <xsl:call-template name='impact-plumx'/>
-        </xsl:if> -->
+        </xsl:if> 
 
     <div class="item-summary-view-metadata">
+
+
 
 
 
@@ -304,7 +306,7 @@
         <!-- Generate the bitstream information from the file section -->
         <xsl:choose>
             <xsl:when test="./mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
-                <h3> <i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-head</i18n:text></h3>
+                <h3><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-head</i18n:text></h3>
                 <div class="file-list">
                     <xsl:apply-templates select="./mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE' or @USE='CC-LICENSE']">
                         <xsl:with-param name="context" select="."/>
@@ -574,10 +576,6 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </a>
-<!-- Call getfileicon template for lock -->
- <xsl:call-template name="getFileIcon"/>
-
-
                 </div>
             </div>
 
@@ -746,7 +744,7 @@
                         <xsl:text> glyphicon-lock</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                      <!--  <xsl:text>glyphicon-file</xsl:text> -->
+                        <xsl:text> glyphicon-file</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
                 </xsl:attribute>
@@ -826,12 +824,12 @@
                 </xsl:if>
 
                 <xsl:choose>    <!-- data-doi data-handle data-arxiv-id data-pmid -->
-             <!--        <xsl:when test='$identifier_doi'>
+                     <xsl:when test='$identifier_doi'>
                    <xsl:attribute name='data-doi'><xsl:value-of select='$identifier_doi'/></xsl:attribute> 
                     </xsl:when> 
                     <xsl:when test='$identifier_handle'>
                         <xsl:attribute name='data-handle'><xsl:value-of select='$identifier_handle'/></xsl:attribute>
-                    </xsl:when> -->
+                    </xsl:when> 
                 </xsl:choose>
                 &#xFEFF;
             </div>
@@ -868,7 +866,7 @@
             </xsl:variable>
 
             <a>
-<!--                <xsl:attribute name="id">plumx</xsl:attribute>
+                <xsl:attribute name="id">plumx</xsl:attribute>
                 <xsl:attribute name="class"><xsl:value-of select="$plumx-class"/></xsl:attribute>
                 <xsl:attribute name="href">https://plu.mx/pitt/a/?doi=<xsl:value-of select="$identifier_doi"/></xsl:attribute>
 
@@ -880,7 +878,7 @@
                 <xsl:if test="confman:getProperty('altmetrics', 'plumx.data-hide-when-empty')">
                     <xsl:attribute name="data-hide-when-empty">true</xsl:attribute>
                 </xsl:if>
--->
+
 
                 <xsl:if test="confman:getProperty('altmetrics', 'plumx.data-hide-print')">
                     <xsl:attribute name="data-hide-print">true</xsl:attribute>
