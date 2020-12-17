@@ -10,6 +10,11 @@
 -->
 <catalogue xml:lang="en" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
+<message key=”xmlui.ArtifactBrowser.AdvancedSearch.type_discipline”>department</message>
+    <message key=”xmlui.ArtifactBrowser.SimpleSearch.filter.discipline”>department</message>
+
+
+
 	<!--
 		The format used by all keys is as follows
 
@@ -102,6 +107,7 @@
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">Identifier</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Language (ISO)</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Keyword</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
 
    <!--  some common other possibilities for Advanced Search Fields -->
    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Contributor</message>
