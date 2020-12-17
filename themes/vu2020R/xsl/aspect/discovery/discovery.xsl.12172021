@@ -258,12 +258,6 @@
                             <xsl:text>)</xsl:text>
                             </small></span>
                     </xsl:if>
-                            <xsl:if test="dri:list[@n=(concat($handle, ':thesis.degree.discipline'))]">
-                                <div class="author">
-                                Department: <xsl:apply-templates select="dri:list[@n=(concat($handle, ':thesis.degree.discipline'))]/dri:item"/>
-                                </div>
-                            </xsl:if>
-
                     <xsl:choose>
                         <xsl:when test="dri:list[@n=(concat($handle, ':dc.description.abstract'))]/dri:item/dri:hi">
                             <div class="abstract">
