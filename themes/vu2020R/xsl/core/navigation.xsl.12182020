@@ -63,7 +63,7 @@
                                                 select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='queryField']"/>
                                     </xsl:attribute>
                                 </input>
-                                <span class="input-group-btn">sdfsadf
+                                <span class="input-group-btn">
                                     <button class="ds-button-field btn btn-primary" title="xmlui.general.go" i18n:attr="title">
                                         <span class="glyphicon glyphicon-search" aria-hidden="true"/>
                                         <xsl:attribute name="onclick">
