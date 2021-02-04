@@ -1,5 +1,26 @@
 #Ignore thumbnails created by Windows
+authentication-ldap.cfg
+config.save/
 Thumbs.db
-
-#Ignore sass cache file 
+/WEB-INF
+/META-INF
+#Ignore sass cache file
 *.scssc
+lib/
+etc/
+exports/
+import/
+bin/
+assetstore/
+dspace.cfg
+logs/
+temp/
+var/
+handle-server/
+reports/
+sitemaps/
+upload/
+solr/statistics/data/**
+*.class
+*.jar
+
