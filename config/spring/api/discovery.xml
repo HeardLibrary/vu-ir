@@ -544,6 +544,9 @@
             </list>
         </property>
 	        <property name="type" value="text"/>
+		   <property name="facetLimit" value="5"/>
+  	      <property name="sortOrderSidebar" value="VALUE"/>
+	<property name="sortOrderFilterPage" value="VALUE"/>
     </bean>
 
 
