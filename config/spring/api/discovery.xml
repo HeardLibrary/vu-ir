@@ -103,7 +103,7 @@
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
                 <ref bean="searchFilterIssued" />
-		        <ref bean="searchFilterContentInOriginalBundle"/>
+	        <ref bean="searchFilterContentInOriginalBundle"/>
             </list>
         </property>
         <!-- Set TagCloud configuration per discovery configuration -->
@@ -118,7 +118,6 @@
 	        <ref bean="searchFilterContentInOriginalBundle"/>
                 <ref bean="searchFilterFileNameInOriginalBundle" />
                 <ref bean="searchFilterFileDescriptionInOriginalBundle" />
-		<ref bean="searchFilterDepartment" />
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -544,7 +543,7 @@
             </list>
         </property>
 	        <property name="type" value="text"/>
-		   <property name="facetLimit" value="5"/>
+		   <property name="facetLimit" value="10"/>
   	      <property name="sortOrderSidebar" value="VALUE"/>
 	<property name="sortOrderFilterPage" value="VALUE"/>
     </bean>
