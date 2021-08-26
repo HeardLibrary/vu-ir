@@ -23,4 +23,5 @@ upload/
 solr/statistics/data/**
 *.class
 *.jar
-
+*.tgz
+*.war

@@ -1,0 +1,9 @@
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/unit/services/impl/AbstractQueryResolverTest.java
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/unit/services/impl/solr/DSpaceSolrQueryResolverTest.java
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/integration/xoai/PipelineTest.java
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/support/XmlMatcherBuilder.java
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/stylesheets/QDCXslTest.java
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/stylesheets/AbstractXSLTest.java
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/support/MatcherBuilder.java
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/DSpaceBasicTestConfiguration.java
+/apps/Dspace7-src/DSpace-dspace-7.0/dspace-oai/src/test/java/org/dspace/xoai/tests/helpers/stubs/StubbedFieldResolver.java
