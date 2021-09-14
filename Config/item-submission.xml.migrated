@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE item-submission SYSTEM "item-submission.dtd">
+<item-submission>
+<submission-map>
+<name-map collection-handle="default" submission-name="traditional"/>
+<name-map collection-handle="1803/9599" submission-name="etd"/>
+</submission-map>
+<step-definitions>
+<step-definition mandatory="true" id="etdpage1">
+<heading>submit.progressbar.describe.step1</heading>
+<processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+<type>submission-form</type>
+</step-definition>
+<step-definition mandatory="true" id="etdpage2">
+<heading>submit.progressbar.describe.step2</heading>
+<processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+<type>submission-form</type>
+</step-definition>
+<step-definition mandatory="true" id="traditionalpage1">
+<heading>submit.progressbar.describe.step1</heading>
+<processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+<type>submission-form</type>
+</step-definition>
+<step-definition mandatory="true" id="traditionalpage2">
+<heading>submit.progressbar.describe.step2</heading>
+<processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+<type>submission-form</type>
+</step-definition>
+<step-definition mandatory="true" id="onepage1">
+<heading>submit.progressbar.describe.step1</heading>
+<processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+<type>submission-form</type>
+</step-definition>
+<step-definition id="upload">
+<heading>submit.progressbar.upload</heading>
+<processing-class>org.dspace.app.rest.submit.step.UploadStep</processing-class>
+<type>upload</type>
+</step-definition>
+<step-definition id="license">
+<heading>submit.progressbar.license</heading>
+<processing-class>org.dspace.app.rest.submit.step.LicenseStep</processing-class>
+<type>license</type>
+<scope visibilityOutside="read-only">submission</scope>
+</step-definition>
+</step-definitions>
+<submission-definitions>
+<submission-process name="etd">
+<step id="collection"/>
+<step id="etdpage1"/>
+<step id="etdpage2"/>
+<step id="upload"/>
+<step id="license"/>
+</submission-process>
+<submission-process name="traditional">
+<step id="collection"/>
+<step id="traditionalpage1"/>
+<step id="traditionalpage2"/>
+<step id="upload"/>
+<step id="license"/>
+</submission-process>
+<submission-process name="one">
+<step id="collection"/>
+<step id="onepage1"/>
+<step id="upload"/>
+<step id="license"/>
+</submission-process>
+</submission-definitions>
+</item-submission>
