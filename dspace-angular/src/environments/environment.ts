@@ -1,1 +1,26 @@
-export const environment = {"production":true,"ui":{"ssl":false,"host":"localhost","port":4000,"nameSpace":"/","rateLimiter":{"windowMs":60000,"max":500},"baseUrl":"http://localhost:4000/"},"rest":{"ssl":true,"host":"dev-irbe.library.vanderbilt.edu","port":443,"nameSpace":"/server","baseUrl":"https://dev-irbe.library.vanderbilt.edu/server"},"cache":{"msToLive":{"default":900000},"control":"max-age=60","autoSync":{"defaultTime":0,"maxBufferSize":100,"timePerMethod":{"PATCH":3}}},"auth":{"ui":{"timeUntilIdle":900000,"idleGracePeriod":300000},"rest":{"timeLeftBeforeTokenRefresh":120000}},"form":{"validatorMap":{"required":"required","regex":"pattern"}},"notifications":{"rtl":false,"position":["top","right"],"maxStack":8,"timeOut":5000,"clickToClose":true,"animate":"scale"},"submission":{"autosave":{"metadata":[],"timer":0},"icons":{"metadata":[{"name":"dc.author","style":"fas fa-user"},{"name":"default","style":""}],"authority":{"confidence":[{"value":600,"style":"text-success"},{"value":500,"style":"text-info"},{"value":400,"style":"text-warning"},{"value":"default","style":"text-muted"}]}}},"universal":{"preboot":true,"async":true,"time":false},"debug":false,"defaultLanguage":"en","languages":[{"code":"en","label":"English","active":true},{"code":"de","label":"Deutsch","active":true},{"code":"cs","label":"Čeština","active":true},{"code":"nl","label":"Nederlands","active":true},{"code":"pt-BR","label":"Português do Brasil","active":true},{"code":"pt-PT","label":"Português","active":true},{"code":"fr","label":"Français","active":true},{"code":"lv","label":"Latviešu","active":true},{"code":"fi","label":"Suomi","active":true},{"code":"hu","label":"magyar","active":true}],"browseBy":{"oneYearLimit":10,"fiveYearLimit":30,"defaultLowerLimit":1900,"types":[{"id":"title","type":"title"},{"id":"dateissued","type":"date","metadataField":"dc.date.issued"},{"id":"author","type":"metadata"},{"id":"subject","type":"metadata"}]},"item":{"edit":{"undoTimeout":10000}},"collection":{"edit":{"undoTimeout":10000}},"themes":[{"name":"dspace"}],"mediaViewer":{"image":false,"video":false}}
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build --configuration production` replaces `environment.ts` with `environment.production.ts`.
+// `ng test --configuration test` replaces `environment.ts` with `environment.test.ts`.
+// The list of file replacements can be found in `angular.json`.
+
+import { AppConfig } from '../config/app-config.interface';
+
+export const environment: Partial<AppConfig> = {
+  production: false,
+
+  // Angular Universal settings
+  universal: {
+    preboot: true,
+    async: true,
+    time: false
+  }
+};
+
+/*
+ * For easier debugging in development mode, you can import the following file
+ * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+ *
+ * This import should be commented out in production mode because it will have a negative impact
+ * on performance if an error is thrown.
+ */
+// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
