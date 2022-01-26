@@ -28,8 +28,12 @@ export const environment = {
       port: 443,
       // NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
       nameSpace: '/server'
-  }
+  },
 
-
-
+// In this example, we only show one theme enabled. It's possible to enable multiple (see below note)
+  themes: [
+   {
+      name: 'vudspace7'
+   }
+		]
 };
