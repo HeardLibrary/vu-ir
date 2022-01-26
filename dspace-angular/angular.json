@@ -142,13 +142,7 @@
                 "input": "src/styles/base-theme.scss",
                 "inject": false,
                 "bundleName": "base-theme"
-              },
-              {
-                "input": "src/themes/vudspace/styles/theme.scss",
-                "inject": false,
-                "bundleName": "vudspace-theme"
-             }
-
+              }
             ],
             "scripts": []
           },
