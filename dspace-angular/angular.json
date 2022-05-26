@@ -63,6 +63,16 @@
                 "inject": false,
                 "bundleName": "vudspace7-theme"
               },
+              {
+                "input": "src/themes/vudspace7/assets/css/vul-pw-header.css",
+                "inject": false,
+                "bundleName": "vul-pw-header"
+              },
+              {
+                "input": "src/themes/vudspace7/assets/css/vul-pw-footer.css",
+                "inject": false,
+                "bundleName": "vul-pw-footer"
+              },
 
               {
                 "input": "src/themes/dspace/styles/theme.scss",
@@ -70,7 +80,12 @@
                 "bundleName": "dspace-theme"
               }
             ],
-            "scripts": []
+            "scripts": [
+              "src/themes/vudspace7/assets/js/vul-pw-header.js",
+              "src/themes/vudspace7/assets/js/vul-pw-footer.js",
+              "node_modules/jquery/dist/jquery.slim.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
