@@ -1,5 +1,0 @@
-rest:
-  ssl: true
-  host: dev-irbe.library.vanderbilt.edu
-  port: 443
-  nameSpace: /server
