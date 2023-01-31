@@ -29,6 +29,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { TranslateModule } from '@ngx-translate/core';
 import { HomePageModule } from '../../app/home-page/home-page.module';
+// import { AboutPageModule } from './app/about-page/about-page.module';
 import { AppModule } from '../../app/app.module';
 import { ItemPageModule } from '../../app/item-page/item-page.module';
 import { RouterModule } from '@angular/router';
@@ -45,6 +46,7 @@ import { ComcolModule } from '../../app/shared/comcol/comcol.module';
 import { RootModule } from '../../app/root.module';
 import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
+// import { AboutPageComponent } from './app/about-page/about-page.component';
 import { RootComponent } from './app/root/root.component';
 import { BrowseBySwitcherComponent } from './app/browse-by/browse-by-switcher/browse-by-switcher.component';
 import { CommunityListPageComponent } from './app/community-list-page/community-list-page.component';
@@ -84,6 +86,7 @@ import { CommunityListComponent } from './app/community-list-page/community-list
 const DECLARATIONS = [
   FileSectionComponent,
   HomePageComponent,
+  // AboutPageComponent,
   RootComponent,
   BrowseBySwitcherComponent,
   CommunityListPageComponent,
@@ -141,6 +144,7 @@ const DECLARATIONS = [
     EditItemPageModule,
     FormsModule,
     HomePageModule,
+    // AboutPageModule,
     HttpClientModule,
     IdlePreloadModule,
     InfoModule,

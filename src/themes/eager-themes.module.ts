@@ -11,7 +11,7 @@ import { EagerThemeModule as Vudspace7EagerThemeModule } from './vudspace7/eager
  */
 @NgModule({
   imports: [
-    DSpaceEagerThemeModule,
+    // DSpaceEagerThemeModule,
     Vudspace7EagerThemeModule,
   ],
 })

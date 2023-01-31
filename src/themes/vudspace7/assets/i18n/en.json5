@@ -1,7 +1,7 @@
 {
-  DSpace default: "All of IR DSpace"
-  "menu.section.browse_global": "Browse DSpace",
-
-  // DSpace default: "DSpace Angular :: "
+  "menu.section.browse_global": "Discover",
+  "nav.login": "DSpace Log In",
   "repository.title.prefix": "DSpace :: ",
+  "about.title": "About the VUIR",
+  "about.breadcrumbs": "About the VUIR",
 }
