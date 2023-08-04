@@ -40,7 +40,6 @@ import {
 import { ServerCheckGuard } from './core/server-check/server-check.guard';
 import { MenuResolver } from './menu.resolver';
 import { ThemedPageErrorComponent } from './page-error/themed-page-error.component';
-import { AboutPageComponent } from '../themes/vudspace7/app/about-page/about-page.component';
 
 @NgModule({
   imports: [
@@ -66,11 +65,6 @@ import { AboutPageComponent } from '../themes/vudspace7/app/about-page/about-pag
               .then((m) => m.HomePageModule),
             data: { showBreadcrumbs: false },
             canActivate: [EndUserAgreementCurrentUserGuard]
-          },
-          {
-            path: 'about',
-            loadChildren: () => import('../themes/vudspace7/app/about-page/about-page.module')
-              .then((m) => m.AboutPageModule),
           },
           {
             path: 'community-list',
@@ -215,7 +209,7 @@ import { AboutPageComponent } from '../themes/vudspace7/app/about-page/about-pag
           {
             path: REQUEST_COPY_MODULE_PATH,
             loadChildren: () => import('./request-copy/request-copy.module').then((m) => m.RequestCopyModule),
-            canActivate: [AuthenticatedGuard, EndUserAgreementCurrentUserGuard]
+            canActivate: [EndUserAgreementCurrentUserGuard]
           },
           {
             path: FORBIDDEN_PATH,
@@ -224,7 +218,8 @@ import { AboutPageComponent } from '../themes/vudspace7/app/about-page/about-pag
           {
             path: 'statistics',
             loadChildren: () => import('./statistics-page/statistics-page-routing.module')
-              .then((m) => m.StatisticsPageRoutingModule)
+              .then((m) => m.StatisticsPageRoutingModule),
+            canActivate: [EndUserAgreementCurrentUserGuard],
           },
           {
             path: HEALTH_PAGE_PATH,
@@ -234,7 +229,13 @@ import { AboutPageComponent } from '../themes/vudspace7/app/about-page/about-pag
           {
             path: ACCESS_CONTROL_MODULE_PATH,
             loadChildren: () => import('./access-control/access-control.module').then((m) => m.AccessControlModule),
-            canActivate: [GroupAdministratorGuard],
+            canActivate: [GroupAdministratorGuard, EndUserAgreementCurrentUserGuard],
+          },
+          {
+            path: 'subscriptions',
+            loadChildren: () => import('./subscriptions-page/subscriptions-page-routing.module')
+              .then((m) => m.SubscriptionsPageRoutingModule),
+            canActivate: [AuthenticatedGuard]
           },
           { path: '**', pathMatch: 'full', component: ThemedPageNotFoundComponent },
         ]

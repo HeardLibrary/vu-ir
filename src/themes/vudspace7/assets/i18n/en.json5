@@ -4,4 +4,7 @@
   "repository.title.prefix": "DSpace :: ",
   "about.title": "About the VUIR",
   "about.breadcrumbs": "About the VUIR",
+  "home.top-level-communities.head": "Browse All Communities",
+  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to VUIR.",
+  "forgot-email.form.info": "Enter Register an account to subscribe to collections for email updates, and submit new items to VUIR.",
 }

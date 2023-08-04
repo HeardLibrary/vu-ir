@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
-import { EagerThemeModule as Vudspace7EagerThemeModule } from './vudspace7/eager-theme.module';
+// import { EagerThemeModule as CustomEagerThemeModule } from './custom/eager-theme.module';
 
 /**
  * This module bundles the eager theme modules for all available themes.
@@ -9,10 +9,15 @@ import { EagerThemeModule as Vudspace7EagerThemeModule } from './vudspace7/eager
  *
  * Themes that aren't in use should not be imported here so they don't take up unnecessary space in the main bundle.
  */
+
+import { EagerThemeModule as DspaceEagerThemeModule } from './dspace/eager-theme.module';
+import { EagerThemeModule as Vudspace7EagerThemeModule } from './vudspace7/eager-theme.module';
+
 @NgModule({
   imports: [
-    // DSpaceEagerThemeModule,
+   // DSpaceEagerThemeModule,
     Vudspace7EagerThemeModule,
+    // CustomEagerThemeModule,
   ],
 })
 export class EagerThemesModule {
