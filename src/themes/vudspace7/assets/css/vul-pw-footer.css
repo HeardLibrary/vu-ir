@@ -1,1 +1,631 @@
-{"payload":{"allShortcutsEnabled":false,"fileTree":{"bootstrap4/dist/css":{"items":[{"name":"vul-pw-fontawesome.css","path":"bootstrap4/dist/css/vul-pw-fontawesome.css","contentType":"file"},{"name":"vul-pw-footer.css","path":"bootstrap4/dist/css/vul-pw-footer.css","contentType":"file"},{"name":"vul-pw-header.css","path":"bootstrap4/dist/css/vul-pw-header.css","contentType":"file"}],"totalCount":3},"bootstrap4/dist":{"items":[{"name":"css","path":"bootstrap4/dist/css","contentType":"directory"},{"name":"fonts","path":"bootstrap4/dist/fonts","contentType":"directory"},{"name":"js","path":"bootstrap4/dist/js","contentType":"directory"},{"name":"mix-manifest.json","path":"bootstrap4/dist/mix-manifest.json","contentType":"file"}],"totalCount":4},"bootstrap4":{"items":[{"name":"dist","path":"bootstrap4/dist","contentType":"directory"},{"name":"src","path":"bootstrap4/src","contentType":"directory"},{"name":"index.html","path":"bootstrap4/index.html","contentType":"file"},{"name":"package-lock.json","path":"bootstrap4/package-lock.json","contentType":"file"},{"name":"package.json","path":"bootstrap4/package.json","contentType":"file"},{"name":"webpack.fontawesome.mix.js","path":"bootstrap4/webpack.fontawesome.mix.js","contentType":"file"},{"name":"webpack.footer.mix.js","path":"bootstrap4/webpack.footer.mix.js","contentType":"file"},{"name":"webpack.header.mix.js","path":"bootstrap4/webpack.header.mix.js","contentType":"file"}],"totalCount":8},"":{"items":[{"name":"bootstrap3","path":"bootstrap3","contentType":"directory"},{"name":"bootstrap4","path":"bootstrap4","contentType":"directory"},{"name":"future-vul","path":"future-vul","contentType":"directory"},{"name":".gitignore","path":".gitignore","contentType":"file"},{"name":"README.md","path":"README.md","contentType":"file"},{"name":"vul-navigation.json","path":"vul-navigation.json","contentType":"file"}],"totalCount":6}},"fileTreeProcessingTime":8.643524,"foldersToFetch":[],"reducedMotionEnabled":null,"repo":{"id":495924250,"defaultBranch":"main","name":"vul-pubweb-components","ownerLogin":"HeardLibrary","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2022-05-24T17:29:40.000Z","ownerAvatar":"https://avatars.githubusercontent.com/u/8887164?v=4","public":true,"private":false,"isOrgOwned":true},"refInfo":{"name":"main","listCacheKey":"v0:1653413544.810377","canEdit":false,"refType":"branch","currentOid":"8d2ad33bdd070cb56ef123f1beb1e0ecd0275c5c"},"path":"bootstrap4/dist/css/vul-pw-footer.css","currentUser":null,"blob":{"rawLines":["/*!"," * Bootstrap v3.4.1 (https://getbootstrap.com/)"," * Copyright 2011-2019 Twitter, Inc."," * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)"," */","/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */","","footer,","section {","  display: block;","}","a {","  background-color: transparent;","}","a:active,","a:hover {","  outline: 0;","}","small {","  font-size: 80%;","}","img {","  border: 0;","}","svg:not(:root) {","  overflow: hidden;","}","* {","  box-sizing: border-box;","}","*:before,","*:after {","  box-sizing: border-box;","}","a {","  color: #337ab7;","  text-decoration: none;","}","a:hover,","a:focus {","  color: #23527c;","  text-decoration: underline;","}","a:focus {","  outline: 5px auto -webkit-focus-ring-color;","  outline-offset: -2px;","}","img {","  vertical-align: middle;","}","","h2,","h4,",".h2,",".h4 {","  font-family: inherit;","  font-weight: 500;","  line-height: 1.1;","  color: inherit;","}","","h2 small,","h4 small,",".h2 small,",".h4 small,","h2 .small,","h4 .small,",".h2 .small,",".h4 .small {","  font-weight: 400;","  line-height: 1;","  color: #777777;","}","","h2,",".h2 {","  margin-top: 20px;","  margin-bottom: 10px;","}","","h2 small,",".h2 small,","h2 .small,",".h2 .small {","  font-size: 65%;","}","h4,",".h4 {","  margin-top: 10px;","  margin-bottom: 10px;","}","h4 small,",".h4 small,","h4 .small,",".h4 .small {","  font-size: 75%;","}","h2,",".h2 {","  font-size: 30px;","}","h4,",".h4 {","  font-size: 18px;","}","p {","  margin: 0 0 10px;","}","small,",".small {","  font-size: 85%;","}",".text-center {","  text-align: center;","}","ul {","  margin-top: 0;","  margin-bottom: 10px;","}","ul ul {","  margin-bottom: 0;","}",".container {","  padding-right: 15px;","  padding-left: 15px;","  margin-right: auto;","  margin-left: auto;","}","@media (min-width: 768px) {","  .container {","    width: 750px;","  }","}","@media (min-width: 992px) {","  .container {","    width: 970px;","  }","}","@media (min-width: 1200px) {","  .container {","    width: 1170px;","  }","}",".row {","  margin-right: -15px;","  margin-left: -15px;","}","",".col-xs-3,",".col-sm-3,",".col-lg-3,",".col-sm-4,",".col-sm-6,",".col-sm-8,",".col-lg-9,",".col-xs-12,",".col-lg-12 {","  position: relative;","  min-height: 1px;","  padding-right: 15px;","  padding-left: 15px;","}","",".col-xs-3,",".col-xs-12 {","  float: left;","}",".col-xs-12 {","  width: 100%;","}",".col-xs-3 {","  width: 25%;","}","@media (min-width: 768px) {","  ","  .col-sm-3,","  .col-sm-4,","  .col-sm-6,","  .col-sm-8 {","    float: left;","  }","  .col-sm-8 {","    width: 66.66666667%;","  }","  .col-sm-6 {","    width: 50%;","  }","  .col-sm-4 {","    width: 33.33333333%;","  }","  .col-sm-3 {","    width: 25%;","  }","}","@media (min-width: 1200px) {","  ","  .col-lg-3,","  .col-lg-9,","  .col-lg-12 {","    float: left;","  }","  .col-lg-12 {","    width: 100%;","  }","  .col-lg-9 {","    width: 75%;","  }","  .col-lg-3 {","    width: 25%;","  }","}",".btn {","  display: inline-block;","  margin-bottom: 0;","  font-weight: normal;","  text-align: center;","  white-space: nowrap;","  vertical-align: middle;","  touch-action: manipulation;","  cursor: pointer;","  background-color: transparent;","  background-image: none;","  border: 1px solid transparent;","  padding: 6px 12px;","  font-size: 14px;","  line-height: 1.42857143;","  border-radius: 4px;","  -webkit-user-select: none;","  -moz-user-select: none;","  -ms-user-select: none;","  user-select: none;","}",".btn:focus,",".btn:active:focus {","  outline: 5px auto -webkit-focus-ring-color;","  outline-offset: -2px;","}",".btn:hover,",".btn:focus {","  color: #333;","  text-decoration: none;","}",".btn:active {","  background-image: none;","  outline: 0;","  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);","}",".btn-primary {","  color: #fff;","  background-color: #337ab7;","  border-color: #2e6da4;","}",".btn-primary:focus {","  color: #fff;","  background-color: #286090;","  border-color: #122b40;","}",".btn-primary:hover {","  color: #fff;","  background-color: #286090;","  border-color: #204d74;","}",".btn-primary:active {","  color: #fff;","  background-color: #286090;","  background-image: none;","  border-color: #204d74;","}",".btn-primary:active:hover,",".btn-primary:active:focus {","  color: #fff;","  background-color: #204d74;","  border-color: #122b40;","}",".open > a {","  outline: 0;","}",".clearfix:before,",".clearfix:after,",".container:before,",".container:after,",".row:before,",".row:after {","  display: table;","  content: \" \";","}",".clearfix:after,",".container:after,",".row:after {","  clear: both;","}",".center-block {","  display: block;","  margin-right: auto;","  margin-left: auto;","}","@-ms-viewport {","  width: device-width;","}","","","/*!"," * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com"," * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)"," */","",".fas,",".fab {","  -moz-osx-font-smoothing: grayscale;","  -webkit-font-smoothing: antialiased;","  display: inline-block;","  font-style: normal;","  font-variant: normal;","  text-rendering: auto;","  line-height: 1;","}","/* makes the font 33% larger relative to the icon container */",".fa-fw {","  text-align: center;","  width: 1.25em;","}","/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen","   readers do not read off random characters that represent icons */",".fa-facebook-f:before {","  content: \"\\f39e\";","}",".fa-flickr:before {","  content: \"\\f16e\";","}",".fa-heart:before {","  content: \"\\f004\";","}",".fa-instagram:before {","  content: \"\\f16d\";","}",".fa-linkedin-in:before {","  content: \"\\f0e1\";","}",".fa-rss:before {","  content: \"\\f09e\";","}",".fa-twitter:before {","  content: \"\\f099\";","}",".fa-youtube:before {","  content: \"\\f167\";","}","","","* {","    box-sizing: border-box; }","  ","  .container {","    width: 100%;","    width: calc(100% - 30px);","    max-width: 1450px; }","  ","  a {","    color: #333333; }","    a:hover {","      color: #006682; }","  ","  .btn {","    font-family: 'Roboto', sans-serif; }","    .btn-primary {","      background-color: #d8ab4c;","      border: #d8ab4c;","      color: #000; }","      .btn-primary:hover {","        background-color: #c6942b;","        color: #000; }","  ","  a.btn-primary {","    color: #000; }","    a.btn-primary:hover {","      color: #000; }","  ","  .footer {","    min-height: 500px;","    background: #1a210f;","    position: relative; }","  ","  @media (max-width: 480px) {","    .footer {","      padding-bottom: 50px; } }","  ","  /**","   * Flex Box Row Sizing","   */","  ","  /* Accessibility Options */","  ","  /* Flickr Widget */","  ","  /* CAROUSEL FADE */","  ","  /* Pause and Play Button */","  ","  /* Carousel Controls */","  ","  /* Classes generated by bootstrap-carousel-accessibility.js */","  ","  /* Slides */","  ","  /* GRID PAGE */","  ","  /* EVENTS */","  ","  /* Events Widget */","  ","  /* LW EVENTS DISPLAY */","  ","  .vu-social {","    background: rgba(34, 34, 34, 0.5);","    margin: -1.5em 0 1.5em; }","  ","  .vu-footer {","    background: #333 url(\"https://cdn.vanderbilt.edu/vu-www4/omni/i/VUfooterphoto.jpg\") no-repeat top center/cover;","    border-top: 7px solid #d8ab4c;","    color: #aaa;","    font-size: 1.2rem;","    min-height: 300px;","    padding: 1.5em 0;","    position: relative; }","    .vu-footer h4 {","      font-weight: 300;","      font-size: 1.4rem; }","    .vu-footer p a {","      color: inherit;","      text-decoration: underline; }","    .vu-footer a {","      color: #ccc; }","      .vu-footer a:hover {","        color: #d8ab4c;","        text-decoration: none; }","    .vu-footer ul {","      line-height: 1.4em;","      list-style-type: none;","      margin-right: 0;","      padding: 0; }","    .vu-footer__title {","      margin: 15px 0px;","      color: #d8ab4c;","      font-family: Roboto, sans-serif;","      font-weight: 700; }","      .vu-footer__title a {","        color: #d8ab4c; }","        .vu-footer__title a:hover {","          color: #ccc; }","  ","  .credits {","    background: #000;","    font-size: 1.2rem;","    padding: 15px 0px 10px 0px;","    color: #969696; }","    .credits a {","      color: #aaa; }","      .credits a:visited {","        color: #aaa; }","      .credits a:hover {","        color: #d8ab4c; }","  ","  @media print {","    a[href]:after {","      font-size: 0.8rem; } }","  ","","/*! vul-footer.css */","","/*!"," * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com"," * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)"," * These were added manually since there didn't seem to be a way to get these rules from PurgeCSS without additional unnecessary CSS. --Matt"," */"," .fas {","\tfont-family: 'Font Awesome 5 Free';","\tfont-weight: 900;","}","",".fab {","\tfont-family: 'Font Awesome 5 Brands';","\tfont-weight: 400;","}","","/*","|--------------------------------------------------------------------------","| Global","|--------------------------------------------------------------------------","*/",":host {","\tall: initial;","}","",".btn:not(.btn-link):not(.gsw-list__link) {","\ttext-transform: uppercase;","\tletter-spacing: 0.5px;","    white-space: normal;","}","","/*","|--------------------------------------------------------------------------","| Footer","|--------------------------------------------------------------------------","*/","",".vu-footer {","\tfont-family: Roboto, sans-serif;","\tfont-weight: 300;","\tline-height: 1.6rem;","\tpadding-bottom: 0;","}","",".vu-footer h4 {","\tline-height: 1.35;","}","",".vu-footer ul {","\tcolor: #aaa;","\tfont-size: 1.2rem;","\tmargin-right: 0;","\tmargin-left: 0;","}","",".vu-footer .social-icons.h2 {","\tfont-size: 30px;","}","",".vu-footer__social .social-icons li {","\tdisplay: inline-block;","\tmargin-bottom: 10px;","}","",".vu-footer__social .social-icons i {","\tcolor: #fff;","\tborder-radius: 50%;","\tdisplay: inline-block;","\tfont-size: 30px;","    padding: 10px 0;","\ttransition: transform 100ms ease-in-out;","    min-width: 50px;","\tmin-height: 50px;","}","",".vu-footer__social .social-icons i:hover {","\ttransform: scale(1.1);","}","",".vu-footer__social .social-icons .facebook i {","\tbackground-color: hsl(221, 44%, 41%);","}","",".vu-footer__social .social-icons .twitter i {","\tbackground-color: hsl(203, 89%, 53%);","}","",".vu-footer__social .social-icons .instagram i {","\tbackground: radial-gradient(circle at 10% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);","}","",".vu-footer__social .social-icons .youtube i {","\tbackground-color: hsl(0, 100%, 46%);","}","",".vu-footer__social .social-icons .flickr i {","\tbackground-color: #fff;","\tposition: relative;","\tz-index: 0;","}","",".vu-footer__social .social-icons .flickr i:after {","\tbackground: linear-gradient(to right, #0063dc 50%, #ff0084 50%);","\tcontent: \"\";","\theight: 18px;","\tleft: 15px;","\tposition: absolute;","\ttop: 15px;","\twidth: 20px;","\tz-index: -1;","}","",".vu-footer__social .social-icons .rss i {","\tbackground-color: hsl(32, 100%, 50%);","\tcolor: hsl(32, 100%, 18%);","}","",".vu-footer__social .social-icons .linkedin i {","\tbackground-color: hsl(201, 100%, 35%);","}","",".vu-footer__yourvu li, ",".vu-footer__popular li {","\tline-height: 1.35;","\tmargin-bottom: 0.5em;","}","",".vu-footer__map .embed-responsive-16by9 {","\theight: initial;","\tpadding: initial;","}","",".vu-footer__map .give-now img {","\tmin-width: 100px;","\twidth: 100%;","}","",".vu-footer__map .friend {","\tpadding: 15px 0;","}","",".vu-footer__map .friend a {","\tcolor: #333;","}","",".credits {","\tmargin-top: 2rem;","}","",".credits a { ","\t-webkit-text-decoration: underline transparent; ","\t        text-decoration: underline transparent;","}","",".credits a:hover {","\t-webkit-text-decoration-color: #d8ab4c;","\t        text-decoration-color: #d8ab4c;","}","",".credits .depository-logo {","\twidth: 30px;","}"],"stylingDirectives":[[{"start":0,"end":3,"cssClass":"pl-c"}],[{"start":0,"end":47,"cssClass":"pl-c"}],[{"start":0,"end":36,"cssClass":"pl-c"}],[{"start":0,"end":77,"cssClass":"pl-c"}],[{"start":0,"end":3,"cssClass":"pl-c"}],[{"start":0,"end":76,"cssClass":"pl-c"}],[],[{"start":0,"end":6,"cssClass":"pl-ent"},{"start":6,"end":7,"cssClass":"pl-kos"}],[{"start":0,"end":7,"cssClass":"pl-ent"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[],[{"start":0,"end":1,"cssClass":"pl-ent"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"}],[],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":1,"end":2,"cssClass":"pl-kos"},{"start":2,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":1,"end":2,"cssClass":"pl-kos"},{"start":2,"end":7,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":12,"cssClass":"pl-c1"}],[],[{"start":0,"end":5,"cssClass":"pl-ent"}],[{"start":2,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":16,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-smi"}],[],[{"start":0,"end":3,"cssClass":"pl-ent"}],[{"start":2,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":11,"cssClass":"pl-c1"}],[],[{"start":0,"end":3,"cssClass":"pl-ent"},{"start":3,"end":4,"cssClass":"pl-kos"},{"start":4,"end":7,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-c1"}],[{"start":2,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":0,"end":1,"cssClass":"pl-c1"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"}],[],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":0,"end":1,"cssClass":"pl-c1"},{"start":1,"end":2,"cssClass":"pl-kos"},{"start":2,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":0,"end":1,"cssClass":"pl-c1"},{"start":1,"end":2,"cssClass":"pl-kos"},{"start":2,"end":7,"cssClass":"pl-c1"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"}],[],[{"start":0,"end":1,"cssClass":"pl-ent"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":16,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"}],[],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":1,"end":2,"cssClass":"pl-kos"},{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"}],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":1,"end":2,"cssClass":"pl-kos"},{"start":2,"end":7,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":16,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"}],[],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":1,"end":2,"cssClass":"pl-kos"},{"start":2,"end":7,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":14,"cssClass":"pl-c1"},{"start":12,"end":14,"cssClass":"pl-smi"}],[{"start":2,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":18,"end":22,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-smi"}],[],[{"start":0,"end":3,"cssClass":"pl-ent"}],[{"start":2,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"}],[],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":2,"end":3,"cssClass":"pl-kos"}],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":2,"end":3,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":3,"end":4,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":18,"cssClass":"pl-c1"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":18,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"}],[],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":3,"end":8,"cssClass":"pl-ent"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":3,"end":8,"cssClass":"pl-ent"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":4,"end":9,"cssClass":"pl-ent"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":4,"end":9,"cssClass":"pl-ent"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":5,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":5,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":18,"cssClass":"pl-c1"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":16,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":16,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":2,"end":3,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":18,"cssClass":"pl-c1"},{"start":16,"end":18,"cssClass":"pl-smi"}],[{"start":2,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":3,"end":8,"cssClass":"pl-ent"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":4,"end":9,"cssClass":"pl-ent"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":5,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":16,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-smi"}],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":2,"end":3,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":18,"cssClass":"pl-c1"},{"start":16,"end":18,"cssClass":"pl-smi"}],[{"start":2,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":3,"end":8,"cssClass":"pl-ent"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":4,"end":9,"cssClass":"pl-ent"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"},{"start":5,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":16,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-smi"}],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":2,"end":3,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"}],[{"start":2,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":2,"end":3,"cssClass":"pl-kos"}],[{"start":1,"end":3,"cssClass":"pl-c1"}],[{"start":2,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[],[{"start":0,"end":1,"cssClass":"pl-ent"}],[{"start":2,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":11,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-c1"},{"start":14,"end":18,"cssClass":"pl-c1"},{"start":16,"end":18,"cssClass":"pl-smi"}],[],[{"start":0,"end":5,"cssClass":"pl-ent"},{"start":5,"end":6,"cssClass":"pl-kos"}],[{"start":1,"end":6,"cssClass":"pl-c1"}],[{"start":2,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":16,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-smi"}],[],[{"start":1,"end":12,"cssClass":"pl-c1"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"}],[],[{"start":0,"end":2,"cssClass":"pl-ent"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":15,"cssClass":"pl-c1"}],[{"start":2,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[],[{"start":0,"end":2,"cssClass":"pl-ent"},{"start":3,"end":5,"cssClass":"pl-ent"}],[{"start":2,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":18,"cssClass":"pl-c1"}],[],[{"start":1,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":20,"cssClass":"pl-c1"},{"start":18,"end":20,"cssClass":"pl-smi"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"}],[],[{"start":0,"end":6,"cssClass":"pl-k"},{"start":8,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":24,"cssClass":"pl-c1"},{"start":22,"end":24,"cssClass":"pl-smi"}],[{"start":3,"end":12,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"}],[],[],[{"start":0,"end":6,"cssClass":"pl-k"},{"start":8,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":24,"cssClass":"pl-c1"},{"start":22,"end":24,"cssClass":"pl-smi"}],[{"start":3,"end":12,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"}],[],[],[{"start":0,"end":6,"cssClass":"pl-k"},{"start":8,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":25,"cssClass":"pl-c1"},{"start":23,"end":25,"cssClass":"pl-smi"}],[{"start":3,"end":12,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":4,"cssClass":"pl-c1"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":20,"cssClass":"pl-c1"},{"start":18,"end":20,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[{"start":1,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[{"start":2,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":20,"cssClass":"pl-c1"},{"start":18,"end":20,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"}],[],[{"start":1,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-smi"}],[],[{"start":1,"end":9,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":12,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-smi"}],[],[{"start":0,"end":6,"cssClass":"pl-k"},{"start":8,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":24,"cssClass":"pl-c1"},{"start":22,"end":24,"cssClass":"pl-smi"}],[],[{"start":3,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":3,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":3,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":3,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[],[{"start":3,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":23,"cssClass":"pl-c1"},{"start":22,"end":23,"cssClass":"pl-smi"}],[],[{"start":3,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":14,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-smi"}],[],[{"start":3,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":23,"cssClass":"pl-c1"},{"start":22,"end":23,"cssClass":"pl-smi"}],[],[{"start":3,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":14,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-smi"}],[],[],[{"start":0,"end":6,"cssClass":"pl-k"},{"start":8,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":25,"cssClass":"pl-c1"},{"start":23,"end":25,"cssClass":"pl-smi"}],[],[{"start":3,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":3,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":3,"end":12,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[],[{"start":3,"end":12,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":15,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-smi"}],[],[{"start":3,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":14,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-smi"}],[],[{"start":3,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":14,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":4,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":18,"cssClass":"pl-c1"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"}],[{"start":2,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"}],[{"start":2,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"}],[{"start":2,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":13,"cssClass":"pl-c1"},{"start":11,"end":13,"cssClass":"pl-smi"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":14,"cssClass":"pl-c1"},{"start":12,"end":14,"cssClass":"pl-smi"},{"start":15,"end":19,"cssClass":"pl-c1"},{"start":17,"end":19,"cssClass":"pl-smi"}],[{"start":2,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":25,"cssClass":"pl-c1"}],[{"start":2,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":20,"cssClass":"pl-c1"},{"start":18,"end":20,"cssClass":"pl-smi"}],[{"start":2,"end":21,"cssClass":"pl-c1"},{"start":21,"end":22,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"}],[{"start":2,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"}],[],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":12,"end":17,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":14,"cssClass":"pl-c1"},{"start":12,"end":14,"cssClass":"pl-smi"}],[{"start":2,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":18,"end":22,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-smi"}],[],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"}],[],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":11,"cssClass":"pl-c1"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":12,"cssClass":"pl-c1"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":20,"end":21,"cssClass":"pl-c1"},{"start":22,"end":25,"cssClass":"pl-c1"},{"start":23,"end":25,"cssClass":"pl-smi"},{"start":26,"end":29,"cssClass":"pl-c1"},{"start":27,"end":29,"cssClass":"pl-smi"},{"start":30,"end":34,"cssClass":"pl-en"},{"start":35,"end":36,"cssClass":"pl-c1"},{"start":36,"end":37,"cssClass":"pl-kos"},{"start":38,"end":39,"cssClass":"pl-c1"},{"start":39,"end":40,"cssClass":"pl-kos"},{"start":41,"end":42,"cssClass":"pl-c1"},{"start":42,"end":43,"cssClass":"pl-kos"},{"start":44,"end":49,"cssClass":"pl-c1"}],[],[{"start":1,"end":12,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"},{"start":20,"end":27,"cssClass":"pl-pds"},{"start":20,"end":21,"cssClass":"pl-kos"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":23,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-kos"}],[],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":13,"end":18,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"},{"start":20,"end":27,"cssClass":"pl-pds"},{"start":20,"end":21,"cssClass":"pl-kos"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":23,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-kos"}],[],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":13,"end":18,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"},{"start":20,"end":27,"cssClass":"pl-pds"},{"start":20,"end":21,"cssClass":"pl-kos"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":23,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-kos"}],[],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":13,"end":19,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"},{"start":20,"end":27,"cssClass":"pl-pds"},{"start":20,"end":21,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":23,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-kos"}],[],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":13,"end":19,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-kos"},{"start":20,"end":25,"cssClass":"pl-c1"},{"start":25,"end":26,"cssClass":"pl-kos"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":13,"end":19,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-kos"},{"start":20,"end":25,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-pds"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"},{"start":20,"end":27,"cssClass":"pl-pds"},{"start":20,"end":21,"cssClass":"pl-kos"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":23,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-kos"}],[],[{"start":1,"end":5,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-ent"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":12,"cssClass":"pl-c1"}],[],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":10,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":10,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":11,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":11,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"}],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":14,"cssClass":"pl-s"}],[],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":10,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":11,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"}],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":10,"cssClass":"pl-c1"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"}],[],[{"start":1,"end":13,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"}],[],[{"start":0,"end":13,"cssClass":"pl-k"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"}],[],[],[],[{"start":0,"end":3,"cssClass":"pl-c"}],[{"start":0,"end":69,"cssClass":"pl-c"}],[{"start":0,"end":107,"cssClass":"pl-c"}],[{"start":0,"end":3,"cssClass":"pl-c"}],[],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"}],[{"start":1,"end":4,"cssClass":"pl-c1"}],[{"start":2,"end":25,"cssClass":"pl-c1"},{"start":25,"end":26,"cssClass":"pl-kos"}],[{"start":2,"end":24,"cssClass":"pl-c1"},{"start":24,"end":25,"cssClass":"pl-kos"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"}],[{"start":2,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"}],[{"start":2,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"}],[{"start":2,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":16,"cssClass":"pl-c1"}],[],[{"start":0,"end":62,"cssClass":"pl-c"}],[{"start":1,"end":6,"cssClass":"pl-c1"}],[{"start":2,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"}],[{"start":2,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":15,"cssClass":"pl-c1"},{"start":13,"end":15,"cssClass":"pl-smi"}],[],[{"start":0,"end":72,"cssClass":"pl-c"}],[{"start":0,"end":68,"cssClass":"pl-c"}],[{"start":1,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":15,"end":21,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-s"}],[],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":11,"end":17,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-s"}],[],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":10,"end":16,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-s"}],[],[{"start":1,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":14,"end":20,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-s"}],[],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":16,"end":22,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-s"}],[],[{"start":1,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":8,"end":14,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-s"}],[],[{"start":1,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":12,"end":18,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-s"}],[],[{"start":1,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":12,"end":18,"cssClass":"pl-c1"}],[{"start":2,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-s"}],[],[],[],[{"start":0,"end":1,"cssClass":"pl-ent"},{"start":0,"end":1,"cssClass":"pl-c1"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"}],[],[{"start":3,"end":12,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":15,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-smi"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":15,"cssClass":"pl-en"},{"start":16,"end":20,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-smi"},{"start":21,"end":22,"cssClass":"pl-c1"},{"start":23,"end":27,"cssClass":"pl-c1"},{"start":25,"end":27,"cssClass":"pl-smi"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[],[{"start":2,"end":3,"cssClass":"pl-ent"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":5,"cssClass":"pl-ent"},{"start":5,"end":6,"cssClass":"pl-kos"},{"start":6,"end":11,"cssClass":"pl-c1"}],[{"start":6,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":20,"cssClass":"pl-pds"},{"start":13,"end":14,"cssClass":"pl-kos"}],[],[{"start":3,"end":6,"cssClass":"pl-c1"}],[{"start":4,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":25,"cssClass":"pl-s"},{"start":25,"end":26,"cssClass":"pl-kos"}],[{"start":5,"end":16,"cssClass":"pl-c1"}],[{"start":6,"end":22,"cssClass":"pl-c1"},{"start":22,"end":23,"cssClass":"pl-kos"},{"start":24,"end":31,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-kos"}],[{"start":6,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":21,"cssClass":"pl-pds"},{"start":14,"end":15,"cssClass":"pl-kos"}],[{"start":6,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-pds"},{"start":13,"end":14,"cssClass":"pl-kos"}],[{"start":7,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"},{"start":19,"end":24,"cssClass":"pl-c1"}],[{"start":8,"end":24,"cssClass":"pl-c1"},{"start":24,"end":25,"cssClass":"pl-kos"},{"start":26,"end":33,"cssClass":"pl-pds"},{"start":26,"end":27,"cssClass":"pl-kos"}],[{"start":8,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":19,"cssClass":"pl-pds"},{"start":15,"end":16,"cssClass":"pl-kos"}],[],[{"start":2,"end":3,"cssClass":"pl-ent"},{"start":4,"end":15,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":15,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":5,"cssClass":"pl-ent"},{"start":6,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":18,"end":23,"cssClass":"pl-c1"}],[{"start":6,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-pds"},{"start":13,"end":14,"cssClass":"pl-kos"}],[],[{"start":3,"end":9,"cssClass":"pl-c1"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":23,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-kos"}],[{"start":4,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"}],[],[{"start":2,"end":8,"cssClass":"pl-k"},{"start":10,"end":19,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-kos"},{"start":21,"end":26,"cssClass":"pl-c1"},{"start":24,"end":26,"cssClass":"pl-smi"}],[{"start":5,"end":11,"cssClass":"pl-c1"}],[{"start":6,"end":20,"cssClass":"pl-c1"},{"start":20,"end":21,"cssClass":"pl-kos"},{"start":22,"end":26,"cssClass":"pl-c1"},{"start":24,"end":26,"cssClass":"pl-smi"}],[],[{"start":2,"end":5,"cssClass":"pl-c"}],[{"start":0,"end":24,"cssClass":"pl-c"}],[{"start":0,"end":5,"cssClass":"pl-c"}],[],[{"start":2,"end":29,"cssClass":"pl-c"}],[],[{"start":2,"end":21,"cssClass":"pl-c"}],[],[{"start":2,"end":21,"cssClass":"pl-c"}],[],[{"start":2,"end":29,"cssClass":"pl-c"}],[],[{"start":2,"end":25,"cssClass":"pl-c"}],[],[{"start":2,"end":64,"cssClass":"pl-c"}],[],[{"start":2,"end":14,"cssClass":"pl-c"}],[],[{"start":2,"end":17,"cssClass":"pl-c"}],[],[{"start":2,"end":14,"cssClass":"pl-c"}],[],[{"start":2,"end":21,"cssClass":"pl-c"}],[],[{"start":2,"end":25,"cssClass":"pl-c"}],[],[{"start":3,"end":12,"cssClass":"pl-c1"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":20,"cssClass":"pl-en"},{"start":21,"end":23,"cssClass":"pl-c1"},{"start":23,"end":24,"cssClass":"pl-kos"},{"start":25,"end":27,"cssClass":"pl-c1"},{"start":27,"end":28,"cssClass":"pl-kos"},{"start":29,"end":31,"cssClass":"pl-c1"},{"start":31,"end":32,"cssClass":"pl-kos"},{"start":33,"end":36,"cssClass":"pl-c1"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":18,"cssClass":"pl-c1"},{"start":16,"end":18,"cssClass":"pl-smi"},{"start":19,"end":20,"cssClass":"pl-c1"},{"start":21,"end":26,"cssClass":"pl-c1"},{"start":24,"end":26,"cssClass":"pl-smi"}],[],[{"start":3,"end":12,"cssClass":"pl-c1"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":20,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":21,"end":24,"cssClass":"pl-en"},{"start":25,"end":86,"cssClass":"pl-s"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":19,"cssClass":"pl-c1"},{"start":17,"end":19,"cssClass":"pl-smi"},{"start":26,"end":33,"cssClass":"pl-pds"},{"start":26,"end":27,"cssClass":"pl-kos"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":15,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":21,"cssClass":"pl-c1"},{"start":18,"end":21,"cssClass":"pl-smi"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":18,"cssClass":"pl-c1"},{"start":16,"end":18,"cssClass":"pl-smi"},{"start":19,"end":20,"cssClass":"pl-c1"}],[{"start":4,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"}],[{"start":5,"end":14,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-ent"}],[{"start":6,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-c1"}],[{"start":6,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":23,"cssClass":"pl-c1"},{"start":20,"end":23,"cssClass":"pl-smi"}],[{"start":5,"end":14,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-ent"},{"start":17,"end":18,"cssClass":"pl-ent"}],[{"start":6,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":6,"end":21,"cssClass":"pl-c1"},{"start":21,"end":22,"cssClass":"pl-kos"}],[{"start":5,"end":14,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-ent"}],[{"start":6,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-pds"},{"start":13,"end":14,"cssClass":"pl-kos"}],[{"start":7,"end":16,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-ent"},{"start":18,"end":19,"cssClass":"pl-kos"},{"start":19,"end":24,"cssClass":"pl-c1"}],[{"start":8,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":22,"cssClass":"pl-pds"},{"start":15,"end":16,"cssClass":"pl-kos"}],[{"start":8,"end":23,"cssClass":"pl-c1"},{"start":23,"end":24,"cssClass":"pl-kos"}],[{"start":5,"end":14,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-ent"}],[{"start":6,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":24,"cssClass":"pl-c1"},{"start":22,"end":24,"cssClass":"pl-smi"}],[{"start":6,"end":21,"cssClass":"pl-c1"},{"start":21,"end":22,"cssClass":"pl-kos"}],[{"start":6,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"},{"start":20,"end":21,"cssClass":"pl-c1"}],[{"start":6,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":16,"cssClass":"pl-c1"}],[{"start":5,"end":21,"cssClass":"pl-c1"}],[{"start":6,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":18,"cssClass":"pl-c1"},{"start":16,"end":18,"cssClass":"pl-smi"},{"start":19,"end":22,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-smi"}],[{"start":6,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":20,"cssClass":"pl-pds"},{"start":13,"end":14,"cssClass":"pl-kos"}],[{"start":6,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":25,"end":26,"cssClass":"pl-kos"}],[{"start":6,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-c1"}],[{"start":7,"end":23,"cssClass":"pl-c1"},{"start":24,"end":25,"cssClass":"pl-ent"}],[{"start":8,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":22,"cssClass":"pl-pds"},{"start":15,"end":16,"cssClass":"pl-kos"}],[{"start":9,"end":25,"cssClass":"pl-c1"},{"start":26,"end":27,"cssClass":"pl-ent"},{"start":27,"end":28,"cssClass":"pl-kos"},{"start":28,"end":33,"cssClass":"pl-c1"}],[{"start":10,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":21,"cssClass":"pl-pds"},{"start":17,"end":18,"cssClass":"pl-kos"}],[],[{"start":3,"end":10,"cssClass":"pl-c1"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":20,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-kos"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":21,"cssClass":"pl-c1"},{"start":18,"end":21,"cssClass":"pl-smi"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"},{"start":18,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"},{"start":22,"end":26,"cssClass":"pl-c1"},{"start":24,"end":26,"cssClass":"pl-smi"},{"start":27,"end":30,"cssClass":"pl-c1"},{"start":28,"end":30,"cssClass":"pl-smi"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":5,"end":12,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-ent"}],[{"start":6,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-pds"},{"start":13,"end":14,"cssClass":"pl-kos"}],[{"start":7,"end":14,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-ent"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":17,"end":24,"cssClass":"pl-c1"}],[{"start":8,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":19,"cssClass":"pl-pds"},{"start":15,"end":16,"cssClass":"pl-kos"}],[{"start":7,"end":14,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-ent"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":17,"end":22,"cssClass":"pl-c1"}],[{"start":8,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":22,"cssClass":"pl-pds"},{"start":15,"end":16,"cssClass":"pl-kos"}],[],[{"start":2,"end":8,"cssClass":"pl-k"}],[{"start":4,"end":5,"cssClass":"pl-ent"},{"start":6,"end":10,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":12,"end":17,"cssClass":"pl-c1"}],[{"start":6,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":23,"cssClass":"pl-c1"},{"start":20,"end":23,"cssClass":"pl-smi"}],[],[],[{"start":0,"end":21,"cssClass":"pl-c"}],[],[{"start":0,"end":3,"cssClass":"pl-c"}],[{"start":0,"end":69,"cssClass":"pl-c"}],[{"start":0,"end":107,"cssClass":"pl-c"}],[{"start":0,"end":140,"cssClass":"pl-c"}],[{"start":0,"end":3,"cssClass":"pl-c"}],[{"start":2,"end":5,"cssClass":"pl-c1"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":35,"cssClass":"pl-s"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":17,"cssClass":"pl-c1"}],[],[],[{"start":1,"end":4,"cssClass":"pl-c1"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":37,"cssClass":"pl-s"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":17,"cssClass":"pl-c1"}],[],[],[{"start":0,"end":2,"cssClass":"pl-c"}],[{"start":0,"end":75,"cssClass":"pl-c"}],[{"start":0,"end":8,"cssClass":"pl-c"}],[{"start":0,"end":75,"cssClass":"pl-c"}],[{"start":0,"end":2,"cssClass":"pl-c"}],[{"start":0,"end":1,"cssClass":"pl-kos"},{"start":1,"end":5,"cssClass":"pl-c1"}],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":5,"end":8,"cssClass":"pl-c1"},{"start":10,"end":18,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-kos"},{"start":20,"end":23,"cssClass":"pl-c1"},{"start":25,"end":39,"cssClass":"pl-c1"}],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"}],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":22,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-smi"}],[{"start":4,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"}],[],[],[{"start":0,"end":2,"cssClass":"pl-c"}],[{"start":0,"end":75,"cssClass":"pl-c"}],[{"start":0,"end":8,"cssClass":"pl-c"}],[{"start":0,"end":75,"cssClass":"pl-c"}],[{"start":0,"end":2,"cssClass":"pl-c"}],[],[{"start":1,"end":10,"cssClass":"pl-c1"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":20,"end":21,"cssClass":"pl-kos"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":17,"cssClass":"pl-c1"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":20,"cssClass":"pl-c1"},{"start":17,"end":20,"cssClass":"pl-smi"}],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":18,"cssClass":"pl-c1"}],[],[],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":11,"end":13,"cssClass":"pl-ent"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":18,"cssClass":"pl-c1"}],[],[],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":11,"end":13,"cssClass":"pl-ent"}],[{"start":1,"end":6,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-kos"},{"start":8,"end":12,"cssClass":"pl-pds"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":18,"cssClass":"pl-c1"},{"start":15,"end":18,"cssClass":"pl-smi"}],[{"start":1,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":16,"cssClass":"pl-c1"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":15,"cssClass":"pl-c1"}],[],[],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":12,"end":24,"cssClass":"pl-c1"},{"start":25,"end":27,"cssClass":"pl-c1"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":33,"end":35,"cssClass":"pl-ent"}],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":1,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":20,"cssClass":"pl-c1"},{"start":18,"end":20,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":33,"end":34,"cssClass":"pl-ent"}],[{"start":1,"end":6,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-kos"},{"start":8,"end":12,"cssClass":"pl-pds"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":1,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":19,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-smi"}],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"},{"start":18,"end":19,"cssClass":"pl-c1"}],[{"start":1,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":23,"end":28,"cssClass":"pl-c1"},{"start":26,"end":28,"cssClass":"pl-smi"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":19,"cssClass":"pl-c1"},{"start":17,"end":19,"cssClass":"pl-smi"}],[{"start":1,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":33,"end":34,"cssClass":"pl-ent"},{"start":34,"end":35,"cssClass":"pl-kos"},{"start":35,"end":40,"cssClass":"pl-c1"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":17,"cssClass":"pl-en"},{"start":18,"end":21,"cssClass":"pl-c1"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":34,"end":42,"cssClass":"pl-c1"},{"start":43,"end":44,"cssClass":"pl-ent"}],[{"start":1,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-en"},{"start":23,"end":26,"cssClass":"pl-c1"},{"start":26,"end":27,"cssClass":"pl-kos"},{"start":28,"end":31,"cssClass":"pl-c1"},{"start":30,"end":31,"cssClass":"pl-smi"},{"start":31,"end":32,"cssClass":"pl-kos"},{"start":33,"end":36,"cssClass":"pl-c1"},{"start":35,"end":36,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":34,"end":41,"cssClass":"pl-c1"},{"start":42,"end":43,"cssClass":"pl-ent"}],[{"start":1,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-en"},{"start":23,"end":26,"cssClass":"pl-c1"},{"start":26,"end":27,"cssClass":"pl-kos"},{"start":28,"end":31,"cssClass":"pl-c1"},{"start":30,"end":31,"cssClass":"pl-smi"},{"start":31,"end":32,"cssClass":"pl-kos"},{"start":33,"end":36,"cssClass":"pl-c1"},{"start":35,"end":36,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":34,"end":43,"cssClass":"pl-c1"},{"start":44,"end":45,"cssClass":"pl-ent"}],[{"start":1,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":28,"cssClass":"pl-en"},{"start":39,"end":42,"cssClass":"pl-c1"},{"start":41,"end":42,"cssClass":"pl-smi"},{"start":43,"end":47,"cssClass":"pl-c1"},{"start":46,"end":47,"cssClass":"pl-smi"},{"start":47,"end":48,"cssClass":"pl-kos"},{"start":49,"end":56,"cssClass":"pl-pds"},{"start":49,"end":50,"cssClass":"pl-kos"},{"start":57,"end":59,"cssClass":"pl-c1"},{"start":58,"end":59,"cssClass":"pl-smi"},{"start":59,"end":60,"cssClass":"pl-kos"},{"start":61,"end":68,"cssClass":"pl-pds"},{"start":61,"end":62,"cssClass":"pl-kos"},{"start":69,"end":71,"cssClass":"pl-c1"},{"start":70,"end":71,"cssClass":"pl-smi"},{"start":71,"end":72,"cssClass":"pl-kos"},{"start":73,"end":80,"cssClass":"pl-pds"},{"start":73,"end":74,"cssClass":"pl-kos"},{"start":81,"end":84,"cssClass":"pl-c1"},{"start":83,"end":84,"cssClass":"pl-smi"},{"start":84,"end":85,"cssClass":"pl-kos"},{"start":86,"end":93,"cssClass":"pl-pds"},{"start":86,"end":87,"cssClass":"pl-kos"},{"start":94,"end":97,"cssClass":"pl-c1"},{"start":96,"end":97,"cssClass":"pl-smi"},{"start":97,"end":98,"cssClass":"pl-kos"},{"start":99,"end":106,"cssClass":"pl-pds"},{"start":99,"end":100,"cssClass":"pl-kos"},{"start":107,"end":110,"cssClass":"pl-c1"},{"start":109,"end":110,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":34,"end":41,"cssClass":"pl-c1"},{"start":42,"end":43,"cssClass":"pl-ent"}],[{"start":1,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-en"},{"start":23,"end":24,"cssClass":"pl-c1"},{"start":24,"end":25,"cssClass":"pl-kos"},{"start":26,"end":30,"cssClass":"pl-c1"},{"start":29,"end":30,"cssClass":"pl-smi"},{"start":30,"end":31,"cssClass":"pl-kos"},{"start":32,"end":35,"cssClass":"pl-c1"},{"start":34,"end":35,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":34,"end":40,"cssClass":"pl-c1"},{"start":41,"end":42,"cssClass":"pl-ent"}],[{"start":1,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":23,"cssClass":"pl-pds"},{"start":19,"end":20,"cssClass":"pl-kos"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":11,"cssClass":"pl-c1"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":34,"end":40,"cssClass":"pl-c1"},{"start":41,"end":42,"cssClass":"pl-ent"},{"start":42,"end":43,"cssClass":"pl-kos"},{"start":43,"end":48,"cssClass":"pl-c1"}],[{"start":1,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":28,"cssClass":"pl-en"},{"start":37,"end":38,"cssClass":"pl-kos"},{"start":39,"end":46,"cssClass":"pl-pds"},{"start":39,"end":40,"cssClass":"pl-kos"},{"start":47,"end":50,"cssClass":"pl-c1"},{"start":49,"end":50,"cssClass":"pl-smi"},{"start":50,"end":51,"cssClass":"pl-kos"},{"start":52,"end":59,"cssClass":"pl-pds"},{"start":52,"end":53,"cssClass":"pl-kos"},{"start":60,"end":63,"cssClass":"pl-c1"},{"start":62,"end":63,"cssClass":"pl-smi"}],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":12,"cssClass":"pl-s"}],[{"start":1,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"},{"start":9,"end":13,"cssClass":"pl-c1"},{"start":11,"end":13,"cssClass":"pl-smi"}],[{"start":1,"end":5,"cssClass":"pl-c1"},{"start":5,"end":6,"cssClass":"pl-kos"},{"start":7,"end":11,"cssClass":"pl-c1"},{"start":9,"end":11,"cssClass":"pl-smi"}],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":1,"end":4,"cssClass":"pl-c1"},{"start":4,"end":5,"cssClass":"pl-kos"},{"start":6,"end":10,"cssClass":"pl-c1"},{"start":8,"end":10,"cssClass":"pl-smi"}],[{"start":1,"end":6,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-kos"},{"start":8,"end":12,"cssClass":"pl-c1"},{"start":10,"end":12,"cssClass":"pl-smi"}],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":12,"cssClass":"pl-c1"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":34,"end":37,"cssClass":"pl-c1"},{"start":38,"end":39,"cssClass":"pl-ent"}],[{"start":1,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-en"},{"start":23,"end":25,"cssClass":"pl-c1"},{"start":25,"end":26,"cssClass":"pl-kos"},{"start":27,"end":31,"cssClass":"pl-c1"},{"start":30,"end":31,"cssClass":"pl-smi"},{"start":31,"end":32,"cssClass":"pl-kos"},{"start":33,"end":36,"cssClass":"pl-c1"},{"start":35,"end":36,"cssClass":"pl-smi"}],[{"start":1,"end":6,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-kos"},{"start":8,"end":11,"cssClass":"pl-en"},{"start":12,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":20,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-smi"},{"start":20,"end":21,"cssClass":"pl-kos"},{"start":22,"end":25,"cssClass":"pl-c1"},{"start":24,"end":25,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":20,"end":32,"cssClass":"pl-c1"},{"start":34,"end":42,"cssClass":"pl-c1"},{"start":43,"end":44,"cssClass":"pl-ent"}],[{"start":1,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-en"},{"start":23,"end":26,"cssClass":"pl-c1"},{"start":26,"end":27,"cssClass":"pl-kos"},{"start":28,"end":32,"cssClass":"pl-c1"},{"start":31,"end":32,"cssClass":"pl-smi"},{"start":32,"end":33,"cssClass":"pl-kos"},{"start":34,"end":37,"cssClass":"pl-c1"},{"start":36,"end":37,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":18,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-ent"},{"start":21,"end":22,"cssClass":"pl-kos"}],[{"start":1,"end":19,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-ent"}],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":12,"end":13,"cssClass":"pl-kos"},{"start":14,"end":18,"cssClass":"pl-c1"}],[{"start":1,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":17,"end":39,"cssClass":"pl-c1"}],[{"start":1,"end":7,"cssClass":"pl-c1"},{"start":7,"end":8,"cssClass":"pl-kos"}],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":17,"end":25,"cssClass":"pl-c1"},{"start":26,"end":29,"cssClass":"pl-ent"}],[{"start":1,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[{"start":1,"end":6,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-kos"},{"start":8,"end":12,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":17,"end":23,"cssClass":"pl-c1"}],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":14,"cssClass":"pl-c1"},{"start":12,"end":14,"cssClass":"pl-smi"},{"start":15,"end":16,"cssClass":"pl-c1"}],[],[],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":17,"end":23,"cssClass":"pl-c1"},{"start":24,"end":25,"cssClass":"pl-ent"}],[{"start":1,"end":6,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-kos"},{"start":8,"end":12,"cssClass":"pl-pds"},{"start":8,"end":9,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":8,"cssClass":"pl-c1"}],[{"start":1,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":14,"end":17,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-ent"}],[{"start":1,"end":24,"cssClass":"pl-c1"},{"start":24,"end":25,"cssClass":"pl-kos"}],[{"start":9,"end":24,"cssClass":"pl-c1"},{"start":24,"end":25,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-ent"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":11,"end":16,"cssClass":"pl-c1"}],[{"start":1,"end":30,"cssClass":"pl-c1"},{"start":30,"end":31,"cssClass":"pl-kos"},{"start":32,"end":39,"cssClass":"pl-pds"},{"start":32,"end":33,"cssClass":"pl-kos"}],[{"start":9,"end":30,"cssClass":"pl-c1"},{"start":30,"end":31,"cssClass":"pl-kos"},{"start":32,"end":39,"cssClass":"pl-pds"},{"start":32,"end":33,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":10,"end":25,"cssClass":"pl-c1"}],[{"start":1,"end":6,"cssClass":"pl-c1"},{"start":6,"end":7,"cssClass":"pl-kos"},{"start":8,"end":12,"cssClass":"pl-c1"},{"start":10,"end":12,"cssClass":"pl-smi"}],[],[]],"csv":null,"csvError":null,"dependabotInfo":{"showConfigurationBanner":false,"configFilePath":null,"networkDependabotPath":"/HeardLibrary/vul-pubweb-components/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":null,"repoAlertsPath":"/HeardLibrary/vul-pubweb-components/security/dependabot","repoSecurityAndAnalysisPath":"/HeardLibrary/vul-pubweb-components/settings/security_analysis","repoOwnerIsOrg":true,"currentUserCanAdminRepo":false},"displayName":"vul-pw-footer.css","displayUrl":"https://github.com/HeardLibrary/vul-pubweb-components/blob/main/bootstrap4/dist/css/vul-pw-footer.css?raw=true","headerInfo":{"blobSize":"10.6 KB","deleteInfo":{"deleteTooltip":"You must be signed in to make or propose changes"},"editInfo":{"editTooltip":"You must be signed in to make or propose changes"},"ghDesktopPath":"https://desktop.github.com","gitLfsPath":null,"onBranch":true,"shortPath":"9a148aa","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2FHeardLibrary%2Fvul-pubweb-components%2Fblob%2Fmain%2Fbootstrap4%2Fdist%2Fcss%2Fvul-pw-footer.css","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":"631","truncatedSloc":"563"},"mode":"file"},"image":false,"isCodeownersFile":null,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":"CSS","large":false,"loggedIn":false,"newDiscussionPath":"/HeardLibrary/vul-pubweb-components/discussions/new","newIssuePath":"/HeardLibrary/vul-pubweb-components/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/HeardLibrary/vul-pubweb-components/blob/main/bootstrap4/dist/css/vul-pw-footer.css","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/HeardLibrary/vul-pubweb-components/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"renderImageOrRaw":false,"richText":null,"renderedFileInfo":null,"tabSize":8,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"HeardLibrary","repoName":"vul-pubweb-components","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":false,"actionsOnboardingTip":null},"truncated":false,"viewable":true,"workflowRedirectUrl":null,"symbols":{"timedOut":false,"notAnalyzed":true,"symbols":[]}},"copilotAccessInfo":null,"csrf_tokens":{"/HeardLibrary/vul-pubweb-components/branches":{"post":"RrHy0mC90WMRep3_3zpklv72zpdSZ7lPgXyYdleNSxDNNSA1klU5LMnvGTObQZxuRpPfSYkmYIT_-qX507tvpw"}}},"title":"vul-pubweb-components/bootstrap4/dist/css/vul-pw-footer.css at main · HeardLibrary/vul-pubweb-components","locale":"en"}
+/*!
+ * Bootstrap v3.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+footer,
+section {
+  display: block;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+small {
+  font-size: 80%;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+img {
+  vertical-align: middle;
+}
+
+h2,
+h4,
+.h2,
+.h4 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h2 small,
+h4 small,
+.h2 small,
+.h4 small,
+h2 .small,
+h4 .small,
+.h2 .small,
+.h4 .small {
+  font-weight: 400;
+  line-height: 1;
+  color: #777777;
+}
+
+h2,
+.h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 small,
+.h2 small,
+h2 .small,
+.h2 .small {
+  font-size: 65%;
+}
+h4,
+.h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h4 small,
+.h4 small,
+h4 .small,
+.h4 .small {
+  font-size: 75%;
+}
+h2,
+.h2 {
+  font-size: 30px;
+}
+h4,
+.h4 {
+  font-size: 18px;
+}
+p {
+  margin: 0 0 10px;
+}
+small,
+.small {
+  font-size: 85%;
+}
+.text-center {
+  text-align: center;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul {
+  margin-bottom: 0;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-xs-3,
+.col-sm-3,
+.col-lg-3,
+.col-sm-4,
+.col-sm-6,
+.col-sm-8,
+.col-lg-9,
+.col-xs-12,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xs-3,
+.col-xs-12 {
+  float: left;
+}
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-3 {
+  width: 25%;
+}
+@media (min-width: 768px) {
+  
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-6,
+  .col-sm-8 {
+    float: left;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  
+  .col-lg-3,
+  .col-lg-9,
+  .col-lg-12 {
+    float: left;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn:focus,
+.btn:active:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary:focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.btn-primary:active {
+  color: #fff;
+  background-color: #286090;
+  background-image: none;
+  border-color: #204d74;
+}
+.btn-primary:active:hover,
+.btn-primary:active:focus {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+}
+.open > a {
+  outline: 0;
+}
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.container:after,
+.row:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+@-ms-viewport {
+  width: device-width;
+}
+
+
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+.fas,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+/* makes the font 33% larger relative to the icon container */
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-facebook-f:before {
+  content: "\f39e";
+}
+.fa-flickr:before {
+  content: "\f16e";
+}
+.fa-heart:before {
+  content: "\f004";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-linkedin-in:before {
+  content: "\f0e1";
+}
+.fa-rss:before {
+  content: "\f09e";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-youtube:before {
+  content: "\f167";
+}
+
+
+* {
+    box-sizing: border-box; }
+  
+  .container {
+    width: 100%;
+    width: calc(100% - 30px);
+    max-width: 1450px; }
+  
+  a {
+    color: #333333; }
+    a:hover {
+      color: #006682; }
+  
+  .btn {
+    font-family: 'Roboto', sans-serif; }
+    .btn-primary {
+      background-color: #d8ab4c;
+      border: #d8ab4c;
+      color: #000; }
+      .btn-primary:hover {
+        background-color: #c6942b;
+        color: #000; }
+  
+  a.btn-primary {
+    color: #000; }
+    a.btn-primary:hover {
+      color: #000; }
+  
+  .footer {
+    min-height: 500px;
+    background: #1a210f;
+    position: relative; }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding-bottom: 50px; } }
+  
+  /**
+   * Flex Box Row Sizing
+   */
+  
+  /* Accessibility Options */
+  
+  /* Flickr Widget */
+  
+  /* CAROUSEL FADE */
+  
+  /* Pause and Play Button */
+  
+  /* Carousel Controls */
+  
+  /* Classes generated by bootstrap-carousel-accessibility.js */
+  
+  /* Slides */
+  
+  /* GRID PAGE */
+  
+  /* EVENTS */
+  
+  /* Events Widget */
+  
+  /* LW EVENTS DISPLAY */
+  
+  .vu-social {
+    background: rgba(34, 34, 34, 0.5);
+    margin: -1.5em 0 1.5em; }
+  
+  .vu-footer {
+    background: #333 url("https://cdn.vanderbilt.edu/vu-www4/omni/i/VUfooterphoto.jpg") no-repeat top center/cover;
+    border-top: 7px solid #d8ab4c;
+    color: #aaa;
+    font-size: 1.2rem;
+    min-height: 300px;
+    padding: 1.5em 0;
+    position: relative; }
+    .vu-footer h4 {
+      font-weight: 300;
+      font-size: 1.4rem; }
+    .vu-footer p a {
+      color: inherit;
+      text-decoration: underline; }
+    .vu-footer a {
+      color: #ccc; }
+      .vu-footer a:hover {
+        color: #d8ab4c;
+        text-decoration: none; }
+    .vu-footer ul {
+      line-height: 1.4em;
+      list-style-type: none;
+      margin-right: 0;
+      padding: 0; }
+    .vu-footer__title {
+      margin: 15px 0px;
+      color: #d8ab4c;
+      font-family: Roboto, sans-serif;
+      font-weight: 700; }
+      .vu-footer__title a {
+        color: #d8ab4c; }
+        .vu-footer__title a:hover {
+          color: #ccc; }
+  
+  .credits {
+    background: #000;
+    font-size: 1.2rem;
+    padding: 15px 0px 10px 0px;
+    color: #969696; }
+    .credits a {
+      color: #aaa; }
+      .credits a:visited {
+        color: #aaa; }
+      .credits a:hover {
+        color: #d8ab4c; }
+  
+  @media print {
+    a[href]:after {
+      font-size: 0.8rem; } }
+  
+
+/*! vul-footer.css */
+
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * These were added manually since there didn't seem to be a way to get these rules from PurgeCSS without additional unnecessary CSS. --Matt
+ */
+ .fas {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+}
+
+.fab {
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 400;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Global
+|--------------------------------------------------------------------------
+*/
+:host {
+	all: initial;
+}
+
+.btn:not(.btn-link):not(.gsw-list__link) {
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+    white-space: normal;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+.vu-footer {
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	line-height: 1.6rem;
+	padding-bottom: 0;
+}
+
+.vu-footer h4 {
+	line-height: 1.35;
+}
+
+.vu-footer ul {
+	color: #aaa;
+	font-size: 1.2rem;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.vu-footer .social-icons.h2 {
+	font-size: 30px;
+}
+
+.vu-footer__social .social-icons li {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.vu-footer__social .social-icons i {
+	color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 30px;
+    padding: 10px 0;
+	transition: transform 100ms ease-in-out;
+    min-width: 50px;
+	min-height: 50px;
+}
+
+.vu-footer__social .social-icons i:hover {
+	transform: scale(1.1);
+}
+
+.vu-footer__social .social-icons .facebook i {
+	background-color: hsl(221, 44%, 41%);
+}
+
+.vu-footer__social .social-icons .twitter i {
+	background-color: hsl(203, 89%, 53%);
+}
+
+.vu-footer__social .social-icons .instagram i {
+	background: radial-gradient(circle at 10% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.vu-footer__social .social-icons .youtube i {
+	background-color: hsl(0, 100%, 46%);
+}
+
+.vu-footer__social .social-icons .flickr i {
+	background-color: #fff;
+	position: relative;
+	z-index: 0;
+}
+
+.vu-footer__social .social-icons .flickr i:after {
+	background: linear-gradient(to right, #0063dc 50%, #ff0084 50%);
+	content: "";
+	height: 18px;
+	left: 15px;
+	position: absolute;
+	top: 15px;
+	width: 20px;
+	z-index: -1;
+}
+
+.vu-footer__social .social-icons .rss i {
+	background-color: hsl(32, 100%, 50%);
+	color: hsl(32, 100%, 18%);
+}
+
+.vu-footer__social .social-icons .linkedin i {
+	background-color: hsl(201, 100%, 35%);
+}
+
+.vu-footer__yourvu li, 
+.vu-footer__popular li {
+	line-height: 1.35;
+	margin-bottom: 0.5em;
+}
+
+.vu-footer__map .embed-responsive-16by9 {
+	height: initial;
+	padding: initial;
+}
+
+.vu-footer__map .give-now img {
+	min-width: 100px;
+	width: 100%;
+}
+
+.vu-footer__map .friend {
+	padding: 15px 0;
+}
+
+.vu-footer__map .friend a {
+	color: #333;
+}
+
+.credits {
+	margin-top: 2rem;
+}
+
+.credits a { 
+	-webkit-text-decoration: underline transparent; 
+	        text-decoration: underline transparent;
+}
+
+.credits a:hover {
+	-webkit-text-decoration-color: #d8ab4c;
+	        text-decoration-color: #d8ab4c;
+}
+
+.credits .depository-logo {
+	width: 30px;
+}
+

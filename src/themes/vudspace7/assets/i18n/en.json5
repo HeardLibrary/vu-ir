@@ -1,7 +1,9 @@
 {
   "menu.section.browse_global": "Discover",
-  "nav.login": "DSpace Log In",
-  "repository.title.prefix": "DSpace :: ",
+  "menu.section.browse_global_by_srsc": "Browse by Taxonomy",
+  "browse.metadata.srsc.breadcrumbs": "Taxonomy",
+  "nav.login": "VUIR Log In",
+  "repository.title.prefix": "VUIR :: ",
   "about.title": "About the VUIR",
   "about.breadcrumbs": "About the VUIR",
   "home.top-level-communities.head": "Browse All Communities",

@@ -157,9 +157,13 @@ import { EditBitstreamPageComponent } from './app/bitstream-page/edit-bitstream-
 import { FormModule } from '../../app/shared/form/form.module';
 import { RequestCopyModule } from 'src/app/request-copy/request-copy.module';
 
+//import { AboutPageModule } from './app/about-page/about-page.module';
+//import { AboutPageComponent } from './app/about-page/about-page.component';
+// 
 const DECLARATIONS = [
   FileSectionComponent,
   HomePageComponent,
+//  AboutPageComponent,
   RootComponent,
   BrowseBySwitcherComponent,
   CommunityListPageComponent,
