@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
+//import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
 // import { EagerThemeModule as CustomEagerThemeModule } from './custom/eager-theme.module';
 
 /**
@@ -10,7 +10,7 @@ import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme
  * Themes that aren't in use should not be imported here so they don't take up unnecessary space in the main bundle.
  */
 
-import { EagerThemeModule as DspaceEagerThemeModule } from './dspace/eager-theme.module';
+//import { EagerThemeModule as DspaceEagerThemeModule } from './dspace/eager-theme.module';
 import { EagerThemeModule as Vudspace7EagerThemeModule } from './vudspace7/eager-theme.module';
 
 @NgModule({

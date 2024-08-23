@@ -59,6 +59,21 @@
                 "input": "src/themes/dspace/styles/theme.scss",
                 "inject": false,
                 "bundleName": "dspace-theme"
+              },
+              {
+                "input": "src/themes/vudspace7/styles/theme.scss",
+                "inject": false,
+                "bundleName": "vudspace7-theme"
+              },
+              {
+                "input": "src/themes/vudspace7/assets/css/vul-pw-header.css",
+                "inject": false,
+                "bundleName": "vul-pw-header"
+              },
+              {
+                "input": "src/themes/vudspace7/assets/css/vul-pw-footer.css",
+                "inject": false,
+                "bundleName": "vul-pw-footer"
               }
             ],
             "scripts": [],

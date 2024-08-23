@@ -41,6 +41,8 @@ import { ServerCheckGuard } from './core/server-check/server-check.guard';
 import { MenuResolver } from './menu.resolver';
 import { ThemedPageErrorComponent } from './page-error/themed-page-error.component';
 
+import { AboutPageComponent } from '../themes/vudspace7/app/about-page/about-page.component';
+
 @NgModule({
   imports: [
     RouterModule.forRoot([
@@ -65,6 +67,11 @@ import { ThemedPageErrorComponent } from './page-error/themed-page-error.compone
               .then((m) => m.HomePageModule),
             data: { showBreadcrumbs: false },
             canActivate: [EndUserAgreementCurrentUserGuard]
+          },
+	  {
+            path: 'about',
+            loadChildren: () => import('../themes/vudspace7/app/about-page/about-page.module')
+               .then((m) => m.AboutPageModule),
           },
           {
             path: 'community-list',
