@@ -14,7 +14,7 @@ import { EagerThemeModule as Vudspace9EagerThemeModule } from './vudspace9/eager
   imports: [
     //DSpaceEagerThemeModule,
     // CustomEagerThemeModule,
-   Vudspace9EagerThemeModule,
+   Vudspace9EagerThemeModule
   ],
 })
 export class EagerThemesModule {

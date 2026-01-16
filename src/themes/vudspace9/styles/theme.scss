@@ -2,9 +2,6 @@
 
 @import './_theme_sass_variable_overrides.scss';
 @import '../../../styles/_variables.scss';
-
-$theme-colors: map-merge($theme-colors, $theme-custom-semantic-colors);
-
 @import '../../../styles/_mixins.scss';
 @import '../../../styles/helpers/font_awesome_imports.scss';
 @import '../../../styles/_vendor.scss';
@@ -13,3 +10,15 @@ $theme-colors: map-merge($theme-colors, $theme-custom-semantic-colors);
 @import '../../../styles/bootstrap_variables_mapping.scss';
 @import '../../../styles/_truncatable-part.component.scss';
 @import './_global-styles.scss';
+
+// Add these missing imports from DSpace 7:
+//@import '../../../../node_modules/nouislider/distribute/nouislider.min';
+//@import '../../../../node_modules/ngx-ui-switch/ui-switch.component.scss';
+
+// Fixed nouislider import:
+//@import '../../../../node_modules/nouislider/dist/nouislider.min.css';
+
+
+// Add the missing imports from DSpace 7:
+@import '../../../../node_modules/nouislider/dist/nouislider.min.css';
+@import '../../../../node_modules/ngx-ui-switch/ui-switch.component.scss';
