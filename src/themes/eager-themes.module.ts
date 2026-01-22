@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { EagerThemeModule as Vudspace9EagerThemeModule } from './vudspace9/eager-theme.module';
+import { EagerThemeModule as Vudspace9EagerThemeModule } from './custom/eager-theme.module';
 // import { EagerThemeModule as CustomEagerThemeModule } from './custom/eager-theme.module';
 
 /**

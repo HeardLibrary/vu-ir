@@ -24,4 +24,4 @@ upload/
 solr/statistics/data/**
 *.class
 *.jar
-
+.angular/
