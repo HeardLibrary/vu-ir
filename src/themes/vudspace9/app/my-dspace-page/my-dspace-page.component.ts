@@ -18,10 +18,10 @@ import { ThemedSearchComponent } from '../../../../app/shared/search/themed-sear
 
 @Component({
   selector: 'ds-themed-my-dspace-page',
-  styleUrls: ['./my-dspace-page.component.scss'],
-  //styleUrls: ['../../../../app/my-dspace-page/my-dspace-page.component.scss'],
-  templateUrl: './my-dspace-page.component.html',
-  //templateUrl: '../../../../app/my-dspace-page/my-dspace-page.component.html',
+  //styleUrls: ['./my-dspace-page.component.scss'],
+  styleUrls: ['../../../../app/my-dspace-page/my-dspace-page.component.scss'],
+  //templateUrl: './my-dspace-page.component.html',
+  templateUrl: '../../../../app/my-dspace-page/my-dspace-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [pushInOut],
   providers: [
