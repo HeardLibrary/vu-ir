@@ -279,6 +279,10 @@ export const APP_ROUTES: Route[] = [
           .then((m) => m.ROUTES),
       },
       {
+        path: 'about',
+        loadChildren: () => import('../themes/vudspace9/app/about/about.module').then(m => m.AboutModule)
+      }, 
+      {
         path: 'email-confirmation',
         loadChildren: () => import('./external-login-email-confirmation-page/external-login-email-confirmation-page-routes')
           .then((m) => m.ROUTES),

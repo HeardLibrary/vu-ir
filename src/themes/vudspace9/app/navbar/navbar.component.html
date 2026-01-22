@@ -10,12 +10,12 @@
           <ds-user-menu [inExpandableNavbar]="true"></ds-user-menu>
         }
         <div class="navbar-nav align-items-md-center me-auto shadow-none gapx-3" role="menubar">
-            <a href="/home">Home</a>
+            <a class="nav-link" routerLink="/home">Home</a>
           @for (section of (sections | async); track section) {
             <ng-container
             *ngComponentOutlet="(sectionMap$ | async).get(section.id)?.component; injector: (sectionMap$ | async).get(section.id)?.injector;"></ng-container>
           }
-         <a href="">About</a>
+         <a class="nav-link" routerLink="/about">About</a>
         </div>
       </div>
     </div>
