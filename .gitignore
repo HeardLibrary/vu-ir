@@ -12,6 +12,7 @@ exports/
 import/
 bin/
 assetstore/
+node_modules/
 dspace.cfg
 logs/
 temp/
