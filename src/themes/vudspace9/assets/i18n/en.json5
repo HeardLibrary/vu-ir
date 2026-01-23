@@ -15,5 +15,15 @@
   "submission.import-external.back-to-my-dspace": "Back to MyVUIR",
   "nav.subscriptions": "Subscriptions",
   "search.form.scope.all": "All VUIR ",
-
+  "dso-selector.set-scope.community.button": "Search all of VUIR
+  "home.top-level-communities.head": "Communities in VUIR",
+  "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
+  "login.form.header": "Please log in to VUIR",
+  "logout.form.header": "Log out from VUIR", 
+  "mydspace.breadcrumbs": "MyVUIR",
+  "mydspace.search-form.placeholder": "Search in MyVUIR...",
+  "mydspace.status": "My VUIR status:",
+  "mydspace.title": "MyVUIR",
+  "nav.browse.header": "All of DSpace",
+  "menu.section.browse_global": "All of VUIR",
 }

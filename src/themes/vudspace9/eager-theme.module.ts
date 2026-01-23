@@ -33,6 +33,7 @@ import { PublicationSidebarSearchListElementComponent } from './app/shared/objec
 import { StartsWithDateComponent } from './app/shared/starts-with/date/starts-with-date.component';
 import { StartsWithTextComponent } from './app/shared/starts-with/text/starts-with-text.component';
 
+import { HomePageComponent } from './app/home-page/home-page.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -80,6 +81,7 @@ const DECLARATIONS = [
   imports: [
     CommonModule,
     RootModule,
+    HomePageComponent,
     ...DECLARATIONS,
   ],
   providers: [
