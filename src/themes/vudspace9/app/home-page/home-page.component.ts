@@ -13,15 +13,12 @@ import { ThemedTopLevelCommunityListComponent } from '../../../../app/home-page/
 import { SuggestionsPopupComponent } from '../../../../app/notifications/suggestions/popup/suggestions-popup.component';
 import { ThemedConfigurationSearchPageComponent } from '../../../../app/search-page/themed-configuration-search-page.component';
 import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/themed-search-form.component';
-import { CommunityListComponent } from '../../../../app/community-list-page/community-list/community-list.component';
-import { CommunityListPageComponent } from '../../../../app/community-list-page/community-list-page.component';
-import { ThemedCommunityListComponent } from 'src/app/community-list-page/community-list/themed-community-list.component';
 
 @Component({
   selector: 'ds-themed-home-page',
   // styleUrls: ['./home-page.component.scss'],
   styleUrls: ['../../../../app/home-page/home-page.component.scss'],
-  templateUrl: './home-page.component.html',
+   templateUrl: './home-page.component.html',
   //templateUrl: '../../../../app/home-page/home-page.component.html',
   standalone: true,
   imports: [
@@ -35,10 +32,7 @@ import { ThemedCommunityListComponent } from 'src/app/community-list-page/commun
     ThemedSearchFormComponent,
     ThemedTopLevelCommunityListComponent,
     TranslateModule,
-    CommunityListComponent,
-    ThemedCommunityListComponent,
   ],
 })
 export class HomePageComponent extends BaseComponent {
 }
-
