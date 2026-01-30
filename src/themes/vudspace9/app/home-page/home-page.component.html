@@ -1,29 +1,96 @@
 <ds-home-coar></ds-home-coar>
 <ds-home-news></ds-home-news>
-@if (showDiscoverFilters) {
-  <ds-configuration-search-page
-    [sideBarWidth]="3"
-    [showViewModes]="false"
-    [searchEnabled]="false"
-    [inPlaceSearch]="false"
-    [showScopeSelector]="false">
-    <ng-container searchContentTop *ngTemplateOutlet="homeContent"></ng-container>
-  </ds-configuration-search-page>
-}
-@if (!showDiscoverFilters) {
-  <div class="container">
-    <ng-container *ngTemplateOutlet="homeContent"></ng-container>
-  </div>
-}
-<ds-suggestions-popup></ds-suggestions-popup>
 
-<ng-template #homeContent>
-  <ds-search-form [inPlaceSearch]="false"
+<!-- SEARCH BAR BELOW ABOUT SECTION -->
+<div class="container my-4">
+  <ds-search-form
+    [inPlaceSearch]="false"
     [searchPlaceholder]="'home.search-form.placeholder' | translate">
   </ds-search-form>
+<<<<<<< HEAD
   <ds-top-level-community-list></ds-top-level-community-list>
 <div class="container">
   <h1>{{ 'communityList.title' | translate }}</h1>
   <ds-community-list></ds-community-list>
 </div>
 </ng-template>
+=======
+</div>
+
+<!-- TOP-LEVEL COMMUNITY TILES -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-sm">
+      <a href="/communities/02031421-f8e1-4b63-9061-8a40d95365a5">
+        <figure class="figure">
+          <img src="https://ir.vanderbilt.edu/themes/vu2020R/images/artssciences.jpg" class="figure-img img-fluid rounded" alt="">
+          <figcaption class="figure-caption">Open Access at the College of Arts and Sciences.</figcaption>
+        </figure>
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="/communities/39a5f46e-f630-4439-bdaf-73270e9e4513">
+        <figure class="figure">
+          <img src="https://ir.vanderbilt.edu/themes/vu2020R/images/law.jpg" class="figure-img img-fluid rounded" alt="">
+          <figcaption class="figure-caption">Open Access at Vanderbilt Law School.</figcaption>
+        </figure>
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="/communities/29e57c9a-33e4-426b-a495-155673bdb013">
+        <figure class="figure">
+          <img src="https://ir.vanderbilt.edu/themes/vu2020R/images/blair.jpg" class="figure-img img-fluid rounded" alt="">
+          <figcaption class="figure-caption">Open Access at the Blair School of Music.</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm">
+      <a href="/communities/66cf37c7-c389-48c2-9504-59c0df520af5">
+        <figure class="figure">
+          <img src="https://ir.vanderbilt.edu/themes/vu2020R/images/peabody.jpg" class="figure-img img-fluid rounded" alt="">
+          <figcaption class="figure-caption">Open Access at the Peabody College of Education and Human Development.</figcaption>
+        </figure>
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="/communities/b2c87506-9e7a-4dbd-9e82-8b85a9dfe502">
+        <figure class="figure">
+          <img src="https://ir.vanderbilt.edu/themes/vu2020R/images/divinity.jpg" class="figure-img img-fluid rounded" alt="">
+          <figcaption class="figure-caption">Open Access at Vanderbilt Divinity School.</figcaption>
+        </figure>
+      </a>
+    </div>
+    <div class="col-sm">
+      <a href="/communities/0a026a8d-fc05-4481-87a4-5f762870018f">
+        <figure class="figure">
+          <img src="https://ir.vanderbilt.edu/themes/vu2020R/images/owen.jpg" class="figure-img img-fluid rounded" alt="">
+          <figcaption class="figure-caption">Open Access at Owen Graduate School of Management.</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- BROWSE ALL COMMUNITIES -->
+  <div class="row">
+    <div class="col-12">
+      <h2>Browse All Communities</h2>
+      <p>Select a community to browse its collections.</p>
+      <ul class="list-unstyled">
+        <li><a href="https://ir.vanderbilt.edu/communities/29e57c9a-33e4-426b-a495-155673bdb013">Blair School of Music</a></li>
+        <li><a href="https://ir.vanderbilt.edu/communities/02031421-f8e1-4b63-9061-8a40d95365a5">College of Arts and Science</a></li>
+        <li><a href="https://ir.vanderbilt.edu/communities/c80ca396-178a-4053-bf64-617bfc77f3a2">Department of Biomedical Informatics</a></li>
+        <li><a href="https://ir.vanderbilt.edu/communities/b2c87506-9e7a-4dbd-9e82-8b85a9dfe502">Divinity School</a></li>
+        <li><a href="https://ir.vanderbilt.edu/communities/6cc2394c-68c5-45b5-97e6-4b6f2ebf05df">Electronic Theses and Dissertations</a></li>
+      </ul>
+      <a class="btn btn-primary mt-3" href="/communities">View All Communities</a>
+    </div>
+  </div>
+</div>
+
+<ds-suggestions-popup></ds-suggestions-popup>
+>>>>>>> 68ebab182 (DSpace9 updated)
