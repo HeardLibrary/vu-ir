@@ -1,9 +1,9 @@
 {
   "production": false,
-  "debug": false,
+  "debug": true,
   "ui": {
     "ssl": false,
-    "host": "dev-ir.library.vanderbilt.edu",
+    "host": "localhost",
     "port": 4000,
     "nameSpace": "/",
     "rateLimiter": {
@@ -11,7 +11,7 @@
       "max": 500
     },
     "useProxies": true,
-    "baseUrl": "http://dev-ir.library.vanderbilt.edu:4000/"
+    "baseUrl": "http://localhost:4000/"
   },
   "rest": {
     "ssl": true,
@@ -348,13 +348,13 @@
   "suggestion": [],
   "themes": [
     {
-      "name": "dspace",
+      "name": "vudspace9",
       "headTags": [
         {
           "tagName": "link",
           "attributes": {
             "rel": "icon",
-            "href": "assets/dspace/images/favicons/favicon.ico",
+            "href": "assets/vudspace9/images/favicons/favicon.ico",
             "sizes": "any"
           }
         },
@@ -362,7 +362,7 @@
           "tagName": "link",
           "attributes": {
             "rel": "icon",
-            "href": "assets/dspace/images/favicons/favicon.svg",
+            "href": "assets/vudspace9/images/favicons/favicon.svg",
             "type": "image/svg+xml"
           }
         },
@@ -370,14 +370,14 @@
           "tagName": "link",
           "attributes": {
             "rel": "apple-touch-icon",
-            "href": "assets/dspace/images/favicons/apple-touch-icon.png"
+            "href": "assets/vudspace9/images/favicons/apple-touch-icon.png"
           }
         },
         {
           "tagName": "link",
           "attributes": {
             "rel": "manifest",
-            "href": "assets/dspace/images/favicons/manifest.webmanifest"
+            "href": "assets/vudspace9/images/favicons/manifest.webmanifest"
           }
         }
       ]

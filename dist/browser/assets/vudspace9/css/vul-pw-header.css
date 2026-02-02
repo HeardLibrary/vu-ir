@@ -1,0 +1,1064 @@
+/*!
+ * Bootstrap v3.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+header,
+main,
+nav {
+  display: block;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+b {
+  font-weight: bold;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+small {
+  font-size: 80%;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button {
+  text-transform: none;
+}
+button {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Glyphicons Halflings";
+  src: url("../fonts/glyphicons-halflings-regular.eot");
+  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-th:before {
+  content: "\e011";
+}
+.glyphicon-cog:before {
+  content: "\e019";
+}
+.glyphicon-lock:before {
+  content: "\e033";
+}
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+img {
+  vertical-align: middle;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+[role="button"] {
+  cursor: pointer;
+}
+h1,
+.h1 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+h1 small,
+.h1 small,
+h1 .small,
+.h1 .small {
+  font-weight: 400;
+  line-height: 1;
+  color: #777777;
+}
+h1,
+.h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h1 small,
+.h1 small,
+h1 .small,
+.h1 .small {
+  font-size: 65%;
+}
+h1,
+.h1 {
+  font-size: 36px;
+}
+small,
+.small {
+  font-size: 85%;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul {
+  margin-bottom: 0;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn:focus,
+.btn:active:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.collapse {
+  display: none;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-duration: 0.35s;
+  transition-timing-function: ease;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle:focus {
+  outline: 0;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0 !important;
+  margin: 2px 0 0;
+  font-size: 14px !important;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+.open > .dropdown-menu {
+  display: block;
+}
+.open > a {
+  outline: 0;
+}
+@media (min-width: 768px) {
+  .vu-navbar-right .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+}
+.vu-navbar .dropdown-toggle::after {
+  content: none !important;
+}
+.vu-nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.vu-nav > li {
+  position: relative;
+  display: block;
+  margin: 0;
+}
+.vu-nav > li > a,
+.vu-nav > li > button {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.vu-nav > li > a:hover,
+.vu-nav > li > button:hover,
+.vu-nav > li > a:focus,
+.vu-nav > li > button:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.vu-nav .show > button,
+.vu-nav .show > button:hover,
+.vu-nav .show > button:focus {
+  background-color: #eeeeee;
+  border-color: #337ab7;
+}
+.vu-nav > li > a > img,
+.vu-nav > li > button > img {
+  max-width: none;
+}
+.vu-navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+@media (min-width: 768px) {
+  .vu-navbar {
+    border-radius: 4px;
+  }
+}
+@media (min-width: 768px) {
+  .vu-navbar-header {
+    float: left;
+  }
+}
+.vu-navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 768px) {
+  .vu-navbar-collapse {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+  .vu-navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+}
+.container > .vu-navbar-header,
+.container > .vu-navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .container > .vu-navbar-header,
+  .container > .vu-navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.vu-navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.vu-navbar-brand:hover,
+.vu-navbar-brand:focus {
+  text-decoration: none;
+}
+.vu-navbar-brand > img {
+  display: block;
+  height: 90%;
+}
+@media (min-width: 768px) {
+  .vu-navbar > .container .vu-navbar-brand {
+    margin-left: -15px;
+  }
+}
+.vu-navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-right: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.vu-navbar-toggle:focus {
+  outline: 0;
+}
+.vu-navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+.vu-navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  .vu-navbar-toggle {
+    display: none;
+  }
+}
+.vu-navbar-nav {
+  margin: 7.5px -15px;
+}
+.vu-navbar-nav > li > a,
+.vu-navbar-nav > li > button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+@media (max-width: 767px) {
+  .vu-navbar-nav .show .dropdown-menu {
+    position: static !important;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    transform: initial !important;
+  }
+  .vu-navbar-nav .show .dropdown-menu > a {
+    padding: 5px 15px 5px 25px;
+  }
+  .vu-navbar-nav .show .dropdown-menu > a {
+    line-height: 20px;
+  }
+  .vu-navbar-nav .show .dropdown-menu > a:hover,
+  .vu-navbar-nav .show .dropdown-menu > a:focus {
+    background-image: none;
+  }
+}
+@media (min-width: 768px) {
+  .vu-navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .vu-navbar-nav > li {
+    float: left;
+  }
+  .vu-navbar-nav > li > a,
+  .vu-navbar-nav > li > button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+.vu-navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+@media (min-width: 768px) {
+  .vu-navbar-left {
+    float: left !important;
+  }
+  .vu-navbar-right {
+    float: right !important;
+    margin-right: -15px;
+  }
+  .vu-navbar-right ~ .vu-navbar-right {
+    margin-right: 0;
+  }
+}
+.vu-navbar-inverse {
+  background-color: #222;
+  border-color: #080808;
+}
+.vu-navbar-inverse .vu-navbar-brand {
+  color: #9d9d9d;
+}
+.vu-navbar-inverse .vu-navbar-brand:hover,
+.vu-navbar-inverse .vu-navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.vu-navbar-inverse .vu-navbar-nav > li > a,
+.vu-navbar-inverse .vu-navbar-nav > li > button {
+  color: #9d9d9d !important;
+}
+.vu-navbar-inverse .vu-navbar-nav > li > a:hover,
+.vu-navbar-inverse .vu-navbar-nav > li > button:hover,
+.vu-navbar-inverse .vu-navbar-nav > li > a:focus,
+.vu-navbar-inverse .vu-navbar-nav > li > button:focus {
+  color: #fff !important;
+  background-color: transparent;
+}
+.vu-navbar-inverse .vu-navbar-nav > .show > button,
+.vu-navbar-inverse .vu-navbar-nav > .show > button:hover,
+.vu-navbar-inverse .vu-navbar-nav > .show > button:focus {
+  color: #fff;
+  background-color: #080808;
+}
+@media (max-width: 767px) {
+  .vu-navbar-inverse .vu-navbar-nav .show .dropdown-menu > a {
+    color: #9d9d9d;
+  }
+  .vu-navbar-inverse .vu-navbar-nav .show .dropdown-menu > a:hover,
+  .vu-navbar-inverse .vu-navbar-nav .show .dropdown-menu > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+}
+.vu-navbar-inverse .vu-navbar-toggle {
+  border-color: #333;
+}
+.vu-navbar-inverse .vu-navbar-toggle:hover,
+.vu-navbar-inverse .vu-navbar-toggle:focus {
+  background-color: #333;
+}
+.vu-navbar-inverse .vu-navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.vu-navbar-inverse .vu-navbar-collapse {
+  border-color: #101010;
+}
+
+.container:before,
+.container:after,
+.vu-nav:before,
+.vu-nav:after,
+.vu-navbar:before,
+.vu-navbar:after,
+.vu-navbar-header:before,
+.vu-navbar-header:after,
+.vu-navbar-collapse:before,
+.vu-navbar-collapse:after {
+  display: table;
+  content: " ";
+}
+
+.container:after,
+.vu-nav:after,
+.vu-navbar:after,
+.vu-navbar-header:after,
+.vu-navbar-collapse:after {
+  clear: both;
+}
+.show {
+  display: block !important;
+}
+@-ms-viewport {
+  width: device-width;
+}
+.visible-xs,
+.visible-sm,
+.visible-md {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .visible-xs {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+
+/*! vu-brandbar.css */
+
+/* -----------------------------------
+NAVIGATION
+----------------------------------- */
+
+#main_navbar {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    z-index: 1000;
+}
+
+.vu-nav .dropdown .dropdown-toggle {
+    padding: 9px 14px; /* To account for transparent border */
+    transition: none;
+    font-size: inherit;
+    font-weight: 300;
+    border-radius: 0;
+}
+
+.vu-nav .dropdown-menu {
+    background: #383838;
+}
+
+.vu-nav .dropdown-menu .dropdown-item {
+    color: #CCC;
+    line-height: 1.42857;
+    padding: 3px 20px;
+    display: block;
+    font-weight: 400;
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+}
+
+.vu-nav .dropdown-menu .dropdown-item:hover,
+.vu-nav .dropdown-menu .dropdown-item:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.vu-navbar .vu-navbar-brand {
+    padding: 8px 0 0px 10px;
+}
+
+.vu-navbar-brand img {
+    max-width: 220px;
+    display: inline;
+}
+
+/* brandbar */
+.vubrandbar__icon {
+    color: #d8ab4c;
+}
+
+/*main nav */
+.vu-navbar {
+    margin-bottom: 0;
+    min-height: 0;
+    z-index: 300;
+}
+
+/* -----------------------------------
+RESPONSIVE
+----------------------------------- */
+
+@media (min-width: 768px) {
+
+    .vu-navbar-brand img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .vu-nav .dropdown .dropdown-toggle {
+        padding: 14px; /* To account for transparent border */
+    }
+
+}
+
+
+* {
+    box-sizing: border-box; }
+  
+  html {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; }
+  
+  @media (min-width: 480px) {
+    html {
+      font-size: 14px; } }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px; } }
+  
+  .container {
+    width: 100%;
+    width: calc(100% - 30px);
+    max-width: 1450px; }
+  
+  a {
+    color: #333333; }
+    a:hover {
+      color: #006682; }
+  
+  .vubrandbar__icon {
+    color: #d8ab4c; }
+  
+  .vumainmenu__text--gold {
+    color: #d8ab4c; }
+    .vumainmenu__text--gold a {
+      color: #d8ab4c !important; }
+  
+  .btn {
+    font-family: 'Roboto', sans-serif; }
+  
+  /**
+   * Flex Box Row Sizing
+   */
+  
+  
+  .header-background {
+    background-color: #ccc; }
+    
+    .header-background img {
+      width: 100%; }
+    @media screen and (max-width: 767px) {
+      
+      .header-background {
+        background-color: #000; }
+        
+        .header-background img {
+          display: none; } }
+  
+  .header-background {
+    background: #ccc url("../../images/vuheader-bkg@1x.png") top center;
+    background-size: cover;
+    margin-bottom: -52px;
+    position: relative;
+    top: -52px; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .header-background {
+        background-image: url(../../images/vuheader-bkg@2x.png); } }
+    @media screen and (max-width: 1199px) {
+      .header-background {
+        top: 0;
+        margin-bottom: 0; } }
+    @media screen and (max-width: 767px) {
+      .header-background {
+        background-image: none;
+        margin-bottom: 0;
+        top: 0; } }
+    .header-background .livetextheader {
+      display: block;
+      text-align: left;
+      margin: 80px 0px 40px 130px;
+      color: #FFF;
+      font-size: 4.45rem;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 200;
+      opacity: 0.85;
+      /* Large Devices, Wide Screens */
+      /* Small Devices, Tablets */
+      /* Extra Small Devices, Phones */
+      /* Custom, iPhone Retina */ }
+      .header-background .livetextheader small {
+        color: #fff;
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+        font-size: 1.4rem;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold; }
+      @media (min-width: 1200px) {
+        .header-background .livetextheader small {
+          display: inline;
+          width: auto;
+          margin: 0;
+          padding-left: 50px; } }
+      @media only screen and (max-width: 1200px) {
+        .header-background .livetextheader {
+          margin-top: 35px; } }
+      @media only screen and (max-width: 768px) {
+        .header-background .livetextheader {
+          font-size: 3.25rem; } }
+      @media only screen and (max-width: 480px) {
+        .header-background .livetextheader {
+          font-size: 2.5rem;
+          margin: 25px auto; } }
+      @media only screen and (max-width: 320px) {
+        .header-background .livetextheader {
+          font-size: 2rem; } }
+    .header-background a:link,
+    .header-background a:visited,
+    .header-background a:hover {
+      text-decoration: none;
+      border: 0; }
+  
+  .graphic-header__title {
+    display: none; }
+    @media screen and (max-width: 767px) {
+      .graphic-header__title {
+        color: #fff;
+        display: block;
+        font-weight: 200; } }
+  
+  #main_navbar .icon-bar {
+    background-color: #d8ab4c !important; }
+  
+  .vumainmenu .vunavigation > li > a {
+    color: #bfbfbf; }
+  
+  /* Accessibility Options */
+  .vu-nav .dropdown-toggle:focus {
+    background-color: #484848 !important;
+    outline: #5e9ed7 auto 5px; }
+  
+  /* Flickr Widget */
+  
+  /* CAROUSEL FADE */
+  
+  /* Pause and Play Button */
+  
+  /* Carousel Controls */
+  
+  /* Classes generated by bootstrap-carousel-accessibility.js */
+  
+  /* Slides */
+  
+  /* GRID PAGE */
+  
+  /* EVENTS */
+  .events {
+    margin: 30px auto 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0); }
+  
+  /* Events Widget */
+  
+  /* LW EVENTS DISPLAY */
+  
+  @media print {
+    a[href]:after {
+      font-size: 0.8rem; } }
+  
+
+/*! vul-header.css */
+
+
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * These were added manually since there didn't seem to be a way to get these rules from PurgeCSS without additional unnecessary CSS. --Matt
+ */
+
+ /* v4-shim */
+ .fa.fa-external-link-square:before {
+	content: "\f360";
+}
+
+/* End Font Awesome */
+.emergencybar h3 {
+	font-size: 1.2rem !important;
+	font-weight: 500; /* Needed when no external Bootstrap styling exists */
+}
+
+.vu-navbar {
+    margin-bottom: 0;
+    min-height: 0;
+    z-index: 300;
+    font-size: 1.2rem; }
+  
+  @media (min-width: 480px) {
+    .vu-navbar {
+      font-size: 1rem; } }
+
+.vu-header .vu-navbar {
+	display: none; }
+
+.vu-navbar {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300; }
+
+.vu-navbar .no-border-radius, .vu-navbar.no-border-radius,
+.vu-navbar .no-border-radius > * {
+	border-radius: 0 !important;
+	background: rgba(34, 34, 34, 0.9); }
+
+.vu-navbar-toggle {
+	background: #222 !important;
+	border: 0 !important; }
+
+.vu-navbar-brand img {
+	max-width: 220px;
+	display: inline; }
+
+.vumainmenu .vunavigation > li > a,
+.vumainmenu .vunavigation > li > button {
+    color: #bfbfbf !important; }
+
+@media (max-width: 767px) {
+    .vu-navbar.vu-navbar-inverse .vu-navbar-brand {
+      height: 22px;
+      padding: 0;
+      margin: 14px 0; }
+    .vu-navbar.vu-navbar-inverse .vu-navbar-toggle {
+      padding: 0;
+      margin: 18px 0; }
+	.vu-navbar.vu-navbar-inverse .vu-navbar-toggle:focus {
+		border: 1px dotted #fff !important;
+		padding: 2px; } 
+	.vu-navbar .btn {
+		width: 100%;
+		text-align: left; } }
+.vu-navbar .btn:hover {
+	border-color: transparent; }
+
+/*
+|--------------------------------------------------------------------------
+| Banner Image
+|--------------------------------------------------------------------------
+*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .header-background {
+        text-shadow: 1px 1px 6px #111;
+    }
+}
+
+.img-banner.header-background[data-div*="Heard"] {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.library.vanderbilt.edu/images/banners/banner-heard.jpg") top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Biomedical"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-biomedical.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Central"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-central.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Digital Scholarship and Communications"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-disc.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Divinity"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-divinity.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Gallery"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-gallery.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Law"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-law.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Management"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-management.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Music"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-music.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Peabody"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-peabody.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Science"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-science.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background[data-div*="Special Collections"] {
+	background: url('https://www.library.vanderbilt.edu/images/banners/banner-specialcollections.jpg') top center / cover no-repeat;
+}
+
+.img-banner.header-background {
+	position: static;
+	margin: 0;
+	font-size: 1rem;
+}
+
+.img-banner .container--banner {
+	padding: 2.8125rem 1.875rem;
+	line-height: initial;
+}
+
+.graphic-header__small {
+	color: #fff;
+	display: inline-block;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	line-height: 1.25;
+	text-transform: uppercase;
+}
+
+.header-background .graphic-header__title {
+	font-size: 2.25em;
+	margin: 0;
+}
+
+.header-background .graphic-header__small + a .graphic-header__title,
+.header-background .graphic-header__small + .graphic-header__title {
+	margin: 0.5rem 0 0 0;
+}
+
+@media only screen and (min-width: 48em) {
+	.header-background .graphic-header__title {
+		font-size: 3.25rem;
+	}
+	
+	.graphic-header__small {
+		font-size: 1.75rem;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.header-background .graphic-header__title {
+		font-size: 4rem;
+	}
+	
+	.graphic-header__small {
+		font-size: 2em;
+	}
+}
+

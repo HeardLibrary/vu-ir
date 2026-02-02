@@ -1,0 +1,631 @@
+/*!
+ * Bootstrap v3.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+footer,
+section {
+  display: block;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+small {
+  font-size: 80%;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+img {
+  vertical-align: middle;
+}
+
+h2,
+h4,
+.h2,
+.h4 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h2 small,
+h4 small,
+.h2 small,
+.h4 small,
+h2 .small,
+h4 .small,
+.h2 .small,
+.h4 .small {
+  font-weight: 400;
+  line-height: 1;
+  color: #777777;
+}
+
+h2,
+.h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 small,
+.h2 small,
+h2 .small,
+.h2 .small {
+  font-size: 65%;
+}
+h4,
+.h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h4 small,
+.h4 small,
+h4 .small,
+.h4 .small {
+  font-size: 75%;
+}
+h2,
+.h2 {
+  font-size: 30px;
+}
+h4,
+.h4 {
+  font-size: 18px;
+}
+p {
+  margin: 0 0 10px;
+}
+small,
+.small {
+  font-size: 85%;
+}
+.text-center {
+  text-align: center;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul {
+  margin-bottom: 0;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-xs-3,
+.col-sm-3,
+.col-lg-3,
+.col-sm-4,
+.col-sm-6,
+.col-sm-8,
+.col-lg-9,
+.col-xs-12,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xs-3,
+.col-xs-12 {
+  float: left;
+}
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-3 {
+  width: 25%;
+}
+@media (min-width: 768px) {
+  
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-6,
+  .col-sm-8 {
+    float: left;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  
+  .col-lg-3,
+  .col-lg-9,
+  .col-lg-12 {
+    float: left;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn:focus,
+.btn:active:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary:focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.btn-primary:active {
+  color: #fff;
+  background-color: #286090;
+  background-image: none;
+  border-color: #204d74;
+}
+.btn-primary:active:hover,
+.btn-primary:active:focus {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+}
+.open > a {
+  outline: 0;
+}
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.container:after,
+.row:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+@-ms-viewport {
+  width: device-width;
+}
+
+
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+.fas,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+/* makes the font 33% larger relative to the icon container */
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-facebook-f:before {
+  content: "\f39e";
+}
+.fa-flickr:before {
+  content: "\f16e";
+}
+.fa-heart:before {
+  content: "\f004";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-linkedin-in:before {
+  content: "\f0e1";
+}
+.fa-rss:before {
+  content: "\f09e";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-youtube:before {
+  content: "\f167";
+}
+
+
+* {
+    box-sizing: border-box; }
+  
+  .container {
+    width: 100%;
+    width: calc(100% - 30px);
+    max-width: 1450px; }
+  
+  a {
+    color: #333333; }
+    a:hover {
+      color: #006682; }
+  
+  .btn {
+    font-family: 'Roboto', sans-serif; }
+    .btn-primary {
+      background-color: #d8ab4c;
+      border: #d8ab4c;
+      color: #000; }
+      .btn-primary:hover {
+        background-color: #c6942b;
+        color: #000; }
+  
+  a.btn-primary {
+    color: #000; }
+    a.btn-primary:hover {
+      color: #000; }
+  
+  .footer {
+    min-height: 500px;
+    background: #1a210f;
+    position: relative; }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding-bottom: 50px; } }
+  
+  /**
+   * Flex Box Row Sizing
+   */
+  
+  /* Accessibility Options */
+  
+  /* Flickr Widget */
+  
+  /* CAROUSEL FADE */
+  
+  /* Pause and Play Button */
+  
+  /* Carousel Controls */
+  
+  /* Classes generated by bootstrap-carousel-accessibility.js */
+  
+  /* Slides */
+  
+  /* GRID PAGE */
+  
+  /* EVENTS */
+  
+  /* Events Widget */
+  
+  /* LW EVENTS DISPLAY */
+  
+  .vu-social {
+    background: rgba(34, 34, 34, 0.5);
+    margin: -1.5em 0 1.5em; }
+  
+  .vu-footer {
+    background: #333 url("https://cdn.vanderbilt.edu/vu-www4/omni/i/VUfooterphoto.jpg") no-repeat top center/cover;
+    border-top: 7px solid #d8ab4c;
+    color: #aaa;
+    font-size: 1.2rem;
+    min-height: 300px;
+    padding: 1.5em 0;
+    position: relative; }
+    .vu-footer h4 {
+      font-weight: 300;
+      font-size: 1.4rem; }
+    .vu-footer p a {
+      color: inherit;
+      text-decoration: underline; }
+    .vu-footer a {
+      color: #ccc; }
+      .vu-footer a:hover {
+        color: #d8ab4c;
+        text-decoration: none; }
+    .vu-footer ul {
+      line-height: 1.4em;
+      list-style-type: none;
+      margin-right: 0;
+      padding: 0; }
+    .vu-footer__title {
+      margin: 15px 0px;
+      color: #d8ab4c;
+      font-family: Roboto, sans-serif;
+      font-weight: 700; }
+      .vu-footer__title a {
+        color: #d8ab4c; }
+        .vu-footer__title a:hover {
+          color: #ccc; }
+  
+  .credits {
+    background: #000;
+    font-size: 1.2rem;
+    padding: 15px 0px 10px 0px;
+    color: #969696; }
+    .credits a {
+      color: #aaa; }
+      .credits a:visited {
+        color: #aaa; }
+      .credits a:hover {
+        color: #d8ab4c; }
+  
+  @media print {
+    a[href]:after {
+      font-size: 0.8rem; } }
+  
+
+/*! vul-footer.css */
+
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * These were added manually since there didn't seem to be a way to get these rules from PurgeCSS without additional unnecessary CSS. --Matt
+ */
+ .fas {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+}
+
+.fab {
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 400;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Global
+|--------------------------------------------------------------------------
+*/
+:host {
+	all: initial;
+}
+
+.btn:not(.btn-link):not(.gsw-list__link) {
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+    white-space: normal;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+.vu-footer {
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	line-height: 1.6rem;
+	padding-bottom: 0;
+}
+
+.vu-footer h4 {
+	line-height: 1.35;
+}
+
+.vu-footer ul {
+	color: #aaa;
+	font-size: 1.2rem;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.vu-footer .social-icons.h2 {
+	font-size: 30px;
+}
+
+.vu-footer__social .social-icons li {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.vu-footer__social .social-icons i {
+	color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 30px;
+    padding: 10px 0;
+	transition: transform 100ms ease-in-out;
+    min-width: 50px;
+	min-height: 50px;
+}
+
+.vu-footer__social .social-icons i:hover {
+	transform: scale(1.1);
+}
+
+.vu-footer__social .social-icons .facebook i {
+	background-color: hsl(221, 44%, 41%);
+}
+
+.vu-footer__social .social-icons .twitter i {
+	background-color: hsl(203, 89%, 53%);
+}
+
+.vu-footer__social .social-icons .instagram i {
+	background: radial-gradient(circle at 10% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.vu-footer__social .social-icons .youtube i {
+	background-color: hsl(0, 100%, 46%);
+}
+
+.vu-footer__social .social-icons .flickr i {
+	background-color: #fff;
+	position: relative;
+	z-index: 0;
+}
+
+.vu-footer__social .social-icons .flickr i:after {
+	background: linear-gradient(to right, #0063dc 50%, #ff0084 50%);
+	content: "";
+	height: 18px;
+	left: 15px;
+	position: absolute;
+	top: 15px;
+	width: 20px;
+	z-index: -1;
+}
+
+.vu-footer__social .social-icons .rss i {
+	background-color: hsl(32, 100%, 50%);
+	color: hsl(32, 100%, 18%);
+}
+
+.vu-footer__social .social-icons .linkedin i {
+	background-color: hsl(201, 100%, 35%);
+}
+
+.vu-footer__yourvu li, 
+.vu-footer__popular li {
+	line-height: 1.35;
+	margin-bottom: 0.5em;
+}
+
+.vu-footer__map .embed-responsive-16by9 {
+	height: initial;
+	padding: initial;
+}
+
+.vu-footer__map .give-now img {
+	min-width: 100px;
+	width: 100%;
+}
+
+.vu-footer__map .friend {
+	padding: 15px 0;
+}
+
+.vu-footer__map .friend a {
+	color: #333;
+}
+
+.credits {
+	margin-top: 2rem;
+}
+
+.credits a { 
+	-webkit-text-decoration: underline transparent; 
+	        text-decoration: underline transparent;
+}
+
+.credits a:hover {
+	-webkit-text-decoration-color: #d8ab4c;
+	        text-decoration-color: #d8ab4c;
+}
+
+.credits .depository-logo {
+	width: 30px;
+}
+
