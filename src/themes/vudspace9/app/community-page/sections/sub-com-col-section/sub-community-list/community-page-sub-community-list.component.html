@@ -1,0 +1,15 @@
+<div *ngIf="(subCommunities$ | async) as subCommunities">
+  <ul *ngIf="subCommunities.length > 0; else noSubCommunities">
+    <li *ngFor="let community of subCommunities">
+      <a
+        class="ds-community-link"
+        [routerLink]="['/handle', community.handle]">
+        {{ community.name }}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noSubCommunities>
+  <p>{{ 'community.page.noSubCommunities' | translate }}</p>
+</ng-template>

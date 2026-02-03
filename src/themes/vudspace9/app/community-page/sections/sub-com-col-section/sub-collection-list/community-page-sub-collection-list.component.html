@@ -1,0 +1,15 @@
+<div *ngIf="(subCollections$ | async) as subCollections">
+  <ul *ngIf="subCollections.length > 0; else noSubCollections">
+    <li *ngFor="let collection of subCollections">
+      <a
+        class="ds-collection-link"
+        [routerLink]="['/handle', collection.handle]">
+        {{ collection.name }}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noSubCollections>
+  <p>{{ 'community.page.noSubCollections' | translate }}</p>
+</ng-template>

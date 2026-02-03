@@ -10916,31 +10916,6 @@
         "byIdentifier": {
           "./node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[3].use[0]!./node_modules/css-loader/dist/runtime/api.js": 572,
           "./node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[3].use[0]!./node_modules/css-loader/dist/runtime/noSourceMaps.js": 563,
-          "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[1].use[0]!./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[6].rules[1].use[0]!./node_modules/@angular-devkit/build-angular/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[10].use[0]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[10].use[1]!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[10].use[2]!./src/themes/vudspace9/app/community-page/community-page.component.scss?ngResource": 160
-        },
-        "usedIds": [
-          160,
-          563,
-          572
-        ]
-      }
-    },
-    {
-      "chunks": {
-        "byName": {
-          "resource": 847
-        },
-        "bySource": {
-          "0 resource": 847
-        },
-        "usedIds": [
-          847
-        ]
-      },
-      "modules": {
-        "byIdentifier": {
-          "./node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[3].use[0]!./node_modules/css-loader/dist/runtime/api.js": 572,
-          "./node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js??ruleSet[1].rules[3].use[0]!./node_modules/css-loader/dist/runtime/noSourceMaps.js": 563,
           "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[1].use[0]!./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[6].rules[1].use[0]!./node_modules/@angular-devkit/build-angular/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[10].use[0]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[10].use[1]!./node_modules/sass-resources-loader/lib/loader.js??ruleSet[1].rules[10].use[2]!./src/themes/vudspace9/app/login-page/login-page.component.scss?ngResource": 136
         },
         "usedIds": [
