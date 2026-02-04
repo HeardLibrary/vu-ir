@@ -15,7 +15,7 @@
   "submission.import-external.back-to-my-dspace": "Back to MyVUIR",
   "nav.subscriptions": "Subscriptions",
   "search.form.scope.all": "All VUIR ",
-  "dso-selector.set-scope.community.button": "Search all of VUIR
+  "dso-selector.set-scope.community.button": "Search all of VUIR",
   "home.top-level-communities.head": "Communities in VUIR",
   "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
   "login.form.header": "Please log in to VUIR",
@@ -25,5 +25,6 @@
   "mydspace.status": "My VUIR status:",
   "mydspace.title": "MyVUIR",
   "nav.browse.header": "All of DSpace",
+  "login.form.shibboleth": "Log in with VUNetID or VUMC email address",
   "menu.section.browse_global": "All of VUIR",
 }
