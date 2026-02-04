@@ -50,9 +50,9 @@
                 "bundleName": "base-theme"
               },
               {
-                "input": "src/themes/vudspace9/styles/theme.scss",
+                "input": "src/themes/custom/styles/theme.scss",
                 "inject": false,
-                "bundleName": "vudspace9-theme"
+                "bundleName": "custom-theme"
               },
               {
                 "input": "src/themes/dspace/styles/theme.scss",
@@ -62,7 +62,7 @@
               {
                 "input": "src/themes/vudspace9/styles/theme.scss",
                 "inject": false,
-                "bundleName": "vudspace9"
+                "bundleName": "vudspace9-theme"
               },
               "node_modules/leaflet/dist/leaflet.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
