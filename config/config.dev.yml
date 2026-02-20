@@ -244,7 +244,33 @@ languages:
   - code: en
     label: English
     active: true
-
+  - code: ar
+    label: العربية
+    active: true
+  - code: bn
+    label: বাংলা
+    active: true
+  - code: ca
+    label: Català
+    active: true
+  - code: cs
+    label: Čeština
+    active: true
+  - code: de
+    label: Deutsch
+    active: true
+  - code: el
+    label: Ελληνικά
+    active: true
+  - code: es
+    label: Español
+    active: true
+  - code: fi
+    label: Suomi
+    active: true
+  - code: fr
+    label: Français
+    active: true
 
 
 
