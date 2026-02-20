@@ -5,10 +5,10 @@ import { ThemedConfigurationSearchPageComponent } from '../../../../../app/searc
 
 @Component({
   selector: 'ds-themed-admin-search-page',
-  styleUrls: ['./admin-search-page.component.scss'],
-  // styleUrls: ['../../../../../app/admin/admin-search-page/admin-search-page.component.scss'],
-  templateUrl: './admin-search-page.component.html',
-  // templateUrl: '../../../../../app/admin/admin-search-page/admin-search-page.component.html',
+  //styleUrls: ['./admin-search-page.component.scss'],
+  styleUrls: ['../../../../../app/admin/admin-search-page/admin-search-page.component.scss'],
+  // templateUrl: './admin-search-page.component.html',
+  templateUrl: '../../../../../app/admin/admin-search-page/admin-search-page.component.html',
   standalone: true,
   imports: [
     ThemedConfigurationSearchPageComponent,
