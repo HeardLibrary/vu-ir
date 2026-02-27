@@ -20,6 +20,7 @@ import { DsoEditMenuComponent } from '../../../../app/shared/dso-page/dso-edit-m
 import { ErrorComponent } from '../../../../app/shared/error/error.component';
 import { ThemedLoadingComponent } from '../../../../app/shared/loading/themed-loading.component';
 import { VarDirective } from '../../../../app/shared/utils/var.directive';
+import { RecentItemListComponent } from '../../../../app/home-page/recent-item-list/recent-item-list.component';
 
 @Component({
   selector: 'ds-themed-collection-page',
@@ -46,6 +47,7 @@ import { VarDirective } from '../../../../app/shared/utils/var.directive';
     ThemedLoadingComponent,
     TranslateModule,
     VarDirective,
+    RecentItemListComponent,
   ],
 })
 export class CollectionPageComponent extends BaseComponent {

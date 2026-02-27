@@ -27,4 +27,6 @@
   "nav.browse.header": "All of DSpace",
   "login.form.shibboleth": "Log in with VUNetID or VUMC email address",
   "menu.section.browse_global": "All of VUIR",
+  "browse.comcol.by.department": "By Department",
+  "browse.metadata.department.breadcrumbs": "Browse by Department",
 }
